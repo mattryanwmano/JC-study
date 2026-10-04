@@ -1,0 +1,992 @@
+<!doctype html>
+<html lang="en-IE">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="JC Maths">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#FAF8F1">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAQD0lEQVR4nO2deVgTZx6Av8mdQDgEBBEBRQQEuQQRUMTbelar1XXbarVPrXZbn+3pthXXdtVnbeuztVa39WzXrmdrRa3XUlGKoIJIBQVUUFRUkDvkIsnsH6EjBQYzycxkwvzevzKTycyXb978vnO+YHhRMgKArhDYOwEAdwE5AFJADoAUkAMgBeQASAE5AFJADoAUkAMgBeQASAE5AFJADoAUkAMgBeQASAE5AFJADoAUkAMgBeQASBHZ5aq9x96xy3UdmuqMAJaviLE5TRCcoAXWLGFDDnCCIZi2hFk5QAsWYE4RBiukYAY7MJfPTMkBZrAJQ7lNf7FiYULZr3s7NHbJVZrleOp3ACdshM0cplOO7tMNWtAIO1lNmxzdJBe0YAim85zx7nMwgzkco5+jS4VBC9ZgKP9piBxght3pMrdtb9/aKgf0Z3AZG+8OI3UOCBvsw0Se2yQHFCicgvbCBSb7AKTQLAeEDftCb/5bLwdURR0Fq+8UnZEDwgYXoPEuQJ0DIMVKOaBMcSysu1+0RQ4oU7gDXfcCihWAFJADIAXkAEgBOQBSQA6AFJADIAXkAEgBOQBSQA6AFJADIAXkAEgBOQBS7LPsk+OiN+DXbrUW3tDdrDTcrzFUVRur64xqnUmrw7U6XCTEJBLMWY55uAl79xIG+oqC/MQRQeIhwRKlwvF+hw4gR9LCqpt3Wy05MiRQnLXdl4k0lN5uPZWrOZWjLijR6w042WF6A6434Co1elhrLL71ZD+GoehBknEJ8rEJ8pgQKYYxkUb6cQA57EiLBj+YodqVriq+pbflPDiOCkr1BaX6T79r9HATTh+lWDRdGRIopiudDAFydI1ai//7YNPm/U1NLSZ6z1zbYNx5uHnn4ebkKNmiZ5XPJCtEQnqvQBsgRxfsO6X6ZGtDdZ2R0atkF2qzC7WHNngnR8kYvZDVgBx/oKbe+PaG2hPnNfZOCCcAOZ5wuUT34kc1NfXMBgwHwvHaVwxxLEv97FuPwIz2QORACKHDmeol/6gxkTZReQpEDpRxUbNs3WMwozN8jxw3KlsXr65pJe/X6gahACVFyZKiZDGhkkBfsaebQCETmHBcq8Mbmk0PHhvvVBmKb+kLSnX51/XWXcK+8FoOrQ5/5eMatZbybXN3Ebw22+WFyc5e7p37KDCJCHNxEvj7iBIipAg5IYTUWvzcZe2hX1pOnFdrdA5jCa/l+Hhr/fUKizrm2/PiFOdVS9xdnCiUyAoZNilJPilJ3tBs+v5n1bZDzfdrDFSvyz78rXNcr2jdebiZ0kfkUmzrSq/P3/KgZEZ73JSC1+e6XNjtu/YvvbqKOtyCv5Hjw011Rio94zIptmdd7yQ6ejMlIuyVmcq5E53W72oUC7k7CsdTOS4V6369orX8eAxD33zoSYsZBEqF4JNl7jSekHZ4WqxsOdhE6fhlz7tMSlYwlBjOwkc5HtYaj/+qtvz4gD6i9xe4MZYc7sJHOY6eU1OqbXyw2E0m5W7NgDl4KUcWhbAR6CuaPsqJucRwGd7J0aLBL1ylUBWdN9FZyLtMaoN337ugVEepTJk1hqdhA/FQjvxrOssP9vcRBfrytLWPeCgHpf7yxEiOTuBjB97JUfmQwqDG4CCuTxBnFN7Jce8RBTkG+oEcfILSnHIfT66PjTEKv+TQ6XFKM7483UAO3qCmONFGJuFjxygBv+TQ66nJIeZvMxYhvskhEVOLBK0OMF2LQfglh5zi+JmWYqTpYfBLDpkUE1DRo7aB18848UsOhJBXLwoNkIe1IAef6OdNoZJp4aIxPRXeyeHvQ0GOa+UgB58I7U+hRzznNwozP3oevJNjaJjU8oPvPDDcruJvc5Z3csSGSinN7Dp0poWxtHAd3snhJMfiwykEj70nVbx9AJ93ciCEpqVQmPlXcd+QfpanwYOPckxNUVDqClu3o0HHy65SPsrRx1NI6fG1ivuGT79rZC49nIWPciCEls1xoXT8l3sbT+XybolBnsoxLEJK6aloHEevflJzoYjCzPWn0qw2rdpSf5HWc9ILT+VACK153Z1Sm1atxee+/+gYlaflyNAb8B2HmxMXVG052NRq5G5thr9yhAdJFkxTUvqIWosvWl3z3hd1KrWVa143qkyb9zclvFC1YmMd0ysk2w6vpzqtWuKefUVbeofCAAqOo13pzelnW5bOdnlhsrOHZZNMNTr8bL72pzMtx7NhTTAHQS7Ftq3ymrD0AdUbVtdoWrO94Z+7GpKjZcnRsqhgSf++Yg83gVwqwHFcp8cbmk1VNcY7DwzF5fqCEn3+NV03f8TBWXgtB0IoJEC8Nc1rYVq1gXqMNxjR2Xzt2fweOzjH3zoHwYTh8k0rPCl1i/EEkAMhhGaNcfr6Iy8pvx9E6EyPksOWv8eakao49Lm3hRVMnuAAcqi1lrYbJSKbfvpxg6WZ3/QZlyC35SQ9CQeQo1FlqRy2r9zl7SH879re/3rHg+cPQprhuhyNKlOLxtJGoLOcnq8z/xnnS7v7vvuSqzOT//eZFCXbluaVEMHdJUC43pQtKKEw9NCHvofineTYuwvcls5xOXC6ZdeRZiuWSCejl6tgWorT4hlKSrNZ7QLX5cjMo9CL4Nub5q/jrBC8PEP58gzl9YrWUznqU7maghKdFT0iGIYigiTjh8vHJchjw6SO0mzmtBw6Pb7nhMry40MZ+6fWsP7isP6uy+e76vR4cbn+tzL9jbut96uNVTWGmjqT+R+pdXpcKsGcFQKlAlM6CXq5Cgf5i0MCxaGB4pBAMfwjNc2s/7ahvpnCEFf0IAlziTEjlWCxodLYUAqzUB0X7up85Jz6q30UVij38xb1o/LAEvBUuJibWh2+aX/TZ982UJr2PTER+idohityaHR4baPxxp3WrALt/tMtVsx1eG4sf1eTZQg7y7H3pOrN9bW2nydqkCRuMC/qAWzC3ToHJd5+0c3eSeiB9AQ5UmJlk5KgwkE/Di+Hu4tg43ue9k5Fz8Sx5ZCIsK0rvXy9YJCMEbjSWrECiRjbluaVEsvdgStHx1Hl8PEQ7lrtFUtlsQ2AKo4nB4ah+ZOc05a4uysdu0zkPo4kh1CApqYolv/JNWIg42MoAOKOHC5BW4TyQe33NN1YaNTdRQhJRFhMqGTKSMXM0U63Hg957st32h82MSp/46Kvujzn3/e/tCc7tf2enz/4MMj7AbE5evWnVXUelifyP2+sHzawZNZnacV3A817RoQWbV+6ocNhK75ffOhisvm1t2v9uY/f7nDAxZshP+SOvHJnQHWju94gcpGrXRUt3m71ob53w/wqR4YWeSip/e0tQ3BFjs5ED505M2b34AHioWFSYuXhNempFn7cYBQevxLXYWf6pcS/Tv2RxkRSxYRjafsWHMhJab+zTqWsUykrqn1yy8IQQuvmb5+VkG2nBP4BOxfb8yY6V2cEVGcERHYaba8zjl043X1EtIww43GzS8bVGAvPfPZaZEOLc4ed6fmJOG7PmTZbTk7rYAaX4W7kaGhxPlkYN21oLrHnh9yRBqOlXRqH8xI776yq88gvD44LKjNvnln1bvt3mzSK+BWbiM0PZu5ZkHqacrrJMRiFO85MJDYnx1x8bcIxf89qo0lQ/sjnTHH0/vOjHjdTWziEUbgrB0JoX3YqIQeOY/tzRln4QZVWnlkcRWx6ujQ+bnI1v07PSyTkYJnSB34qbVs3v4ui5bOXvhEK2qYyRQZURAZULJ1wZFfmBIVUb5fkdYaLrcEI/9vmF5duDSp/1Mf8Ors0/F5tWzf5EP+K7s9w4kqcrrVtyqBSrlk++SfireNX4lqN9vlJNKmfTCpQSPSEGQQSkeHVcT9Pir7EbrpI4aIco8MLvV3rza/3nW+LFnt/b3dE+N8O73en+zMcvvSkTEkNL5wYlUfciSa1U2ZxJL0JthAP5ydtkIcN7mt+nF+norZACMtwsVgRYKbZiVlfnZiOEDp0MfmtqT80aRS/FEWb352XlFn0e0uySx42uOfdCiE2x0fmuypa4geWmtsCCKH0vMTxkZdpSeqvJREhy3dYePDAPvd9e9USjefvzo77PmtMmF9lWN/KIf4VwwaW9u/9kJZU0QUXIwdCaE7iOfNvvVHtdLIw7kBOitEkQAg5yzRTh17o/rNH8hJNvzdJZGJ9SthVhFB7GzKLo5o0FFYTpAsBhqfN3t2+NDGaBEWVgQdyUtL2LZi0Zu2M9atPFQ5lP2FkcFSOPm515puKENqTnXogt635Ny0uVy55ymNO6fnDidcjQovkEj1CaNyQyxjWNiVVbxCduBJPf6ItYHR44Y6lnw/0qery3ZL7/d7Y8frG48+ymyhSuFismJmbnHmmOAohdLk8mNg5Lymz+0+VVvUrq/IjNsdHtQUMH7f6iH63r1b2N2+mX0p8PvGs7Yl8ag9pZ4YPun50xcr88uCs6xGXK4KvVgZq9H8YPtxyctr0obmBHChiuCvHqMG/9XGre9DQi9gTFVAe2vdu959qXxUVCkxjwguJzfGRlwk58sqDq+o9fN1pmL5qBRiGxwWVmVvURpPgcsXAr09Pybo+xPyuCceySiJAju4QYPicxHPtY+zc5MzuP2LCsaP5CcSm0SSI/9uXXR6J49iRvOFLxh+jIaG2IRSY4oPKogPLR6zcQHTpcqQVw9E6h5nZiVlE9U0p10yOudj98RduhD1qdLfw5OlddaEySlW9x/KdSyuqfTq/JRIYBdiTp3RcFZxYip+7kQMh5O1anxpeaB5PmRF33ly17AZK9/vmQ99r9/wH+1XalEQq4Dh24kr8ycK4hOCSZ6IvDQ264eteKxSYKmt6f/2/Ke2jRXTgLdZS1Q2clgMhtPmVrsuFzuhaxacKY4nNP4/8JW327g7HaPSSpI++UOvaKoDpeYlsymEGx7HcsjCi06UzsQNucEQO2oqV3mOf0mvJNBlFMcTIBUJo5rAuRr3lEv3EqDxi82j+cBOLg7QioVEkfMqTfGF9Kze+vNnGC9F1L6yMHNUZAXa3oQNH8p50bwzwfkA2/jIjPodoZ9Y0ueaUDU4OKWYjfQh5u9ZfWPtmdkl4XnlwyX3/e7We9S1KXatYKtZ7KpsG+1WOj8qfHHOx85iL7VRnBFjxKQwvIm2Rd09nOaxLAUA7dN0aOlsrXIsl/ITGu2C9HBAnHAWr7xTN/RwQPOwLvfnP6U4wwL7YJEeX8QqCh73oMudtKf0ZiRzgB/swkee2ygHVUi5j492hIXJA4WJ3aC9QzFjfCdYBMhsgtDAKo9nOeGsFQghzMJ23tEUO9LS0QgihEXaymk45kAUugyI2wmYO0ywHsjjWgSWUsEuu0i+HGahqsAwTPzamKqQQGNiEodxmsLUCfrADc/nMVLHSHihiGILpnx8bchCAJbTAWkhmVQ4CsMQK2C+m7SMH4BDAZB+AFJADIAXkAEgBOQBSQA6AFJADIAXkAEgBOQBSQA6AFJADIAXkAEgBOQBSQA6AFJADIAXkAEgBOQBS/g+jo4qlHcnv3QAAAABJRU5ErkJggg==">
+<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAQD0lEQVR4nO2deVgTZx6Av8mdQDgEBBEBRQQEuQQRUMTbelar1XXbarVPrXZbn+3pthXXdtVnbeuztVa39WzXrmdrRa3XUlGKoIJIBQVUUFRUkDvkIsnsH6EjBQYzycxkwvzevzKTycyXb978vnO+YHhRMgKArhDYOwEAdwE5AFJADoAUkAMgBeQASAE5AFJADoAUkAMgBeQASAE5AFJADoAUkAMgBeQASAE5AFJADoAUkAMgBeQASBHZ5aq9x96xy3UdmuqMAJaviLE5TRCcoAXWLGFDDnCCIZi2hFk5QAsWYE4RBiukYAY7MJfPTMkBZrAJQ7lNf7FiYULZr3s7NHbJVZrleOp3ACdshM0cplOO7tMNWtAIO1lNmxzdJBe0YAim85zx7nMwgzkco5+jS4VBC9ZgKP9piBxght3pMrdtb9/aKgf0Z3AZG+8OI3UOCBvsw0Se2yQHFCicgvbCBSb7AKTQLAeEDftCb/5bLwdURR0Fq+8UnZEDwgYXoPEuQJ0DIMVKOaBMcSysu1+0RQ4oU7gDXfcCihWAFJADIAXkAEgBOQBSQA6AFJADIAXkAEgBOQBSQA6AFJADIAXkAEgBOQBS7LPsk+OiN+DXbrUW3tDdrDTcrzFUVRur64xqnUmrw7U6XCTEJBLMWY55uAl79xIG+oqC/MQRQeIhwRKlwvF+hw4gR9LCqpt3Wy05MiRQnLXdl4k0lN5uPZWrOZWjLijR6w042WF6A6434Co1elhrLL71ZD+GoehBknEJ8rEJ8pgQKYYxkUb6cQA57EiLBj+YodqVriq+pbflPDiOCkr1BaX6T79r9HATTh+lWDRdGRIopiudDAFydI1ai//7YNPm/U1NLSZ6z1zbYNx5uHnn4ebkKNmiZ5XPJCtEQnqvQBsgRxfsO6X6ZGtDdZ2R0atkF2qzC7WHNngnR8kYvZDVgBx/oKbe+PaG2hPnNfZOCCcAOZ5wuUT34kc1NfXMBgwHwvHaVwxxLEv97FuPwIz2QORACKHDmeol/6gxkTZReQpEDpRxUbNs3WMwozN8jxw3KlsXr65pJe/X6gahACVFyZKiZDGhkkBfsaebQCETmHBcq8Mbmk0PHhvvVBmKb+kLSnX51/XWXcK+8FoOrQ5/5eMatZbybXN3Ebw22+WFyc5e7p37KDCJCHNxEvj7iBIipAg5IYTUWvzcZe2hX1pOnFdrdA5jCa/l+Hhr/fUKizrm2/PiFOdVS9xdnCiUyAoZNilJPilJ3tBs+v5n1bZDzfdrDFSvyz78rXNcr2jdebiZ0kfkUmzrSq/P3/KgZEZ73JSC1+e6XNjtu/YvvbqKOtyCv5Hjw011Rio94zIptmdd7yQ6ejMlIuyVmcq5E53W72oUC7k7CsdTOS4V6369orX8eAxD33zoSYsZBEqF4JNl7jSekHZ4WqxsOdhE6fhlz7tMSlYwlBjOwkc5HtYaj/+qtvz4gD6i9xe4MZYc7sJHOY6eU1OqbXyw2E0m5W7NgDl4KUcWhbAR6CuaPsqJucRwGd7J0aLBL1ylUBWdN9FZyLtMaoN337ugVEepTJk1hqdhA/FQjvxrOssP9vcRBfrytLWPeCgHpf7yxEiOTuBjB97JUfmQwqDG4CCuTxBnFN7Jce8RBTkG+oEcfILSnHIfT66PjTEKv+TQ6XFKM7483UAO3qCmONFGJuFjxygBv+TQ66nJIeZvMxYhvskhEVOLBK0OMF2LQfglh5zi+JmWYqTpYfBLDpkUE1DRo7aB18848UsOhJBXLwoNkIe1IAef6OdNoZJp4aIxPRXeyeHvQ0GOa+UgB58I7U+hRzznNwozP3oevJNjaJjU8oPvPDDcruJvc5Z3csSGSinN7Dp0poWxtHAd3snhJMfiwykEj70nVbx9AJ93ciCEpqVQmPlXcd+QfpanwYOPckxNUVDqClu3o0HHy65SPsrRx1NI6fG1ivuGT79rZC49nIWPciCEls1xoXT8l3sbT+XybolBnsoxLEJK6aloHEevflJzoYjCzPWn0qw2rdpSf5HWc9ILT+VACK153Z1Sm1atxee+/+gYlaflyNAb8B2HmxMXVG052NRq5G5thr9yhAdJFkxTUvqIWosvWl3z3hd1KrWVa143qkyb9zclvFC1YmMd0ysk2w6vpzqtWuKefUVbeofCAAqOo13pzelnW5bOdnlhsrOHZZNMNTr8bL72pzMtx7NhTTAHQS7Ftq3ymrD0AdUbVtdoWrO94Z+7GpKjZcnRsqhgSf++Yg83gVwqwHFcp8cbmk1VNcY7DwzF5fqCEn3+NV03f8TBWXgtB0IoJEC8Nc1rYVq1gXqMNxjR2Xzt2fweOzjH3zoHwYTh8k0rPCl1i/EEkAMhhGaNcfr6Iy8pvx9E6EyPksOWv8eakao49Lm3hRVMnuAAcqi1lrYbJSKbfvpxg6WZ3/QZlyC35SQ9CQeQo1FlqRy2r9zl7SH879re/3rHg+cPQprhuhyNKlOLxtJGoLOcnq8z/xnnS7v7vvuSqzOT//eZFCXbluaVEMHdJUC43pQtKKEw9NCHvofineTYuwvcls5xOXC6ZdeRZiuWSCejl6tgWorT4hlKSrNZ7QLX5cjMo9CL4Nub5q/jrBC8PEP58gzl9YrWUznqU7maghKdFT0iGIYigiTjh8vHJchjw6SO0mzmtBw6Pb7nhMry40MZ+6fWsP7isP6uy+e76vR4cbn+tzL9jbut96uNVTWGmjqT+R+pdXpcKsGcFQKlAlM6CXq5Cgf5i0MCxaGB4pBAMfwjNc2s/7ahvpnCEFf0IAlziTEjlWCxodLYUAqzUB0X7up85Jz6q30UVij38xb1o/LAEvBUuJibWh2+aX/TZ982UJr2PTER+idohityaHR4baPxxp3WrALt/tMtVsx1eG4sf1eTZQg7y7H3pOrN9bW2nydqkCRuMC/qAWzC3ToHJd5+0c3eSeiB9AQ5UmJlk5KgwkE/Di+Hu4tg43ue9k5Fz8Sx5ZCIsK0rvXy9YJCMEbjSWrECiRjbluaVEsvdgStHx1Hl8PEQ7lrtFUtlsQ2AKo4nB4ah+ZOc05a4uysdu0zkPo4kh1CApqYolv/JNWIg42MoAOKOHC5BW4TyQe33NN1YaNTdRQhJRFhMqGTKSMXM0U63Hg957st32h82MSp/46Kvujzn3/e/tCc7tf2enz/4MMj7AbE5evWnVXUelifyP2+sHzawZNZnacV3A817RoQWbV+6ocNhK75ffOhisvm1t2v9uY/f7nDAxZshP+SOvHJnQHWju94gcpGrXRUt3m71ob53w/wqR4YWeSip/e0tQ3BFjs5ED505M2b34AHioWFSYuXhNempFn7cYBQevxLXYWf6pcS/Tv2RxkRSxYRjafsWHMhJab+zTqWsUykrqn1yy8IQQuvmb5+VkG2nBP4BOxfb8yY6V2cEVGcERHYaba8zjl043X1EtIww43GzS8bVGAvPfPZaZEOLc4ed6fmJOG7PmTZbTk7rYAaX4W7kaGhxPlkYN21oLrHnh9yRBqOlXRqH8xI776yq88gvD44LKjNvnln1bvt3mzSK+BWbiM0PZu5ZkHqacrrJMRiFO85MJDYnx1x8bcIxf89qo0lQ/sjnTHH0/vOjHjdTWziEUbgrB0JoX3YqIQeOY/tzRln4QZVWnlkcRWx6ujQ+bnI1v07PSyTkYJnSB34qbVs3v4ui5bOXvhEK2qYyRQZURAZULJ1wZFfmBIVUb5fkdYaLrcEI/9vmF5duDSp/1Mf8Ors0/F5tWzf5EP+K7s9w4kqcrrVtyqBSrlk++SfireNX4lqN9vlJNKmfTCpQSPSEGQQSkeHVcT9Pir7EbrpI4aIco8MLvV3rza/3nW+LFnt/b3dE+N8O73en+zMcvvSkTEkNL5wYlUfciSa1U2ZxJL0JthAP5ydtkIcN7mt+nF+norZACMtwsVgRYKbZiVlfnZiOEDp0MfmtqT80aRS/FEWb352XlFn0e0uySx42uOfdCiE2x0fmuypa4geWmtsCCKH0vMTxkZdpSeqvJREhy3dYePDAPvd9e9USjefvzo77PmtMmF9lWN/KIf4VwwaW9u/9kJZU0QUXIwdCaE7iOfNvvVHtdLIw7kBOitEkQAg5yzRTh17o/rNH8hJNvzdJZGJ9SthVhFB7GzKLo5o0FFYTpAsBhqfN3t2+NDGaBEWVgQdyUtL2LZi0Zu2M9atPFQ5lP2FkcFSOPm515puKENqTnXogt635Ny0uVy55ymNO6fnDidcjQovkEj1CaNyQyxjWNiVVbxCduBJPf6ItYHR44Y6lnw/0qery3ZL7/d7Y8frG48+ymyhSuFismJmbnHmmOAohdLk8mNg5Lymz+0+VVvUrq/IjNsdHtQUMH7f6iH63r1b2N2+mX0p8PvGs7Yl8ag9pZ4YPun50xcr88uCs6xGXK4KvVgZq9H8YPtxyctr0obmBHChiuCvHqMG/9XGre9DQi9gTFVAe2vdu959qXxUVCkxjwguJzfGRlwk58sqDq+o9fN1pmL5qBRiGxwWVmVvURpPgcsXAr09Pybo+xPyuCceySiJAju4QYPicxHPtY+zc5MzuP2LCsaP5CcSm0SSI/9uXXR6J49iRvOFLxh+jIaG2IRSY4oPKogPLR6zcQHTpcqQVw9E6h5nZiVlE9U0p10yOudj98RduhD1qdLfw5OlddaEySlW9x/KdSyuqfTq/JRIYBdiTp3RcFZxYip+7kQMh5O1anxpeaB5PmRF33ly17AZK9/vmQ99r9/wH+1XalEQq4Dh24kr8ycK4hOCSZ6IvDQ264eteKxSYKmt6f/2/Ke2jRXTgLdZS1Q2clgMhtPmVrsuFzuhaxacKY4nNP4/8JW327g7HaPSSpI++UOvaKoDpeYlsymEGx7HcsjCi06UzsQNucEQO2oqV3mOf0mvJNBlFMcTIBUJo5rAuRr3lEv3EqDxi82j+cBOLg7QioVEkfMqTfGF9Kze+vNnGC9F1L6yMHNUZAXa3oQNH8p50bwzwfkA2/jIjPodoZ9Y0ueaUDU4OKWYjfQh5u9ZfWPtmdkl4XnlwyX3/e7We9S1KXatYKtZ7KpsG+1WOj8qfHHOx85iL7VRnBFjxKQwvIm2Rd09nOaxLAUA7dN0aOlsrXIsl/ITGu2C9HBAnHAWr7xTN/RwQPOwLvfnP6U4wwL7YJEeX8QqCh73oMudtKf0ZiRzgB/swkee2ygHVUi5j492hIXJA4WJ3aC9QzFjfCdYBMhsgtDAKo9nOeGsFQghzMJ23tEUO9LS0QgihEXaymk45kAUugyI2wmYO0ywHsjjWgSWUsEuu0i+HGahqsAwTPzamKqQQGNiEodxmsLUCfrADc/nMVLHSHihiGILpnx8bchCAJbTAWkhmVQ4CsMQK2C+m7SMH4BDAZB+AFJADIAXkAEgBOQBSQA6AFJADIAXkAEgBOQBSQA6AFJADIAXkAEgBOQBSQA6AFJADIAXkAEgBOQBS/g+jo4qlHcnv3QAAAABJRU5ErkJggg==">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font:14px system-ui,sans-serif;background:#FAF8F1}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<title>JC Maths Quest</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Atkinson+Hyperlegible:wght@400;700&family=Caveat:wght@600;700&display=swap">
+<style>
+/* Layout: phone-first app shell. Header / one of three views / bottom tab bar. Copybook paper by day, chalkboard by night. */
+:root{
+  --paper:#FAF8F1; --grid:rgba(38,67,217,.075); --ink:#15171C; --muted:#5A5F6E; --stroke:#15171C; --edge:#15171C;
+  --card:#FFFFFF; --soft:#EEF1FD; --rule:rgba(38,67,217,.14);
+  --biro:#2643D9; --on-biro:#FFFFFF; --marker:#FFD43B; --on-marker:#15171C;
+  --redpen:#D93030; --mint:#0F9A64; --on-mint:#FFFFFF; --coral:#FF8A65; --on-coral:#15171C;
+  --f-display:"Bricolage Grotesque","Arial Black",system-ui,sans-serif;
+  --f-body:"Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-hand:"Caveat","Segoe Print","Comic Sans MS",cursive;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#13201A; --grid:rgba(255,255,255,.045); --ink:#ECEFE6; --muted:#9EA99B; --stroke:#3C4E45; --edge:#070C0A;
+  --card:#1B2923; --soft:#22342C; --rule:rgba(255,255,255,.08);
+  --biro:#8EA2FF; --on-biro:#0D1230; --marker:#FFD43B; --on-marker:#15171C;
+  --redpen:#FF7070; --mint:#3CD596; --on-mint:#0B2219; --coral:#FF9C7D; --on-coral:#15171C; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#13201A; --grid:rgba(255,255,255,.045); --ink:#ECEFE6; --muted:#9EA99B; --stroke:#3C4E45; --edge:#070C0A;
+  --card:#1B2923; --soft:#22342C; --rule:rgba(255,255,255,.08);
+  --biro:#8EA2FF; --on-biro:#0D1230; --marker:#FFD43B; --on-marker:#15171C;
+  --redpen:#FF7070; --mint:#3CD596; --on-mint:#0B2219; --coral:#FF9C7D; --on-coral:#15171C; color-scheme:dark}
+
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{height:100%}
+body{background-color:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.45;
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:24px 24px}
+button{font:inherit;color:inherit;cursor:pointer}
+button:focus-visible,input:focus-visible,label:focus-within{outline:3px solid var(--biro);outline-offset:2px}
+h1,h2,h3{font-family:var(--f-display);font-weight:800;letter-spacing:-.02em;line-height:1.1;text-wrap:balance;margin:0}
+.app{height:100%;display:flex;flex-direction:column;max-width:1100px;margin:0 auto}
+header.top{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 16px}
+.brand{font-family:var(--f-display);font-weight:800;font-size:21px;letter-spacing:-.03em;white-space:nowrap}
+.brand b{display:inline-block;background:var(--marker);color:var(--on-marker);padding:0 7px;border-radius:5px;transform:rotate(-2.5deg);margin-left:2px}
+.stats{display:flex;gap:6px}
+.chip{display:inline-flex;align-items:center;gap:5px;border:2px solid var(--stroke);border-radius:999px;padding:3px 10px;font-weight:700;font-size:14px;background:var(--card);font-variant-numeric:tabular-nums;white-space:nowrap}
+.chip svg{width:16px;height:16px}
+main{flex:1;min-height:0;position:relative}
+.view{position:absolute;inset:0;overflow-y:auto;padding:4px 16px 28px}
+nav.tabs{display:flex;justify-content:center;gap:6px;padding:8px 12px;border-top:2px solid var(--stroke);background:var(--card)}
+nav.tabs button{flex:1;max-width:180px;display:flex;flex-direction:column;align-items:center;gap:2px;border:0;background:none;padding:6px 4px;border-radius:12px;font-weight:700;font-size:13px;color:var(--muted)}
+nav.tabs button svg{width:24px;height:24px}
+nav.tabs button[aria-selected="true"]{color:var(--ink);background:var(--marker);color:var(--on-marker)}
+
+/* ---------- Scroll feed ---------- */
+#v-feed{padding:0;overflow:hidden}
+.reels{height:100%;overflow-y:auto;scroll-snap-type:y mandatory;overscroll-behavior:contain}
+.reel{height:100%;scroll-snap-align:start;scroll-snap-stop:always;display:flex;justify-content:center;padding:10px 16px}
+.rc{position:relative;width:100%;max-width:460px;height:100%;border-radius:24px;border:2px solid var(--stroke);box-shadow:5px 5px 0 var(--edge);
+  padding:56px 76px 30px 24px;display:flex;flex-direction:column;justify-content:center;gap:14px;overflow:hidden}
+.rc.c0{background:var(--marker);color:var(--on-marker)}
+.rc.c1{background:var(--biro);color:var(--on-biro)}
+.rc.c2{background:var(--mint);color:var(--on-mint)}
+.rc.c3{background:var(--coral);color:var(--on-coral)}
+.rc .tag{position:absolute;top:18px;left:22px;font-weight:700;font-size:14px;opacity:.85}
+.rc .count{position:absolute;top:18px;right:22px;font-size:13px;font-weight:700;opacity:.7;font-variant-numeric:tabular-nums}
+.rc h2{font-size:clamp(28px,7.5vw,40px)}
+.rc p{margin:0;font-size:18px;max-width:30ch}
+.rc .fx{font-size:22px;font-weight:700;background:rgba(255,255,255,.22);border:2px dashed currentColor;border-radius:12px;padding:10px 14px;align-self:flex-start;max-width:100%}
+.rc.c0 .fx,.rc.c3 .fx{background:rgba(255,255,255,.4)}
+.rc .check{margin-top:4px;border:2px solid currentColor;border-radius:14px;padding:10px 14px;background:transparent;text-align:left;font-weight:700;font-size:16px}
+.rc .check .ans{display:block;font-family:var(--f-hand);font-size:28px;line-height:1.1;margin-top:4px}
+.rail{position:absolute;right:12px;bottom:26px;display:flex;flex-direction:column;gap:16px;align-items:center}
+.rail button{width:50px;height:50px;border-radius:50%;border:2px solid currentColor;background:rgba(255,255,255,.18);display:grid;place-items:center;color:inherit}
+.rail button svg{width:24px;height:24px}
+.rail small{display:block;text-align:center;font-size:11px;font-weight:700;margin-top:3px}
+.rail button[aria-pressed="true"]{background:var(--redpen);color:#fff;border-color:var(--redpen)}
+.hint{font-size:14px;font-weight:700;opacity:.8;display:flex;align-items:center;gap:6px}
+.hint svg{width:18px;height:18px;animation:bob 1.4s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-5px)}}
+
+/* ---------- Quest ---------- */
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:10px 0 16px}
+.sec-head h1{font-size:clamp(28px,6vw,40px)}
+.sec-head p{margin:4px 0 0;color:var(--muted);max-width:56ch}
+.topics{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.tcard{display:flex;flex-direction:column;gap:10px;text-align:left;background:var(--card);border:2px solid var(--stroke);border-radius:18px;box-shadow:4px 4px 0 var(--edge);padding:16px;transition:transform .12s}
+.tcard:hover{transform:translate(-2px,-2px)}
+.tcard .strand{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.tcard h3{font-size:21px}
+.tcard .blurb{font-size:14px;color:var(--muted);margin:0}
+.bar{height:10px;border-radius:99px;background:var(--soft);border:2px solid var(--stroke);overflow:hidden}
+.bar i{display:block;height:100%;background:var(--mint)}
+.tmeta{display:flex;justify-content:space-between;font-size:13px;font-weight:700;font-variant-numeric:tabular-nums}
+.trophy{color:var(--marker)}
+.back{border:2px solid var(--stroke);background:var(--card);border-radius:999px;padding:6px 14px;font-weight:700;display:inline-flex;gap:6px;align-items:center}
+.map{position:relative;max-width:420px;margin:10px auto 0;display:flex;flex-direction:column;gap:26px;padding-bottom:30px}
+.node{display:flex;align-items:center;gap:14px}
+.node:nth-child(4n+2){margin-left:22%}
+.node:nth-child(4n+3){margin-left:40%}
+.node:nth-child(4n){margin-left:18%}
+.nbtn{flex:none;width:76px;height:76px;border-radius:50%;border:3px solid var(--stroke);background:var(--card);box-shadow:0 6px 0 var(--edge);font-family:var(--f-display);font-weight:800;font-size:28px;display:grid;place-items:center}
+.nbtn:active{transform:translateY(4px);box-shadow:0 2px 0 var(--edge)}
+.nbtn.open{background:var(--biro);color:var(--on-biro)}
+.nbtn.done{background:var(--mint);color:var(--on-mint)}
+.nbtn.boss{border-radius:22px;background:var(--redpen);color:#fff}
+.nbtn.boss.done{background:var(--marker);color:var(--on-marker)}
+.nbtn[disabled]{opacity:.45;cursor:not-allowed;box-shadow:0 6px 0 var(--edge)}
+.nbtn svg{width:30px;height:30px}
+.nlabel{display:flex;flex-direction:column;min-width:0}
+.nlabel b{font-family:var(--f-display);font-size:18px}
+.nlabel span{font-size:13px;color:var(--muted)}
+.stars{display:inline-flex;gap:2px}
+.stars svg{width:16px;height:16px}
+.stars .on{color:var(--marker)} .stars .off{color:var(--stroke);opacity:.6}
+
+/* ---------- Game overlay ---------- */
+.game{position:absolute;inset:0;z-index:5;background-color:var(--paper);background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:24px 24px;display:flex;flex-direction:column;overflow-y:auto}
+.game-in{width:100%;max-width:640px;margin:0 auto;padding:12px 16px 24px;display:flex;flex-direction:column;gap:16px;flex:1}
+.gbar{display:flex;align-items:center;gap:12px}
+.x{width:40px;height:40px;border-radius:50%;border:2px solid var(--stroke);background:var(--card);display:grid;place-items:center;flex:none}
+.x svg{width:18px;height:18px}
+.gbar .bar{flex:1;height:16px}
+.hearts{display:flex;gap:3px;color:var(--redpen)} .hearts svg{width:22px;height:22px} .hearts .lost{opacity:.2}
+.qcard{background:var(--card);border:2px solid var(--stroke);border-radius:20px;box-shadow:4px 4px 0 var(--edge);padding:20px}
+.qcard .lvl{font-size:13px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.qtext{font-size:21px;margin-top:8px;line-height:1.5}
+.qtext b{font-weight:700}
+.fr{display:inline-flex;flex-direction:column;align-items:center;vertical-align:middle;margin:0 3px;line-height:1.15}
+.fr span:first-child{border-bottom:2px solid currentColor;padding:0 4px}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media (max-width:520px){.opts{grid-template-columns:1fr}}
+.opt{display:flex;gap:12px;align-items:center;text-align:left;background:var(--card);border:2px solid var(--stroke);border-radius:16px;box-shadow:0 4px 0 var(--edge);padding:12px 14px;font-size:18px;font-weight:700;min-width:0}
+.opt:active{transform:translateY(3px);box-shadow:0 1px 0 var(--edge)}
+.opt .k{flex:none;width:28px;height:28px;border-radius:8px;border:2px solid var(--stroke);display:grid;place-items:center;font-size:14px}
+.opt.right{background:var(--mint);color:var(--on-mint);border-color:var(--mint)}
+.opt.wrong{background:var(--redpen);color:#fff;border-color:var(--redpen);animation:shake .35s}
+.opt[disabled]{cursor:default}
+@keyframes shake{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+.fb{border-radius:18px;padding:16px;border:2px solid var(--stroke);display:flex;flex-direction:column;gap:10px}
+.fb.ok{background:var(--mint);color:var(--on-mint)} .fb.no{background:var(--redpen);color:#fff}
+.fb h3{font-size:22px}
+.fb p{margin:0}
+.fb .btn{color:var(--ink)} .fb .btn.go{color:var(--on-marker)}
+.btn{border:2px solid var(--stroke);border-radius:14px;padding:12px 18px;font-weight:700;font-size:17px;background:var(--card);box-shadow:0 4px 0 var(--edge);display:inline-flex;align-items:center;justify-content:center;gap:8px}
+.btn:active{transform:translateY(3px);box-shadow:0 1px 0 var(--edge)}
+.btn.pri{background:var(--biro);color:var(--on-biro)}
+.btn.go{background:var(--marker);color:var(--on-marker)}
+.btn[disabled]{opacity:.5;cursor:not-allowed}
+.tipcard{background:var(--marker);color:var(--on-marker);border:2px solid var(--stroke);border-radius:20px;box-shadow:4px 4px 0 var(--edge);padding:22px;display:flex;flex-direction:column;gap:12px}
+.tipcard .who{font-family:var(--f-hand);font-size:26px;line-height:1}
+.tipcard p{margin:0;font-size:19px}
+.center{text-align:center;display:flex;flex-direction:column;align-items:center;gap:14px;margin-top:4vh}
+.bigstars{display:flex;gap:8px} .bigstars svg{width:56px;height:56px}
+.bigstars .on{color:var(--marker);filter:drop-shadow(2px 2px 0 var(--edge))} .bigstars .off{color:var(--stroke);opacity:.35}
+.tri{max-width:260px;color:var(--ink);margin-top:10px}
+.confetti{position:fixed;inset:0;pointer-events:none;z-index:20;overflow:hidden}
+.confetti i{position:absolute;top:-20px;width:10px;height:14px;border-radius:2px;animation:fall 1.6s ease-in forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(540deg)}}
+
+.wex{background:var(--card);border:2px solid var(--stroke);border-radius:20px;box-shadow:4px 4px 0 var(--edge);padding:20px;display:flex;flex-direction:column;gap:12px}
+.wex .lvl{font-size:13px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.wex .qtext{margin-top:0}
+.wsteps{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.wsteps li{display:flex;gap:12px;align-items:flex-start;font-size:18px;padding:10px 12px;border-radius:12px;background:var(--soft);animation:pop .25s ease-out}
+.wsteps .sn{flex:none;width:28px;height:28px;border-radius:50%;background:var(--biro);color:var(--on-biro);display:grid;place-items:center;font-weight:700;font-size:14px}
+.wans{display:flex;flex-direction:column;gap:2px;background:var(--marker);color:var(--on-marker);border:2px solid var(--stroke);border-radius:14px;padding:12px 14px;font-size:20px}
+.wans .who{font-family:var(--f-hand);font-size:24px;line-height:1}
+.wtrap{margin:0;border-left:4px solid var(--redpen);padding:6px 12px;font-size:16px}
+.peek{border:2px dashed var(--stroke);border-radius:16px;padding:10px 14px}
+.peek summary{cursor:pointer;font-weight:700}
+.peek .wex{margin-top:10px;box-shadow:none}
+@keyframes pop{from{transform:translateY(6px);opacity:.3}to{transform:none;opacity:1}}
+
+.fig{display:block;width:100%;height:auto;margin:4px auto 0;color:var(--ink);font-family:var(--f-body);overflow:visible}
+.qfig{margin-top:10px}
+.figwrap{background:var(--card);color:var(--ink);border:2px solid var(--stroke);border-radius:14px;padding:10px;overflow-x:auto}
+.figcap{margin:4px 0 0;text-align:center;font-weight:700;font-size:14px}
+.wfig:empty{display:none}
+.amod{display:flex;flex-direction:column;align-items:center;gap:6px}
+.amod table{border-collapse:separate;border-spacing:4px;font-size:18px;font-weight:700}
+.amod th{padding:6px 12px;color:var(--muted);font-weight:700}
+.amod td{min-width:84px;height:48px;text-align:center;border:2px solid var(--stroke);border-radius:10px;background:var(--soft)}
+.amod td.c0{background:var(--biro);color:var(--on-biro)} .amod td.c2{background:var(--marker);color:var(--on-marker)}
+.amod p{margin:0;font-size:16px}
+.ixp{font-size:18px;text-align:center;padding:6px;line-height:2.2}
+.ixp s{color:var(--redpen);text-decoration-thickness:2px}
+.btn.ghost{background:transparent;box-shadow:none;border-style:dashed;font-size:15px;padding:10px 14px;align-self:center}
+.fb.help{background:var(--card);color:var(--ink);border-width:3px;border-color:var(--marker)}
+.fb.help .wsteps li{font-size:16px}
+.note2{font-size:14px;color:var(--muted)}
+.sheet{position:absolute;inset:0;z-index:4;background:rgba(10,12,16,.45);display:flex;align-items:flex-end;justify-content:center;padding:12px}
+.sheet-in{width:100%;max-width:520px;max-height:100%;overflow-y:auto;background:var(--card);color:var(--ink);border:2px solid var(--stroke);border-radius:22px;box-shadow:0 -4px 0 var(--edge);padding:18px;display:flex;flex-direction:column;gap:12px;animation:pop .25s ease-out}
+.sheet-top{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.sheet .lvl{font-size:13px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.sheet .qtext{margin:0;font-size:19px}
+.sheet .wsteps li{font-size:16px}
+/* ---------- Test ---------- */
+.tests{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-bottom:18px}
+.tchoice{background:var(--card);border:2px solid var(--stroke);border-radius:18px;box-shadow:4px 4px 0 var(--edge);padding:18px;text-align:left;display:flex;flex-direction:column;gap:6px}
+.tchoice h3{font-size:22px} .tchoice p{margin:0;color:var(--muted);font-size:15px}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:6px 0 4px}
+.step{display:flex;gap:10px;align-items:flex-start;font-size:15px}
+.step b.n{flex:none;width:28px;height:28px;border-radius:50%;background:var(--ink);color:var(--paper);display:grid;place-items:center;font-size:14px}
+.paper{position:relative;background-color:var(--card);border:2px solid var(--stroke);border-radius:6px;box-shadow:5px 5px 0 var(--edge);padding:22px 18px 22px 54px;
+  background-image:repeating-linear-gradient(transparent 0 33px,var(--rule) 33px 34px)}
+.paper::before{content:"";position:absolute;top:0;bottom:0;left:40px;width:2px;background:var(--redpen);opacity:.55}
+.paper h2{font-size:24px;margin-bottom:4px}
+.pmeta{display:flex;gap:14px;flex-wrap:wrap;color:var(--muted);font-size:14px;font-weight:700;margin-bottom:12px;font-variant-numeric:tabular-nums}
+.pq{display:grid;grid-template-columns:1fr auto;gap:4px 12px;padding:14px 0;border-top:1px dashed var(--stroke)}
+.pq .qn{font-family:var(--f-display);font-weight:800;font-size:18px}
+.pq .mk{font-weight:700;color:var(--muted);font-size:14px;white-space:nowrap}
+.pq .body{grid-column:1/-1;font-size:17px;line-height:1.6}
+.pq .body ol{margin:6px 0 0;padding-left:22px}
+.sol{grid-column:1/-1;margin-top:6px;border-left:3px solid var(--mint);padding:6px 12px;background:var(--soft);border-radius:0 10px 10px 0;font-size:15px}
+.upload{margin-top:18px;background:var(--card);border:2px dashed var(--stroke);border-radius:18px;padding:18px;display:flex;flex-direction:column;gap:12px}
+.upload label.btn{cursor:pointer;align-self:flex-start}
+.upload input[type=file]{position:absolute;width:1px;height:1px;opacity:0}
+.thumbs{display:flex;gap:10px;flex-wrap:wrap}
+.thumb{position:relative;width:86px;height:110px;border-radius:10px;overflow:hidden;border:2px solid var(--stroke)}
+.thumb img{width:100%;height:100%;object-fit:cover}
+.thumb button{position:absolute;top:4px;right:4px;width:24px;height:24px;border-radius:50%;border:0;background:var(--redpen);color:#fff;font-weight:700;line-height:1}
+.note{font-size:14px;color:var(--muted)}
+.warn{background:var(--soft);border:2px solid var(--stroke);border-radius:12px;padding:10px 12px;font-size:15px}
+.marking{display:flex;align-items:center;gap:12px;font-family:var(--f-hand);font-size:26px;color:var(--redpen)}
+.pen{width:34px;height:34px;animation:scribble .8s ease-in-out infinite alternate}
+@keyframes scribble{from{transform:rotate(-12deg) translateX(-4px)}to{transform:rotate(8deg) translateX(6px)}}
+.result{margin-top:18px;display:flex;flex-direction:column;gap:14px}
+.score{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.ring{width:130px;height:130px;border:4px solid var(--redpen);border-radius:50%;display:grid;place-items:center;transform:rotate(-6deg);font-family:var(--f-hand);color:var(--redpen);text-align:center;line-height:.9}
+.ring b{font-size:46px;display:block} .ring span{font-size:22px}
+.grade{font-family:var(--f-display);font-size:26px;font-weight:800}
+.qres{background:var(--card);border:2px solid var(--stroke);border-radius:16px;padding:14px 16px;display:grid;grid-template-columns:auto 1fr auto;gap:4px 12px;align-items:start}
+.qres .tick{font-family:var(--f-hand);font-size:34px;line-height:.8;color:var(--redpen)}
+.qres .tick.ok{color:var(--mint)}
+.qres h4{margin:0;font-size:17px}
+.qres .m{font-family:var(--f-hand);font-size:26px;color:var(--redpen);line-height:1}
+.qres .hand{grid-column:2/-1;font-family:var(--f-hand);font-size:22px;line-height:1.2;color:var(--redpen)}
+.qres .seen{grid-column:2/-1;font-size:14px;color:var(--muted)}
+.qres .fix{grid-column:2/-1;font-size:15px}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+@media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}.reels{scroll-behavior:auto}}
+@media (max-width:420px){.chip .lbl{display:none}.brand{font-size:18px}}
+</style>
+
+<div class="app">
+  <header class="top">
+    <div class="brand">JC Maths <b>Quest</b></div>
+    <div class="stats">
+      <span class="chip" title="Day streak"><svg viewBox="0 0 24 24" fill="var(--coral)" stroke="var(--stroke)" stroke-width="1.6"><path d="M12 2c1 4 5 6 5 11a5 5 0 0 1-10 0c0-2 1-3.5 2-4.5.3 1.6 1.2 2.5 2 2.5 0-3-1-6 1-9z"/></svg><span id="streak">0</span><span class="lbl">day</span></span>
+      <span class="chip" title="Experience points"><svg viewBox="0 0 24 24" fill="var(--marker)" stroke="var(--stroke)" stroke-width="1.6"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 17l-6.1 3.4 1.5-6.8L2.2 9l6.9-.7z"/></svg><span id="xp">0</span><span class="lbl">XP</span></span>
+    </div>
+  </header>
+  <main>
+    <section class="view" id="v-feed" role="tabpanel" aria-label="Scroll"></section>
+    <section class="view" id="v-quest" role="tabpanel" aria-label="Quest" hidden></section>
+    <section class="view" id="v-test" role="tabpanel" aria-label="Test" hidden></section>
+  </main>
+  <nav class="tabs" role="tablist">
+    <button role="tab" data-tab="feed" aria-selected="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="3"/><path d="M10 9l5 3-5 3z" fill="currentColor"/></svg>Scroll</button>
+    <button role="tab" data-tab="quest" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V4M5 4h11l-2 4 2 4H5"/></svg>Quest</button>
+    <button role="tab" data-tab="test" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l4-1 11-11-3-3L5 16z"/><path d="M14 7l3 3"/><path d="M13 20h7"/></svg>Test</button>
+  </nav>
+</div>
+
+<script>
+// ---------- helpers ----------
+const R=(a,b)=>a+Math.floor(Math.random()*(b-a+1));
+const pick=a=>a[Math.floor(Math.random()*a.length)];
+const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+const gcd=(a,b)=>{a=Math.abs(a);b=Math.abs(b);while(b){[a,b]=[b,a%b]}return a};
+const M=n=>n<0?'−'+Math.abs(n):''+n;
+const pb=n=>n<0?'('+M(n)+')':''+n;
+const SUP={'0':'⁰','1':'¹','2':'²','3':'³','4':'⁴','5':'⁵','6':'⁶','7':'⁷','8':'⁸','9':'⁹','-':'⁻','−':'⁻'};
+const sup=s=>String(s).split('').map(c=>SUP[c]||c).join('');
+const frac=(n,d)=>{if(d<0){n=-n;d=-d}const g=gcd(n,d)||1;n/=g;d/=g;return d===1?M(n):M(n)+'/'+d};
+const eur=n=>(n<0?'-':'')+'€'+Math.abs(n).toLocaleString('en-IE',{minimumFractionDigits:2,maximumFractionDigits:2});
+const r2=n=>Math.round(n*100)/100;
+function poly(cs,vars){let s='';cs.forEach((c,i)=>{if(!c)return;const v=vars[i],a=Math.abs(c),k=(a===1&&v)?'':a;
+  s+= s?(c<0?' − ':' + ')+k+v : (c<0?'−':'')+k+v});return s||'0'}
+const P2=(a,b,c,x='x')=>poly([a,b,c],[x+'²',x,'']);
+const br=(a,b)=>'('+poly([a,b],['x',''])+')';
+const F=(t,d)=>`<span class="fr"><span>${t}</span><span>${d}</span></span>`;
+function mk(q,a,wrongs,why,extra,vis){const seen=new Set([String(a)]),w=[];
+  for(const x of wrongs){if(x==null)continue;const s=String(x);if(/^-|€-|NaN|Infinity|undefined/.test(s)||seen.has(s))continue;seen.add(s);w.push(s);if(w.length===3)break}
+  for(const f of ['None of these','Cannot be found'])if(w.length<3)w.push(f);
+  return {q:q+(extra?'<div class="qfig">'+extra+'</div>':''),a:String(a),opts:shuffle([String(a),...w]),why,vis}}
+const TRIPLES=[[3,4,5],[6,8,10],[5,12,13],[8,15,17],[9,12,15],[7,24,25]];
+function tri(o,a,h){return `<svg class="tri" viewBox="0 0 260 170" role="img" aria-label="Right-angled triangle"><path d="M20 140H220V30Z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="M206 140v-14h14" fill="none" stroke="currentColor" stroke-width="2"/><path d="M58 140a38 38 0 0 0-5-19" fill="none" stroke="var(--redpen)" stroke-width="3"/><text x="64" y="132" fill="var(--redpen)" font-weight="700" font-size="16">A</text><text x="120" y="162" text-anchor="middle" fill="currentColor" font-size="15">adj = ${a}</text><text x="228" y="90" fill="currentColor" font-size="15">${o}</text><text x="96" y="74" text-anchor="end" fill="currentColor" font-size="15">hyp = ${h}</text></svg>`}
+
+// ---------- Quest topics: 4 levels each, Basic → Expert ----------
+const LV=['Warm-up','Building','Higher','Expert'];
+const TOPICS=[
+{id:'num',name:'Number & Indices',strand:'Number',blurb:'BIMDAS, index laws, fractional powers, scientific notation.',levels:[
+ {tip:'Order of operations is BIMDAS: Brackets, Indices, Multiply and Divide (left to right), then Add and Subtract (left to right).',gen:()=>{const a=R(2,9),b=R(2,9),c=R(2,6),d=R(1,9);
+  if(Math.random()<.5){const s=a+b*c-d;return mk(`Work out <b>${a} + ${b} × ${c} − ${d}</b>`,M(s),[(a+b)*c-d,a+b*(c-d),a*b+c-d,s+2,s-1,s+3].map(M),`Multiply first: ${b} × ${c} = ${b*c}. Then ${a} + ${b*c} − ${d} = ${s}.`)}
+  const s=a*a-b*c;return mk(`Work out <b>${a}² − ${b} × ${c}</b>`,M(s),[2*a-b*c,(a*a-b)*c,a*a+b*c,s+1,s-2].map(M),`Index first: ${a}² = ${a*a}. Then ${b} × ${c} = ${b*c}. ${a*a} − ${b*c} = ${M(s)}.`)}},
+ {tip:'Index laws only work when the bases match. Multiply → add the powers. Divide → subtract. Power of a power → multiply.',gen:()=>{const v=pick(['x','a','y','k']),t=R(0,2);let m=R(2,7),n=R(2,6),q,e,why;
+  if(t===0){q=`${v}${sup(m)} × ${v}${sup(n)}`;e=m+n;why=`Multiplying: add the powers. ${m} + ${n} = ${e}.`}
+  else if(t===1){m=n+R(1,5);q=`${v}${sup(m)} ÷ ${v}${sup(n)}`;e=m-n;why=`Dividing: subtract the powers. ${m} − ${n} = ${e}.`}
+  else{q=`(${v}${sup(m)})${sup(n)}`;e=m*n;why=`Power of a power: multiply. ${m} × ${n} = ${e}.`}
+  return mk(`Simplify <b>${q}</b>`,v+sup(e),[m+n,m-n,m*n,e+1,e-1,e+2,2*e].filter(x=>x>0&&x!==e).map(x=>v+sup(x)),why,'',t<2?FIG.idx(v,m,n,t):FIG.idx(v,m,n,2))}},
+ {tip:'For a fractional power like 8<sup>2/3</sup>: the bottom is the root, the top is the power. Root first to keep numbers small. A negative power means "one over".',gen:()=>{const T=[['8','2/3','4',['16/3','6','2','1/4'],'Cube root of 8 is 2, then 2² = 4.'],['27','2/3','9',['18','3','6','1/9'],'Cube root of 27 is 3, then 3² = 9.'],['16','3/4','8',['12','2','4','1/8'],'Fourth root of 16 is 2, then 2³ = 8.'],['25','3/2','125',['37.5','5','15','1/125'],'Square root of 25 is 5, then 5³ = 125.'],['4','−2','1/16',['−16','−8','16','1/8'],'Negative power means flip: 4⁻² = 1/4² = 1/16.'],['32','2/5','4',['12.8','2','8','1/4'],'Fifth root of 32 is 2, then 2² = 4.'],['64','−1/2','1/8',['−8','8','−32','1/32'],'Flip, then square root: 1/√64 = 1/8.'],['100','3/2','1000',['150','10','300','1/1000'],'√100 = 10, then 10³ = 1000.'],['81','3/4','27',['60.75','3','9','1/27'],'Fourth root of 81 is 3, then 3³ = 27.'],['9','−1/2','1/3',['−3','3','−4.5','1/9'],'Flip, then square root: 1/√9 = 1/3.']];
+  const [b,e,a,w,why]=pick(T);return mk(`Evaluate <b>${b}<sup>${e}</sup></b>`,a,w,why)}},
+ {tip:'Scientific notation is a × 10ⁿ where 1 ≤ a < 10. Multiply the front numbers, add the powers of 10, then tidy up so the front number is between 1 and 10.',gen:()=>{const a=R(2,9),b=R(2,9),m=R(2,9),n=R(2,8),p=a*b;let c,e;if(p>=10){c=p/10;e=m+n+1}else{c=p;e=m+n}
+  const S=(c,e)=>`${c} × 10${sup(e)}`;
+  return mk(`Write <b>(${a} × 10${sup(m)}) × (${b} × 10${sup(n)})</b> in scientific notation.`,S(c,e),[S(p,m+n),S(c,m*n),S(a+b,m+n),S(c,e+1),S(c,e-1),S(a+b,e),S(c,e+2)],p>=10?`${a} × ${b} = ${p} and 10${sup(m)} × 10${sup(n)} = 10${sup(m+n)}. ${p} is not between 1 and 10, so write it as ${c} × 10¹, giving ${S(c,e)}.`:`${a} × ${b} = ${p}, then add the powers: ${m} + ${n} = ${m+n}.`)}}]},
+{id:'money',name:'Applied Arithmetic',strand:'Number',blurb:'Percentages, VAT, compound interest and income tax.',levels:[
+ {tip:'To find p% of an amount, divide by 100 and multiply by p. A p% reduction leaves (100 − p)%.',gen:()=>{const p=pick([5,10,15,20,25,30,35,40,60,75]),n=20*R(2,25),s=p*n/100;
+  if(Math.random()<.5)return mk(`What is <b>${p}%</b> of <b>€${n}</b>?`,eur(s),[eur(p*n/10),eur(n-s),eur(s*2),eur(s+p),eur(n/p)],`${p}% = ${p}/100. ${p}/100 × ${n} = ${s}.`,'',FIG.pctBar(p,n,s,false));
+  return mk(`A €${n} jacket is reduced by <b>${p}%</b> in the sale. What is the sale price?`,eur(n-s),[eur(s),eur(n-p),eur(n+s),eur(n-2*s),eur(n-s/2)],`${p}% of €${n} = €${s}. Sale price = ${n} − ${s} = €${n-s}.`,'',FIG.pctBar(p,n,s,true))}},
+ {tip:'Adding VAT at 23% means × 1.23. Removing VAT means ÷ 1.23. Never take 23% off a price that already includes VAT.',gen:()=>{const X=pick([100,200,300,400,500,600,800,1000]),I=r2(X*1.23);
+  if(Math.random()<.5)return mk(`A laptop costs <b>${eur(X)}</b> before VAT at 23%. What is the price including VAT?`,eur(I),[eur(X*.23),eur(X*.77),eur(X+23),eur(X*2.3),eur(I+23)],`Price × 1.23 = ${eur(X)} × 1.23 = ${eur(I)}.`,'',FIG.vatBar(X,I));
+  return mk(`A bike costs <b>${eur(I)}</b> including VAT at 23%. What was the price before VAT?`,eur(X),[eur(r2(I*.77)),eur(r2(I-23)),eur(r2(I*.23)),eur(X+23),eur(r2(I/1.13))],`Including VAT is 123%. Divide by 1.23: ${eur(I)} ÷ 1.23 = ${eur(X)}. Taking 23% off the bigger number is the classic trap.`,'',FIG.vatBar(X,I))}},
+ {tip:'Compound interest: F = P(1 + i)ᵗ, with i as a decimal. It is in the Formulae & Tables booklet. Interest earned = F − P.',gen:()=>{const P=pick([1000,2000,2500,4000,5000]),r=pick([2,3,4,5]),t=pick([2,3]),F=r2(P*Math.pow(1+r/100,t));
+  return mk(`<b>${eur(P)}</b> is invested at <b>${r}%</b> per year compound interest. What is it worth after <b>${t} years</b>?`,eur(F),[eur(r2(P*(1+r*t/100))),eur(r2(P*Math.pow(1+r/100,t+1))),eur(r2(F-P)),eur(r2(P*Math.pow(1+r/100,t-1)))],`F = P(1 + i)ᵗ = ${P} × ${(1+r/100).toFixed(2)}${sup(t)} = ${eur(F)}. Compound beats simple interest because you earn interest on interest.`,'',FIG.growth(P,r,t))}},
+ {tip:'Income tax in three moves: (1) gross tax = 20% up to the cut-off point + 40% on the rest, (2) subtract tax credits to get net tax, (3) gross pay − deductions = take-home pay.',gen:()=>{const G=pick([48000,50000,52000,55000,60000]),cut=44000,TC=pick([3750,4000,4250,4500]),g=.2*cut+.4*(G-cut),net=g-TC;
+  return mk(`Gross income <b>${eur(G)}</b>. Standard rate cut-off point <b>€44,000</b>. Tax is 20% up to the cut-off and 40% on the rest. Tax credits are <b>${eur(TC)}</b>. Find the <b>net tax</b>.`,eur(net),[eur(g),eur(.2*G-TC),eur(.4*G-TC),eur(net+2*TC),eur(G-net)],`20% × 44,000 = 8,800. 40% × ${(G-cut).toLocaleString('en-IE')} = ${(.4*(G-cut)).toLocaleString('en-IE')}. Gross tax = ${eur(g)}. Take off the credits: ${eur(g)} − ${eur(TC)} = ${eur(net)}.`,'',FIG.taxBar(G,cut))}}]},
+{id:'sets',name:'Sets',strand:'Number',blurb:'Union, intersection, Venn diagrams with two and three sets.',levels:[
+ {tip:'∪ (union) means in A or B or both. ∩ (intersection) means in both. List each element once, inside curly brackets.',gen:()=>{const U10=[1,2,3,4,5,6,7,8,9,10];let A,B,I;do{A=shuffle(U10).slice(0,R(4,5)).sort((x,y)=>x-y);B=shuffle(U10).slice(0,R(4,5)).sort((x,y)=>x-y);I=A.filter(x=>B.includes(x))}while(I.length<1||I.length>3);
+  const Un=[...new Set([...A,...B])].sort((x,y)=>x-y),S=s=>s.length?'{'+s.join(', ')+'}':'{ }',u=Math.random()<.5;
+  return mk(`A = ${S(A)}<br>B = ${S(B)}<br>Find <b>A ${u?'∪':'∩'} B</b>`,S(u?Un:I),[S(u?I:Un),S(A.filter(x=>!B.includes(x))),S(B.filter(x=>!A.includes(x))),S(A),S(B)],u?'Union = every element in A or B, each listed once.':'Intersection = only the elements that are in both A and B.','',FIG.venn2({a:A.filter(x=>!B.includes(x)).join(', ')||' ',ab:I.join(', '),b:B.filter(x=>!A.includes(x)).join(', ')||' ',hl:u?'union':'inter'}))}},
+ {tip:'#A means "the number of elements in A". #(A ∪ B) = #A + #B − #(A ∩ B). Subtract the overlap so it is not counted twice.',gen:()=>{const c=R(2,6),a=c+R(3,12),b=c+R(2,10),u=a+b-c;
+  return mk(`#A = ${a}, #B = ${b}, #(A ∩ B) = ${c}.<br>Find <b>#(A ∪ B)</b>.`,u,[a+b,a+b-2*c,a+b+c,u+1,u-1],`#(A ∪ B) = ${a} + ${b} − ${c} = ${u}.`,'',FIG.venn2({a:a-c,ab:c,b:b-c,hl:'union'}))}},
+ {tip:'Venn method: fill the middle first, then the "only" regions, then whatever is outside both circles.',gen:()=>{const c=R(3,8),f=c+R(4,12),h=c+R(3,10),n=R(2,7),N=f+h-c+n;
+  if(Math.random()<.5)return mk(`In a class of <b>${N}</b>, ${f} play football, ${h} play hurling and ${c} play both. How many play <b>neither</b>?`,n,[N-f-h,f+h-c,c,n+c,N-f],`Football or hurling = ${f} + ${h} − ${c} = ${f+h-c}. Neither = ${N} − ${f+h-c} = ${n}.`,'',FIG.venn2({na:'Football',nb:'Hurling',U:'Class ('+N+')',a:f-c,ab:c,b:h-c,out:n,hl:'out'}));
+  return mk(`In a class of <b>${N}</b>, ${f} play football, ${h} play hurling and ${c} play both. How many play <b>football only</b>?`,f-c,[f,h-c,f+c,N-h,c,f-c+1,N-c],`Football only = football − both = ${f} − ${c} = ${f-c}.`,'',FIG.venn2({na:'Football',nb:'Hurling',U:'Class ('+N+')',a:f-c,ab:c,b:h-c,out:n,hl:'aonly'}))}},
+ {tip:'Three sets: fill the centre (A ∩ B ∩ C) first, then the three "two sets only" regions, then the "one set only" regions. Add all seven regions.',gen:()=>{const x=[0,0,0,0,0,0,0].map(()=>R(1,9)),[a,b,c,ab,ac,bc,abc]=x,tot=x.reduce((s,v)=>s+v,0);
+  return mk(`#A = ${a+ab+ac+abc}, #B = ${b+ab+bc+abc}, #C = ${c+ac+bc+abc}<br>#(A∩B) = ${ab+abc}, #(A∩C) = ${ac+abc}, #(B∩C) = ${bc+abc}<br>#(A∩B∩C) = ${abc}<br>Find <b>#(A ∪ B ∪ C)</b>.`,tot,[tot-abc,a+b+c+2*(ab+ac+bc)+3*abc,tot+abc,tot-2*abc,tot+1],`Centre = ${abc}. Two-only regions: ${ab}, ${ac}, ${bc}. One-only regions: ${a}, ${b}, ${c}. Total = ${tot}.`,'',FIG.venn3([a,b,c,ab,ac,bc,abc]))}}]},
+{id:'alg',name:'Algebra & Factorising',strand:'Algebra',blurb:'Expanding brackets, trinomials, difference of two squares.',levels:[
+ {tip:'Multiply everything inside the bracket. A minus outside changes every sign inside. Then collect like terms.',gen:()=>{let p=R(2,5),q=pick([-4,-3,-2,2,3,4]);if(p+q===0)q=-q;const a=R(1,7)*pick([1,-1]),b=R(1,7)*pick([1,-1]),X=p+q,C=p*a+q*b,L=x=>poly(x,['x','']);
+  return mk(`Expand and simplify <b>${p}${br(1,a)} ${q<0?'−':'+'} ${Math.abs(q)}${br(1,b)}</b>`,L([X,C]),[L([X,p*a+Math.sign(q)*b]),L([X,p*a-q*b]),L([p-q,C]),L([X,C+1]),L([X,-C])],`${p}${br(1,a)} = ${L([p,p*a])}. ${M(q)}${br(1,b)} = ${L([q,q*b])}. Collect: ${L([X,C])}.`)}},
+ {tip:'(x + a)(x + b): every term in the first bracket times every term in the second. Then combine the two x terms.',gen:()=>{let a,b;do{a=R(-7,7);b=R(-7,7)}while(!a||!b);
+  return mk(`Expand <b>${br(1,a)}${br(1,b)}</b>`,P2(1,a+b,a*b),[P2(1,0,a*b),P2(1,a+b,-a*b),P2(1,a*b,a+b),P2(1,-(a+b),a*b),P2(1,a-b,a*b)],`x × x = x². The x terms: ${poly([a],['x'])} and ${poly([b],['x'])} make ${poly([a+b],['x'])}. The numbers: ${M(a)} × ${M(b)} = ${M(a*b)}.`,'',FIG.area(1,a,1,b))}},
+ {tip:'To factorise x² + bx + c, find two numbers that multiply to c and add to b. If c is positive the signs match; if c is negative they differ.',gen:()=>{let p,q;do{p=R(-8,8);q=R(-8,8)}while(!p||!q||p===q||p===-q);
+  const key=(u,v)=>[u,v].sort((x,y)=>x-y).join(),K=key(p,q),c=[[-p,-q],[p,-q],[-p,q],[p*q,1],[p+q,1],[p,q+1]].filter(([u,v])=>v&&u&&key(u,v)!==K);
+  return mk(`Factorise <b>${P2(1,p+q,p*q)}</b>`,br(1,p)+br(1,q),c.map(([u,v])=>br(1,u)+br(1,v)),`Two numbers that multiply to ${M(p*q)} and add to ${M(p+q)}: ${M(p)} and ${M(q)}.`,'',FIG.area(1,p,1,q))}},
+ {tip:'Always take out a common factor first. Difference of two squares: a² − b² = (a − b)(a + b). For 2x² + bx + c try (2x ± ?)(x ± ?) and check by expanding.',gen:()=>{
+  if(Math.random()<.4){let a,b;do{a=R(2,5);b=R(1,9)}while(gcd(a,b)!==1);return mk(`Factorise <b>${a*a}x² − ${b*b}</b>`,`(${a}x − ${b})(${a}x + ${b})`,[`(${a}x − ${b})²`,`(${a*a}x − ${b})(x + ${b})`,`(${a}x + ${b})²`,`(${a}x − ${b*b})(${a}x + 1)`],`Difference of two squares: ${a*a}x² = (${a}x)² and ${b*b} = ${b}². So (${a}x − ${b})(${a}x + ${b}).`,'',FIG.area(a,-b,a,b))}
+  const a=pick([2,3]);let p,q;do{p=R(-7,7);q=R(-7,7)}while(!p||!q||p===q||gcd(a,p)!==1);
+  const ex=(a1,b1,a2,b2)=>[a1*a2,a1*b2+b1*a2,b1*b2].join(),T=ex(a,p,1,q),f=(a1,b1,a2,b2)=>br(a1,b1)+br(a2,b2);
+  return mk(`Factorise <b>${P2(a,a*q+p,p*q)}</b>`,f(a,p,1,q),[[a,q,1,p],[a,-p,1,-q],[a,p,1,-q],[a,-p,1,q]].filter(c=>ex(...c)!==T).map(c=>f(...c)),`Try (${a}x ± ?)(x ± ?). The numbers must multiply to ${M(p*q)} and the inner + outer terms must add to ${poly([a*q+p],['x'])}. Answer: ${f(a,p,1,q)}.`,'',FIG.area(a,p,1,q))}}]},
+{id:'eq',name:'Equations',strand:'Algebra',blurb:'Linear, fractions, simultaneous and quadratic equations.',levels:[
+ {tip:'Whatever you do to one side, do to the other. Get the x terms on one side and the numbers on the other.',gen:()=>{const x=R(-6,9),a=R(3,8),c=R(1,a-1),b=R(-10,10),d=(a-c)*x+b;
+  return mk(`Solve <b>${poly([a,b],['x',''])} = ${poly([c,d],['x',''])}</b>`,`x = ${M(x)}`,[x+1,-x,x-1,x+2,d+b].map(v=>`x = ${M(v)}`),`Subtract ${poly([c],['x'])} from both sides and move the number: ${poly([a-c],['x'])} = ${M(d-b)}, so x = ${M(x)}.`,'',FIG.meet(a,b,c,d,x))}},
+ {tip:'Fractions: multiply every term by the LCD. Put brackets around each top line so the minus signs behave.',gen:()=>{let m,n;do{m=R(2,5);n=R(2,5)}while(m===n);const x=R(1,12);let a,b;do{a=R(1,9)}while((x+a)%m);do{b=R(1,9)}while((x-b)%n);const k=(x+a)/m+(x-b)/n;
+  return mk(`Solve ${F('x + '+a,m)} + ${F('x − '+b,n)} = <b>${M(k)}</b>`,`x = ${x}`,[x+1,x-1,-x,x+2,k*m*n].map(v=>`x = ${M(v)}`),`Multiply every term by ${m*n}: ${n}(x + ${a}) + ${m}(x − ${b}) = ${M(k*m*n)}. Expand and collect: ${poly([m+n,n*a-m*b],['x',''])} = ${M(k*m*n)}, so x = ${x}.`)}},
+ {tip:'Simultaneous equations: make the coefficients of one letter match, add or subtract to get rid of it, solve, then substitute back to find the other.',gen:()=>{let x,y,a1,b1,a2,b2;do{x=R(-5,6);y=R(-5,6);a1=R(1,5);b1=R(1,5)*pick([1,-1]);a2=R(1,5);b2=R(1,5)*pick([1,-1])}while(!x||!y||x===y||a1*b2-a2*b1===0);
+  const c1=a1*x+b1*y,c2=a2*x+b2*y,E=(a,b,c)=>`${poly([a,b],['x','y'])} = ${M(c)}`,S=(u,v)=>`x = ${M(u)}, y = ${M(v)}`;
+  return mk(`Solve:<br><b>${E(a1,b1,c1)}</b><br><b>${E(a2,b2,c2)}</b>`,S(x,y),[S(y,x),S(-x,y),S(x,-y),S(-x,-y),S(x+1,y-1)],`${a1===a2?'The x terms already match.':`Multiply the first equation by ${a2} and the second by ${a1} so the x terms match: ${E(a1*a2,b1*a2,c1*a2)} and ${E(a1*a2,a1*b2,a1*c2)}.`} Subtract one from the other: ${poly([b1*a2-a1*b2],['y'])} = ${M(c1*a2-a1*c2)}, so y = ${M(y)}. Substitute into the first equation: ${a1===1?'':a1}x ${b1<0?'−':'+'} ${Math.abs(b1)}(${M(y)}) = ${M(c1)}, so x = ${M(x)}.`,'',FIG.sim(a1,b1,c1,a2,b2,c2,x,y))}},
+ {tip:'Quadratic = 0: factorise, then set each bracket equal to 0. If it will not factorise, use the formula in the Formulae & Tables booklet.',gen:()=>{
+  if(Math.random()<.6){let p,q;do{p=R(-8,8);q=R(-8,8)}while(!p||!q||p===q||p===-q);const[u,v]=[p,q].sort((a,b)=>a-b),S=(a,b)=>`x = ${M(a)} or x = ${M(b)}`;
+   return mk(`Solve <b>${P2(1,-(p+q),p*q)} = 0</b>`,S(u,v),[S(-v,-u),S(u,-v),S(-u,v),S(u*v,1)],`Factorise: ${br(1,-p)}${br(1,-q)} = 0. Each bracket = 0, so x = ${M(p)} or x = ${M(q)}.`,'',FIG.parab(1,-(p+q),p*q,[u,v]))}
+  let p,q;do{p=pick([-7,-5,-3,-1,1,3,5,7]);q=R(-6,6)}while(!q);const S=(a,b)=>`x = ${a} or x = ${b}`;
+  return mk(`Solve <b>${P2(2,-(2*q+p),p*q)} = 0</b>`,S(frac(p,2),M(q)),[S(frac(-p,2),M(-q)),S(M(p),M(q)),S(frac(q,2),M(p)),S(frac(p,2),M(-q))],`Factorise: ${br(2,-p)}${br(1,-q)} = 0. So 2x = ${M(p)} → x = ${frac(p,2)}, or x = ${M(q)}.`,'',FIG.parab(2,-(2*q+p),p*q,[p/2,q].sort((m,n)=>m-n)))}}]},
+{id:'fn',name:'Functions & Patterns',strand:'Functions',blurb:'f(x) notation, linear and quadratic patterns, unknown coefficients.',levels:[
+ {tip:'f(x) is a rule. f(3) means "replace every x with 3". Put negative inputs in brackets.',gen:()=>{const a=R(2,9)*pick([1,-1]),b=R(-9,9),k=R(-5,6),v=a*k+b;
+  return mk(`f(x) = ${poly([a,b],['x',''])}<br>Find <b>f(${M(k)})</b>`,M(v),[a*k-b,a+k+b,-v,-a*k+b,v+a,v+1,v-1].map(M),`Replace x with ${M(k)}: ${M(a)} × ${pb(k)} ${b<0?'−':'+'} ${Math.abs(b)} = ${M(v)}.`,'',FIG.lineFn(a,b,k,v))}},
+ {tip:'A linear pattern has the same first difference d every time. Tₙ = dn + (first term − d).',gen:()=>{const d=R(2,7)*pick([1,1,-1]),a=R(1,12),t=[0,1,2,3].map(i=>a+i*d),c=a-d,T=(p,q)=>'T<sub>n</sub> = '+poly([p,q],['n','']);
+  return mk(`Find the general term of <b>${t.map(M).join(', ')}, …</b>`,T(d,c),[T(a,d),T(d,a),T(c,d),T(d,-c),T(d,c+1)],`Common difference ${M(d)}, so start with ${poly([d],['n'])}. When n = 1 that gives ${M(d)}; you need ${M(a)}, so add ${M(c)}. T<sub>n</sub> = ${poly([d,c],['n',''])}.`,'',FIG.diffs(t,false))}},
+ {tip:'In a quadratic pattern the first differences change but the second differences stay the same. Use that to predict the next term.',gen:()=>{const b=R(-3,4),c=R(-3,6),T=n=>n*n+b*n+c,t=[1,2,3,4].map(T),s=T(5),d=t[3]-t[2];
+  return mk(`This pattern is quadratic: <b>${t.map(M).join(', ')}, …</b><br>What is the <b>next term</b>?`,M(s),[t[3]+d,s+2,s-2,t[3]+2,s+1].map(M),`First differences: ${[t[1]-t[0],t[2]-t[1],t[3]-t[2]].map(M).join(', ')}. The second difference is 2, so the next first difference is ${M(d+2)}. ${M(t[3])} + ${M(d+2)} = ${M(s)}.`,'',FIG.diffs([...t,s],true))}},
+ {tip:'If you know f(p) = v and one coefficient is unknown, substitute x = p, set it equal to v, and solve the linear equation.',gen:()=>{const k=R(1,6)*pick([1,-1]),c=R(1,9)*pick([1,-1]),p=pick([1,2,3,-1,-2,-3]),v=p*p+k*p+c;
+  return mk(`f(x) = x² + kx ${c<0?'−':'+'} ${Math.abs(c)}<br>If <b>f(${M(p)}) = ${M(v)}</b>, find <b>k</b>.`,`k = ${M(k)}`,[-k,k+1,k-1,v-c,v+c].map(x=>`k = ${M(x)}`),`Put x = ${M(p)}: ${p*p} ${p<0?'−':'+'} ${Math.abs(p)===1?'':Math.abs(p)}k ${c<0?'−':'+'} ${Math.abs(c)} = ${M(v)}. So ${poly([p],['k'])} = ${M(v-p*p-c)} and k = ${M(k)}.`,'',FIG.parab(1,k,c,null,[p,v]))}}]},
+{id:'coord',name:'Coordinate Geometry',strand:'Geometry',blurb:'Midpoint, slope, distance, equation of a line.',levels:[
+ {tip:'Midpoint = (average of the x values, average of the y values).',gen:()=>{let x1,y1,x2,y2;do{x1=R(-8,8);y1=R(-8,8);x2=R(-8,8);y2=R(-8,8)}while((x1+x2)%2||(y1+y2)%2||(x1===x2&&y1===y2));const P=(a,b)=>`(${M(a)}, ${M(b)})`,mx=(x1+x2)/2,my=(y1+y2)/2;
+  return mk(`Find the midpoint of <b>${P(x1,y1)}</b> and <b>${P(x2,y2)}</b>`,P(mx,my),[P((x2-x1)/2,(y2-y1)/2),P(x1+x2,y1+y2),P(my,mx),P(-mx,my),P(mx,-my),P(mx+1,my),P(mx,my+1)],`Average the x values and the y values: ((${M(x1)} + ${pb(x2)}) ÷ 2, (${M(y1)} + ${pb(y2)}) ÷ 2) = ${P(mx,my)}.`,'',FIG.mid(x1,y1,x2,y2))}},
+ {tip:'Slope m = rise ÷ run = (y₂ − y₁)/(x₂ − x₁). Parallel lines have equal slopes. Perpendicular slopes multiply to −1: flip and change the sign.',gen:()=>{
+  if(Math.random()<.35){let a,b;do{a=R(1,6)*pick([1,-1]);b=R(1,6)}while(gcd(a,b)!==1||Math.abs(a)===b);return mk(`Line l has slope <b>${frac(a,b)}</b>. What is the slope of a line <b>perpendicular</b> to l?`,frac(-b,a),[frac(a,b),frac(-a,b),frac(b,a),'−1'],`Flip the fraction and change the sign: ${frac(-b,a)}. Check: ${frac(a,b)} × ${frac(-b,a)} = −1.`,'',FIG.perp(a,b))}
+  let x1,y1,x2,y2;do{x1=R(-6,6);y1=R(-6,6);x2=R(-6,6);y2=R(-6,6)}while(x1===x2||y1===y2);const dy=y2-y1,dx=x2-x1;
+  return mk(`Find the slope of the line through <b>(${M(x1)}, ${M(y1)})</b> and <b>(${M(x2)}, ${M(y2)})</b>`,frac(dy,dx),[frac(dx,dy),frac(-dy,dx),frac(-dx,dy),frac(dy+1,dx),frac(dy,dx+1)],`Label the points: (x₁, y₁) = (${M(x1)}, ${M(y1)}) and (x₂, y₂) = (${M(x2)}, ${M(y2)}). Use m = (y₂ − y₁) ÷ (x₂ − x₁). Substitute, with negatives in brackets: (${M(y2)} − ${pb(y1)}) ÷ (${M(x2)} − ${pb(x1)}) = ${M(dy)} ÷ ${pb(dx)}. Simplify: m = ${frac(dy,dx)}.`,'',FIG.slope(x1,y1,x2,y2))}},
+ {tip:'Distance = √((x₂ − x₁)² + (y₂ − y₁)²). It is just Pythagoras on the grid.',gen:()=>{const[a,b,c]=pick(TRIPLES),[dx,dy]=Math.random()<.5?[a,b]:[b,a],x1=R(-5,5),y1=R(-5,5),x2=x1+dx*pick([1,-1]),y2=y1+dy*pick([1,-1]);
+  return mk(`Find the distance between <b>(${M(x1)}, ${M(y1)})</b> and <b>(${M(x2)}, ${M(y2)})</b>`,c,[a+b,c+1,`√${a+b}`,`√${Math.abs(a*a-b*b)}`,c*c],`Across ${dx}, up/down ${dy}. √(${dx}² + ${dy}²) = √${c*c} = ${c}.`,'',FIG.dist(x1,y1,x2,y2))}},
+ {tip:'Equation of a line: y − y₁ = m(x − x₁). You need one point and the slope. Tidy into y = mx + c.',gen:()=>{const m=R(1,5)*pick([1,-1]),x1=R(-5,5),y1=R(-6,6),c=y1-m*x1,Y=(a,b)=>'y = '+poly([a,b],['x','']);
+  return mk(`Find the equation of the line through <b>(${M(x1)}, ${M(y1)})</b> with slope <b>${M(m)}</b>, in the form y = mx + c.`,Y(m,c),[Y(m,y1+m*x1),Y(-m,c),Y(m,-c),Y(m,c+1),Y(c||1,m),Y(m,c-1),Y(m+1,c)],`y − ${pb(y1)} = ${M(m)}(x − ${pb(x1)}). Expand and rearrange: ${Y(m,c)}.`,'',FIG.lineEq(m,x1,y1,c))}}]},
+{id:'trig',name:'Trigonometry',strand:'Geometry',blurb:'Pythagoras, SOH CAH TOA, missing sides and angles.',levels:[
+ {tip:'Pythagoras: hyp² = a² + b². The hypotenuse is opposite the right angle and is always the longest side.',gen:()=>{const[a,b,c]=pick(TRIPLES);
+  if(Math.random()<.5)return mk(`A right-angled triangle has shorter sides <b>${a} cm</b> and <b>${b} cm</b>. How long is the hypotenuse?`,c+' cm',[a+b,b-a,c+1,c*c,c-1].map(x=>x+' cm'),`h² = ${a}² + ${b}² = ${a*a} + ${b*b} = ${c*c}. h = √${c*c} = ${c} cm.`,FIG.rt({o:a+' cm',a:b+' cm',h:'?'}),'');
+  return mk(`The hypotenuse is <b>${c} cm</b> and one side is <b>${a} cm</b>. Find the third side.`,b+' cm',[c-a,c+a,b+1,b-1,`√${c*c+a*a}`].map(x=>x+' cm'),`Finding a shorter side: subtract. ${c}² − ${a}² = ${c*c-a*a}. √${c*c-a*a} = ${b} cm.`,FIG.rt({o:a+' cm',a:'?',h:c+' cm'}),'')}},
+ {tip:'SOH CAH TOA. Label sides from the angle: opposite faces it, adjacent touches it, hypotenuse is the longest.',gen:()=>{const[o,a,h]=pick(TRIPLES),f=pick(['sin','cos','tan']),v={sin:`${o}/${h}`,cos:`${a}/${h}`,tan:`${o}/${a}`};
+  return mk(`Using the triangle, write down <b>${f} A</b>.`,v[f],[v.sin,v.cos,v.tan,`${h}/${o}`,`${a}/${o}`],`${f} = ${f==='sin'?'Opposite ÷ Hypotenuse':f==='cos'?'Adjacent ÷ Hypotenuse':'Opposite ÷ Adjacent'} = ${v[f]}.`,'<br>'+tri(o,a,h))}},
+ {tip:'Finding a side: choose the ratio that links the side you have to the side you want. Check your calculator shows D (degrees mode).',gen:()=>{const th=pick([25,30,35,40,50,55,60,65,70]),h=R(5,20),rd=th*Math.PI/180,f1=v=>v.toFixed(1)+' m',t=R(0,2);
+  if(t===0){const s=h*Math.sin(rd);return mk(`A ladder <b>${h} m</b> long leans against a wall at <b>${th}°</b> to the ground. How high up the wall does it reach? (1 d.p.)`,f1(s),[f1(h*Math.cos(rd)),f1(h*Math.tan(rd)),f1(h/Math.sin(rd)),f1(h*Math.sin(th)),f1(s+.5)],`Height is opposite ${th}°, ladder is the hypotenuse. O = ${h} × sin ${th}° = ${f1(s)}.`,FIG.rt({h:'ladder '+h+' m',o:'?',ang:th+'°'}),'')}
+  if(t===1){const s=h*Math.cos(rd);return mk(`A ladder <b>${h} m</b> long leans against a wall at <b>${th}°</b> to the ground. How far is its foot from the wall? (1 d.p.)`,f1(s),[f1(h*Math.sin(rd)),f1(h*Math.tan(rd)),f1(h/Math.cos(rd)),f1(h*Math.cos(th)),f1(s+.5)],`The ground is adjacent to ${th}°. A = ${h} × cos ${th}° = ${f1(s)}.`,FIG.rt({h:'ladder '+h+' m',a:'?',ang:th+'°'}),'')}
+  const s=h*Math.tan(rd);return mk(`You stand <b>${h} m</b> from the base of a tree. The angle of elevation to the top is <b>${th}°</b>. How tall is the tree? (1 d.p.)`,f1(s),[f1(h*Math.sin(rd)),f1(h*Math.cos(rd)),f1(h/Math.tan(rd)),f1(h*Math.tan(th)),f1(s+1)],`tan ${th}° = O ÷ A, so O = ${h} × tan ${th}° = ${f1(s)}.`,FIG.rt({a:h+' m',o:'tree ?',ang:th+'°'}),'')}},
+ {tip:'Finding an angle: work out the ratio as a fraction, then use sin⁻¹, cos⁻¹ or tan⁻¹ (usually SHIFT + sin/cos/tan).',gen:()=>{const D=x=>Math.round(x*180/Math.PI)+'°';
+  if(Math.random()<.5){let o,a;do{o=R(2,12);a=R(5,30)}while(o>=a);const A=Math.atan(o/a);return mk(`A ramp rises <b>${o} m</b> over a horizontal distance of <b>${a} m</b>. Find the angle it makes with the ground, to the nearest degree.`,D(A),[D(Math.atan(a/o)),D(Math.asin(o/a)),D(Math.acos(o/a)),(Math.round(A*180/Math.PI)+1)+'°',(Math.round(A*180/Math.PI)-2)+'°'],`tan A = ${o}/${a}. A = tan⁻¹(${o}/${a}) = ${D(A)}.`,FIG.rt({o:o+' m',a:a+' m',ang:'?'}),'')}
+  let H,L;do{H=R(10,40);L=R(20,60)}while(H>=L);const A=Math.asin(H/L);return mk(`A kite string is <b>${L} m</b> long and the kite is <b>${H} m</b> above the ground. Find the angle of elevation of the string, to the nearest degree.`,D(A),[D(Math.acos(H/L)),D(Math.atan(H/L)),(Math.round(A*180/Math.PI)-1)+'°',D(Math.atan(L/H)),(Math.round(A*180/Math.PI)+2)+'°'],`sin A = opposite ÷ hypotenuse = ${H}/${L}. A = sin⁻¹(${H}/${L}) = ${D(A)}.`,FIG.rt({o:H+' m',h:'string '+L+' m',ang:'?'}),'')}}]},
+{id:'vol',name:'Area & Volume',strand:'Geometry',blurb:'Triangles, circles, cylinders, cones and spheres.',levels:[
+ {tip:'Triangle area = ½ × base × perpendicular height. Rectangle and parallelogram = base × perpendicular height.',gen:()=>{const t=R(0,2),b=R(3,15),h=R(2,12);
+  if(t===0)return mk(`Find the area of a triangle with base <b>${b} cm</b> and perpendicular height <b>${h} cm</b>.`,`${b*h/2} cm²`,[b*h,b+h,2*(b+h),b*h/2+h,b*h/2+b,b*h-1].map(x=>x+' cm²'),`½ × ${b} × ${h} = ${b*h/2} cm².`,FIG.triA(b,h,'cm'),'');
+  if(t===1)return mk(`A rectangle has area <b>${b*h} cm²</b> and length <b>${b} cm</b>. Find its perimeter.`,`${2*(b+h)} cm`,[b+h,b*h,2*b+h,2*(b+h)+2,2*b+2*h-2,4*b].map(x=>x+' cm'),`Width = ${b*h} ÷ ${b} = ${h} cm. Perimeter = 2(${b} + ${h}) = ${2*(b+h)} cm.`,FIG.rectA(b,b*h,'cm'),'');
+  return mk(`Find the area of a parallelogram with base <b>${b} m</b> and perpendicular height <b>${h} m</b>.`,`${b*h} m²`,[b*h/2,2*(b+h),b+h,b*h+b,b*h+h,b*h-1].map(x=>x+' m²'),`Base × perpendicular height = ${b} × ${h} = ${b*h} m².`,FIG.para(b,h,'m'),'')}},
+ {tip:'Circle: area = πr², circumference = 2πr. Check whether you were given the radius or the diameter.',gen:()=>{const r=R(2,12),d=Math.random()<.5,g=d?`diameter <b>${2*r} cm</b>`:`radius <b>${r} cm</b>`,pre=d?`Radius = ${2*r} ÷ 2 = ${r}. `:'';
+  if(Math.random()<.5)return mk(`A circle has ${g}. Find its <b>area</b> in terms of π.`,`${r*r}π cm²`,[2*r,4*r*r,r,2*r*r,3*r*r,r*r+1].map(x=>x+'π cm²'),`${pre}Area = πr² = π × ${r}² = ${r*r}π cm².`,FIG.circ(r,d),'');
+  return mk(`A circle has ${g}. Find its <b>circumference</b> in terms of π.`,`${2*r}π cm`,[r*r,r,4*r,2*r*r,3*r,2*r+2].map(x=>x+'π cm'),`${pre}Circumference = 2πr = 2 × π × ${r} = ${2*r}π cm.`,FIG.circ(r,d),'')}},
+ {tip:'Cylinder: volume = πr²h, curved surface area = 2πrh. "In terms of π" means leave π in the answer.',gen:()=>{const r=R(2,7),h=R(3,12),V=r*r*h;
+  if(Math.random()<.6)return mk(`A cylinder has radius <b>${r} cm</b> and height <b>${h} cm</b>. Find its volume in terms of π.`,`${V}π cm³`,[2*r*h,r*h,r*h*h,2*V,4*r*h,V+r,3*V].map(x=>x+'π cm³'),`V = πr²h = π × ${r}² × ${h} = ${V}π cm³.`,FIG.cyl(r,h),'');
+  return mk(`A cylinder has volume <b>${V}π cm³</b> and radius <b>${r} cm</b>. Find its height.`,`${h} cm`,[V/r,h*2,h+r,V/(2*r),h+1,h-1].map(x=>(Number.isInteger(x)?x:x.toFixed(1))+' cm'),`πr²h = ${V}π → ${r*r}h = ${V} → h = ${h} cm.`,FIG.cyl(r,'?'),'')}},
+ {tip:'Cone V = ⅓πr²h, sphere V = ⁴⁄₃πr³. When a solid is melted and recast, the volume stays the same, so set the formulas equal.',gen:()=>{
+  if(Math.random()<.5){const[r,Q,h]=pick([[3,2,9],[3,3,4],[6,4,18],[6,6,8],[3,6,1],[6,3,32]]);return mk(`A solid sphere of radius <b>${r} cm</b> is melted and recast as a cylinder of radius <b>${Q} cm</b>. Find the height of the cylinder.`,h+' cm',[2*h,r*r*r/(Q*Q),h+3,4*r*r*r/(Q*Q),h*3].map(x=>x+' cm'),`Equal volumes: ⁴⁄₃π × ${r}³ = π × ${Q}² × h → ${4*r*r*r/3} = ${Q*Q}h → h = ${h} cm.`,FIG.melt(r,Q,'cyl'),'')}
+  let r,h;do{r=R(2,9);h=R(3,15)}while((r*r*h)%3);return mk(`A cone has radius <b>${r} cm</b> and height <b>${h} cm</b>. Find its volume in terms of π.`,`${r*r*h/3}π cm³`,[r*r*h,2*r*h,r*h,r*r*h/3+r,r*r*h/3+1,2*r*r*h/3].map(x=>x+'π cm³'),`V = ⅓πr²h = ⅓ × π × ${r*r} × ${h} = ${r*r*h/3}π cm³. A cone is exactly one third of the cylinder around it.`,FIG.cone(r,h),'')}}]},
+{id:'stats',name:'Statistics & Probability',strand:'Statistics',blurb:'Mean, median, probability, two dice.',levels:[
+ {tip:'Mean = total of all the values ÷ how many values there are.',gen:()=>{const m=R(4,15);let xs;do{xs=[0,0,0,0].map(()=>m+R(-4,4));xs.push(5*m-xs.reduce((a,b)=>a+b,0))}while(xs[4]<1);const s=[...xs].sort((a,b)=>a-b);
+  return mk(`Find the mean of <b>${xs.join(', ')}</b>`,m,[5*m,s[2]===m?m+2:s[2],m+1,m-1,s[4]-s[0]],`Total = ${5*m}. ${5*m} ÷ 5 = ${m}.`,'',FIG.dots(xs,m))}},
+ {tip:'Median = the middle value once the data is in order. With an even number of values, average the two in the middle.',gen:()=>{const xs=[0,0,0,0,0,0].map(()=>R(1,30)),s=[...xs].sort((a,b)=>a-b),md=(s[2]+s[3])/2;
+  return mk(`Find the median of <b>${xs.join(', ')}</b>`,md,[(xs[2]+xs[3])/2,s[2],s[3],Math.round(xs.reduce((a,b)=>a+b)/6*10)/10,(s[0]+s[5])/2,s[2]+1,md+1,md+2],`Order first: ${s.join(', ')}. The middle two are ${s[2]} and ${s[3]}. (${s[2]} + ${s[3]}) ÷ 2 = ${md}.`,'',FIG.ordered(s))}},
+ {tip:'P(event) = number of favourable outcomes ÷ total number of outcomes. Simplify the fraction.',gen:()=>{const r=R(1,8),b=R(1,8),g=R(1,8),n=r+b+g,C=pick([['red',r],['blue',b],['green',g]]);
+  return mk(`A bag has <b>${r} red</b>, <b>${b} blue</b> and <b>${g} green</b> counters. One is picked at random. Find <b>P(${C[0]})</b>.`,frac(C[1],n),[frac(C[1],n-C[1]),'1/3',frac(n-C[1],n),frac(C[1]+1,n),frac(1,C[1]+1),frac(C[1],n+1),frac(1,n)],`${C[1]} ${C[0]} out of ${n} counters: ${C[1]}/${n}${gcd(C[1],n)>1?' = '+frac(C[1],n):''}.`,FIG.bag(r,b,g),'')}},
+ {tip:'Two dice give 6 × 6 = 36 equally likely outcomes. Draw the sample space grid and count.',gen:()=>{
+  if(Math.random()<.7){const k=R(3,11),c=6-Math.abs(7-k);return mk(`Two fair dice are thrown and the scores added. Find <b>P(total = ${k})</b>.`,frac(c,36),['1/11',frac(c,12),frac(c+1,36),'1/36',frac(c,6)],`36 outcomes. ${c} of them total ${k}. P = ${c}/36${gcd(c,36)>1?' = '+frac(c,36):''}.`,'',FIG.dice(x=>x===k))}
+  const k=R(7,10);let c=0;for(let s=k+1;s<=12;s++)c+=6-Math.abs(7-s);return mk(`Two fair dice are thrown and the scores added. Find <b>P(total > ${k})</b>.`,frac(c,36),[frac(c+6-Math.abs(7-k),36),frac(12-k,11),frac(c,12),frac(36-c,36)],`Totals above ${k}: count them in the grid, ${c} outcomes. P = ${c}/36${gcd(c,36)>1?' = '+frac(c,36):''}.`,'',FIG.dice(x=>x>k))}}]}
+];
+
+// ---------- Scroll feed cards ----------
+const REELS=[
+['Indices','Multiplying? Add the powers.','Same base, multiply → add the indices.','aᵐ × aⁿ = aᵐ⁺ⁿ','2³ × 2⁴ = ?','2⁷ = 128','num'],
+['Indices','Dividing? Subtract.','And anything (except 0) to the power 0 is 1.','aᵐ ÷ aⁿ = aᵐ⁻ⁿ','5⁶ ÷ 5⁶ = ?','5⁰ = 1','num'],
+['Indices','Fractional power: root first.','The bottom number is the root, the top is the power.','8^(2/3) = (∛8)² = 4','27^(2/3) = ?','(∛27)² = 3² = 9','num'],
+['Indices','Negative power? Flip it.','A negative index means one over.','a⁻ⁿ = 1/aⁿ','2⁻³ = ?','1/8','num'],
+['Number','Scientific notation','A number between 1 and 10, times a power of 10.','45 000 = 4.5 × 10⁴','0.0032 = ?','3.2 × 10⁻³','num'],
+['Money','VAT at 23%? × 1.23','Going backwards? Divide by 1.23. Never take 23% off.','incl. VAT = price × 1.23','€738 incl. VAT. Price before VAT?','€600','money'],
+['Money','Compound interest','It is in the Formulae & Tables booklet. i is a decimal.','F = P(1 + i)ᵗ','€1000 at 5% for 2 years?','€1102.50','money'],
+['Money','Income tax in 3 moves','Gross tax → minus tax credits → net tax. Then gross pay minus deductions = take-home.','20% to cut-off, 40% above','Gross tax €9,000, credits €3,500. Net tax?','€5,500','money'],
+['Money','% profit is on cost price','Unless the question says otherwise.','% profit = profit ÷ cost × 100','Bought €80, sold €100. % profit?','25%','money'],
+['Sets','∪ is everything. ∩ is the overlap.','Union: in A or B. Intersection: in both.','#(A∪B) = #A + #B − #(A∩B)','#A = 12, #B = 9, #(A∩B) = 4. #(A∪B)?','17','sets'],
+['Sets','Venn diagrams: start in the middle','Fill the overlap first, then the "only" parts, then the outside.','A′ = not in A','30 in class, 25 in A∪B. #(A∪B)′?','5','sets'],
+['Algebra','Factorising checklist','1. Common factor. 2. Difference of two squares. 3. Trinomial. In that order.','6x² − 9x = 3x(2x − 3)','Factorise 5x² + 10x','5x(x + 2)','alg'],
+['Algebra','Difference of two squares','Two perfect squares with a minus between them.','a² − b² = (a − b)(a + b)','Factorise 4x² − 9','(2x − 3)(2x + 3)','alg'],
+['Algebra','x² + bx + c','Two numbers that multiply to c and add to b.','x² + 7x + 12 = (x + 3)(x + 4)','Factorise x² − x − 12','(x − 4)(x + 3)','alg'],
+['Equations','Fractions? Kill them first.','Multiply every term by the LCD. One move, no fractions.','x/2 + x/3 = 5 → 3x + 2x = 30','Solve x/2 + x/3 = 5','x = 6','eq'],
+['Equations','Simultaneous: make one vanish','Match the coefficients, then add or subtract.','x + y = 7, x − y = 1 → add','Solve those two','x = 4, y = 3','eq'],
+['Equations','Quadratic = 0? Factorise.','Each bracket = 0. Stuck? Use the formula in the Tables booklet.','x = (−b ± √(b² − 4ac)) / 2a','Solve x² − 5x + 6 = 0','x = 2 or x = 3','eq'],
+['Inequalities','Divide by a negative? Flip the sign.','The only rule that is different from equations.','−2x < 6 → x > −3','Solve −3x ≥ 12','x ≤ −4','eq'],
+['Inequalities','N, Z or R?','N = {1, 2, 3, …}. Z includes 0 and negatives. R = draw a solid line on the number line.','x ∈ R → solid line','x > 2, x ∈ N. First three values?','3, 4, 5','eq'],
+['Patterns','Linear pattern = same first difference','The difference goes in front of n.','5, 9, 13, 17 → Tₙ = 4n + 1','Tₙ for 3, 8, 13, 18?','Tₙ = 5n − 2','fn'],
+['Patterns','Quadratic pattern = same second difference','Half the second difference is the number in front of n².','2nd diff = 2 → Tₙ = n² + …','2nd difference is 6. Coefficient of n²?','3','fn'],
+['Functions','Roots are where the graph crosses the x-axis','That is where f(x) = 0.','f(x) = 0 → roots','Roots of f(x) = (x − 1)(x + 4)?','x = 1 and x = −4','fn'],
+['Coord Geo','Slope = rise over run','Parallel: same slope. Perpendicular: flip it and change the sign.','m = (y₂ − y₁)/(x₂ − x₁)','Perpendicular to slope 2/3?','−3/2','coord'],
+['Coord Geo','Equation of a line','You need one point and the slope. That is all.','y − y₁ = m(x − x₁)','Through (0, 1), slope 2?','y = 2x + 1','coord'],
+['Trig','SOH CAH TOA','Label from the angle: Opposite, Adjacent, Hypotenuse.','sin = O/H  cos = A/H  tan = O/A','O = 3, H = 5. sin A?','3/5','trig'],
+['Trig','Calculator in DEG mode','Look for a small D at the top of the screen before any trig question.','sin 30° = 0.5','If sin 30 gives −0.988, what mode are you in?','Radians. Switch to degrees.','trig'],
+['Trig','Pythagorean triples','Spot these and skip the calculator.','3-4-5  5-12-13  8-15-17','Sides 6 and 8. Hypotenuse?','10','trig'],
+['Geometry','Angles in a triangle add to 180°','The exterior angle equals the two interior opposite angles added.','A + B + C = 180°','Angles x, 2x, 3x. Find x.','30°','vol'],
+['Volume','Know your solids','All in the Formulae & Tables booklet.','Cylinder πr²h · Cone ⅓πr²h · Sphere ⁴⁄₃πr³','Cylinder r = 3, h = 10. Volume?','90π','vol'],
+['Volume','"In terms of π"','Leave π in the answer. Do not multiply it out.','300π cm³ ✓   942.48 cm³ ✗','Circle r = 5. Area in terms of π?','25π','vol'],
+['Statistics','Mean, median, mode','Median: put the data in order first. Mode: the most common value.','mean = total ÷ count','Median of 7, 2, 9, 4, 5?','5','stats'],
+['Probability','P = favourable ÷ total','Two dice have 36 outcomes. Draw the grid.','0 ≤ P ≤ 1','P(double) with two dice?','6/36 = 1/6','stats'],
+['Exam tip','Show your work','Marks are given for method. A right answer with no work can lose marks; a wrong answer with good work still earns some.','Attempt every part','How many marks for a blank?','Zero. Always write something.',null],
+['Exam tip','Units and rounding','If it says 2 decimal places, give exactly 2. Put cm², m³ or € on every answer.','5.4378 → 5.44 m','Round 74.137 to 1 d.p.','74.1',null]
+];
+
+// ---------- Exam-style written questions with marking scheme ----------
+const BANK=[
+{t:'num',m:6,q:'(a) Simplify (2<sup>5</sup> × 2<sup>3</sup>) ÷ 2<sup>4</sup>, giving your answer as a power of 2.<br>(b) Evaluate 16<sup>3/4</sup> without a calculator, showing your work.',s:'(a) 2⁵ × 2³ = 2⁸; 2⁸ ÷ 2⁴ = 2⁴ [3]. (b) 16^(3/4) = (⁴√16)³ = 2³ = 8 [3].'},
+{t:'num',m:8,q:'Light travels at 3 × 10<sup>8</sup> m/s. The Sun is 1.5 × 10<sup>11</sup> m from the Earth.<br>(a) How many seconds does light from the Sun take to reach Earth?<br>(b) Give your answer in minutes, correct to one decimal place.',s:'(a) time = distance ÷ speed = 1.5 × 10¹¹ ÷ 3 × 10⁸ = 0.5 × 10³ = 500 s [5]. (b) 500 ÷ 60 = 8.33… = 8.3 minutes [3].'},
+{t:'money',m:10,q:'Aoife has a gross income of €52,000. The standard rate cut-off point is €44,000. Income up to the cut-off is taxed at 20% and the rest at 40%. Her tax credits are €4,000. Ignore USC and PRSI.<br>(a) Find her gross tax.<br>(b) Find her net tax.<br>(c) Find her take-home pay after tax.',s:'(a) 20% × 44,000 = 8,800; 40% × 8,000 = 3,200; gross tax = €12,000 [5]. (b) 12,000 − 4,000 = €8,000 [3]. (c) 52,000 − 8,000 = €44,000 [2].'},
+{t:'money',m:8,q:'€5,000 is invested at 3% per year compound interest.<br>(a) Find the value of the investment after 3 years, correct to the nearest cent.<br>(b) How much interest was earned?',s:'(a) F = 5000(1.03)³ = 5000 × 1.092727 = €5,463.64 [6]. Year-by-year method also fully correct: 5150, 5304.50, 5463.635. (b) 5463.64 − 5000 = €463.64 [2].'},
+{t:'money',m:6,q:'A phone costs €738 including VAT at 23%. Find the price of the phone before VAT was added.',s:'738 = 123% of price; 1% = 738 ÷ 123 = 6; 100% = €600 [6]. Common error: 23% of 738 subtracted = €568.26 (award max 2 for attempting percentages).'},
+{t:'sets',m:8,q:'In a class of 30 students, 18 study French, 12 study German and 5 study both.<br>(a) Show this information on a Venn diagram.<br>(b) How many students study neither language?<br>(c) A student is picked at random. Find the probability that they study French only.',s:'(a) Centre 5, French only 13, German only 7, outside 5 [4]. (b) 30 − (13 + 5 + 7) = 5 [2]. (c) 13/30 [2].'},
+{t:'alg',m:9,q:'Factorise fully:<br>(a) 6x² − 9x<br>(b) x² − 5x − 14<br>(c) 4x² − 25',s:'(a) 3x(2x − 3) [3]; x(6x − 9) is not fully factorised, award 2. (b) (x − 7)(x + 2) [3]. (c) (2x − 5)(2x + 5) [3].'},
+{t:'alg',m:6,q:'Expand and simplify (2x − 3)(x² + 4x − 1).',s:'2x³ + 8x² − 2x − 3x² − 12x + 3 [4] = 2x³ + 5x² − 14x + 3 [2].'},
+{t:'eq',m:8,q:'Solve the simultaneous equations:<br>2x + 3y = 7<br>5x − 2y = −11',s:'×2 and ×3: 4x + 6y = 14, 15x − 6y = −33 [3]. Add: 19x = −19, x = −1 [3]. Substitute: −2 + 3y = 7, y = 3 [2].'},
+{t:'eq',m:7,q:'Solve the equation <span class="fr"><span>x + 2</span><span>3</span></span> − <span class="fr"><span>x − 1</span><span>4</span></span> = 2.',s:'×12: 4(x + 2) − 3(x − 1) = 24 [3]. 4x + 8 − 3x + 3 = 24 [2]. x + 11 = 24, x = 13 [2]. Common error: −3x − 3 instead of −3x + 3, gives x = 19.'},
+{t:'eq',m:6,q:'(a) Solve x² − 2x − 15 = 0.<br>(b) Verify one of your answers.',s:'(a) (x − 5)(x + 3) = 0 [2]; x = 5 or x = −3 [2]. Formula method also fine. (b) e.g. 25 − 10 − 15 = 0 ✓ [2].'},
+{t:'eq',m:6,q:'Solve the inequality −4 < 2x + 2 ≤ 8, x ∈ R, and show your solution on a number line.',s:'Subtract 2: −6 < 2x ≤ 6 [2]. Divide by 2: −3 < x ≤ 3 [2]. Number line: open circle at −3, closed at 3, solid line between [2].'},
+{t:'fn',m:12,q:'f(x) = x² − 2x − 3.<br>(a) Complete a table of values for −2 ≤ x ≤ 4.<br>(b) Draw the graph of f(x) for −2 ≤ x ≤ 4.<br>(c) Use your graph to find the roots of f(x) = 0.<br>(d) Write down the coordinates of the minimum point.',s:'(a) f(−2)=5, f(−1)=0, f(0)=−3, f(1)=−4, f(2)=−3, f(3)=0, f(4)=5 [4]. (b) Smooth U-shaped curve through those points [3]. (c) x = −1 and x = 3 [3]. (d) (1, −4) [2].'},
+{t:'fn',m:8,q:'The first four terms of a pattern are 5, 9, 13, 17.<br>(a) Find a formula for the nth term, Tₙ.<br>(b) Find T₅₀.<br>(c) Which term of the pattern is 161?',s:'(a) Common difference 4, Tₙ = 4n + 1 [3]. (b) 4(50) + 1 = 201 [2]. (c) 4n + 1 = 161, n = 40, the 40th term [3].'},
+{t:'fn',m:9,q:'A pattern begins 3, 8, 15, 24, 35, …<br>(a) Show that the pattern is quadratic.<br>(b) Find a formula for Tₙ.<br>(c) Find T₁₀.',s:'(a) First differences 5, 7, 9, 11; second differences all 2, so quadratic [3]. (b) Tₙ = n² + 2n [4] (any valid method). (c) 100 + 20 = 120 [2].'},
+{t:'coord',m:12,q:'A(−2, 1) and B(4, 9) are two points.<br>(a) Find the midpoint of [AB].<br>(b) Find |AB|.<br>(c) Find the slope of AB.<br>(d) Find the equation of the line AB.',s:'(a) (1, 5) [3]. (b) √(6² + 8²) = √100 = 10 [3]. (c) 8/6 = 4/3 [3]. (d) y − 1 = 4/3(x + 2) → 4x − 3y + 11 = 0 (or y = 4/3x + 11/3) [3].'},
+{t:'coord',m:10,q:'The line l has equation 2x + y − 6 = 0.<br>(a) Find where l crosses the x-axis and the y-axis.<br>(b) Find the slope of l.<br>(c) Find the equation of the line through (1, 2) that is perpendicular to l.',s:'(a) (3, 0) and (0, 6) [4]. (b) y = −2x + 6, slope −2 [2]. (c) perpendicular slope 1/2; y − 2 = ½(x − 1) → x − 2y + 3 = 0 [4].'},
+{t:'trig',m:8,q:'A ladder 6 m long leans against a vertical wall. It makes an angle of 65° with the level ground.<br>(a) How high up the wall does the ladder reach? Give your answer correct to two decimal places.<br>(b) How far is the foot of the ladder from the wall?',s:'(a) 6 sin 65° = 5.44 m [4]. (b) 6 cos 65° = 2.54 m [4]. Pythagoras for (b) using (a) also accepted.'},
+{t:'trig',m:8,q:'A right-angled triangle has shorter sides of length 8 cm and 15 cm.<br>(a) Find the length of the hypotenuse.<br>(b) Find the size of the smallest angle in the triangle, correct to the nearest degree.',s:'(a) √(64 + 225) = √289 = 17 cm [4]. (b) smallest angle is opposite 8: tan⁻¹(8/15) = 28.07… = 28° [4].'},
+{t:'vol',m:7,q:'In triangle ABC, |∠A| = (2x + 10)°, |∠B| = (3x − 5)° and |∠C| = (x + 25)°.<br>Find the value of x, and hence find the size of each angle.',s:'2x + 10 + 3x − 5 + x + 25 = 180 [2]; 6x + 30 = 180, x = 25 [2]. A = 60°, B = 70°, C = 50° [3].'},
+{t:'vol',m:10,q:'A cylinder has radius 5 cm and height 12 cm.<br>(a) Find its volume in terms of π.<br>(b) Find its curved surface area in terms of π.<br>(c) A sphere has the same volume as the cylinder. Find the radius of the sphere, correct to one decimal place.',s:'(a) π(5²)(12) = 300π cm³ [3]. (b) 2π(5)(12) = 120π cm² [3]. (c) ⁴⁄₃πr³ = 300π → r³ = 225 → r = 6.08… = 6.1 cm [4].'},
+{t:'vol',m:9,q:'A shape is made from a rectangle 10 cm by 6 cm with a semicircle on one of its 6 cm sides.<br>(a) Find the area of the shape, correct to two decimal places.<br>(b) Find the perimeter of the shape, correct to two decimal places.',s:'(a) 60 + ½π(3²) = 60 + 4.5π = 74.14 cm² [5]. (b) 10 + 10 + 6 + ½(2π × 3) = 26 + 3π = 35.42 cm [4]. Common error: including the 6 cm edge under the semicircle.'},
+{t:'stats',m:8,q:'Here is a set of data: 4, 7, 7, 8, 10, 12, 15.<br>Find (a) the mean, (b) the median, (c) the mode, (d) the range.',s:'(a) 63 ÷ 7 = 9 [2]. (b) 8 [2]. (c) 7 [2]. (d) 15 − 4 = 11 [2].'},
+{t:'stats',m:10,q:'Two fair six-sided dice are thrown and the scores are added.<br>(a) Draw a sample space showing all possible outcomes.<br>(b) Find P(total = 8).<br>(c) Find P(a double).<br>(d) Find P(total greater than 9).',s:'(a) 6 × 6 grid of totals, 36 outcomes [3]. (b) 5/36 [2]. (c) 6/36 = 1/6 [2]. (d) totals 10, 11, 12: 3 + 2 + 1 = 6, so 6/36 = 1/6 [3].'}
+];
+
+// ---------- Worked examples: one per level, shown before the questions ----------
+// {q, steps[], ans, trap?, fig?}
+const EX={
+num:[
+ {q:'Work out 5 + 3 × 4 − 2',steps:['No brackets or indices, so look for × and ÷ first.','3 × 4 = 12. The sum becomes 5 + 12 − 2.','Now add and subtract from left to right: 5 + 12 = 17, then 17 − 2 = 15.'],ans:'15',trap:'Working straight left to right gives 8 × 4 − 2 = 30. That ignores BIMDAS.'},
+ {q:'Simplify (x³ × x⁵) ÷ x⁴',steps:['Every term has base x, so the index laws apply.','Multiplying: add the powers. x³ × x⁵ = x⁸.','Dividing: subtract the powers. x⁸ ÷ x⁴ = x⁴.'],ans:'x⁴',trap:'x³ × x⁵ is not x¹⁵. You only multiply powers for a power of a power, like (x³)⁵ = x¹⁵.'},
+ {q:'Evaluate 27<sup>2/3</sup>',steps:['The bottom of the fraction (3) is the root. The top (2) is the power.','Root first: ∛27 = 3, because 3 × 3 × 3 = 27.','Then the power: 3² = 9.'],ans:'9',trap:'27 × 2/3 = 18 is the classic wrong answer. A power is not a multiplication.'},
+ {q:'Write (4 × 10⁵) × (6 × 10³) in scientific notation.',steps:['Multiply the front numbers: 4 × 6 = 24.','Multiply the powers of 10 by adding: 10⁵ × 10³ = 10⁸.','So far: 24 × 10⁸. But 24 is not between 1 and 10.','24 = 2.4 × 10¹, so the answer is 2.4 × 10⁹.'],ans:'2.4 × 10⁹'}],
+money:[
+ {q:'A €160 game is reduced by 15% in a sale. Find the sale price.',steps:['Find 1%: 160 ÷ 100 = €1.60.','Find 15%: 1.60 × 15 = €24.','Sale price = 160 − 24 = €136.','Shortcut: 100% − 15% = 85%, and 160 × 0.85 = €136.'],ans:'€136'},
+ {q:'A TV costs €984 including VAT at 23%. Find the price before VAT.',steps:['The price with VAT is 123% of the original price.','123% = €984, so 1% = 984 ÷ 123 = €8.','100% = 8 × 100 = €800.','Check: 800 × 1.23 = 984 ✓'],ans:'€800',trap:'Taking 23% off €984 gives €757.68. Wrong: the 23% was worked out on the smaller price.'},
+ {q:'€2,000 is invested at 4% per year compound interest for 2 years. Find the final value.',steps:['Formula from the Tables booklet: F = P(1 + i)ᵗ, with P = 2000, i = 0.04, t = 2.','F = 2000 × (1.04)²','1.04² = 1.0816','F = 2000 × 1.0816 = €2,163.20','Year by year gives the same: 2000 → 2080 → 2163.20.'],ans:'€2,163.20'},
+ {q:'Gross income €50,000. Cut-off point €44,000. Rates 20% and 40%. Tax credits €4,000. Find the net tax.',steps:['Standard rate: 20% of 44,000 = €8,800.','The rest: 50,000 − 44,000 = 6,000. 40% of 6,000 = €2,400.','Gross tax = 8,800 + 2,400 = €11,200.','Net tax = gross tax − tax credits = 11,200 − 4,000 = €7,200.'],ans:'€7,200'}],
+sets:[
+ {q:'A = {1, 2, 3, 5, 8} and B = {2, 4, 5, 6}. Find A ∩ B and A ∪ B.',steps:['∩ means in both. Check each element of A against B: 2 and 5 are in both.','A ∩ B = {2, 5}','∪ means in either. Start with all of A, then add anything new from B: 4 and 6.','A ∪ B = {1, 2, 3, 4, 5, 6, 8}. Shared elements are listed once.'],ans:'A ∩ B = {2, 5}, A ∪ B = {1, 2, 3, 4, 5, 6, 8}'},
+ {q:'#A = 15, #B = 11, #(A ∩ B) = 4. Find #(A ∪ B).',steps:['Adding 15 + 11 = 26 counts the 4 shared elements twice.','Take the overlap away once: 26 − 4 = 22.','That is the formula #(A ∪ B) = #A + #B − #(A ∩ B).'],ans:'22'},
+ {q:'In a class of 30, 17 like maths, 12 like art and 6 like both. How many like neither?',steps:['Start in the middle of the Venn diagram: 6 like both.','Maths only = 17 − 6 = 11. Art only = 12 − 6 = 6.','Inside the circles: 11 + 6 + 6 = 23.','Neither = 30 − 23 = 7.'],ans:'7'},
+ {q:'#A = 20, #B = 18, #C = 15, #(A∩B) = 8, #(A∩C) = 6, #(B∩C) = 5, #(A∩B∩C) = 3. Find #(A ∪ B ∪ C).',steps:['Centre first: A ∩ B ∩ C = 3.','Two-sets-only regions: A∩B only = 8 − 3 = 5, A∩C only = 6 − 3 = 3, B∩C only = 5 − 3 = 2.','One-set-only regions: A only = 20 − 5 − 3 − 3 = 9, B only = 18 − 5 − 2 − 3 = 8, C only = 15 − 3 − 2 − 3 = 7.','Add all seven regions: 3 + 5 + 3 + 2 + 9 + 8 + 7 = 37.'],ans:'37'}],
+alg:[
+ {q:'Expand and simplify 3(2x + 4) − 2(x − 5)',steps:['First bracket: 3 × 2x = 6x and 3 × 4 = 12.','Second bracket: −2 × x = −2x and −2 × −5 = +10. The minus changes both signs.','Write it out: 6x + 12 − 2x + 10.','Collect like terms: 4x + 22.'],ans:'4x + 22',trap:'Writing −2(x − 5) as −2x − 10 is the most common mistake here.'},
+ {q:'Expand (x + 5)(x − 3)',steps:['x × x = x²','x × −3 = −3x','5 × x = 5x','5 × −3 = −15','Combine the x terms: −3x + 5x = 2x. Answer: x² + 2x − 15.'],ans:'x² + 2x − 15'},
+ {q:'Factorise x² − 2x − 15',steps:['Find two numbers that multiply to −15 and add to −2.','Pairs that make −15: 1 & −15, −1 & 15, 3 & −5, −3 & 5.','3 + (−5) = −2 ✓','So x² − 2x − 15 = (x + 3)(x − 5). Expand to check.'],ans:'(x + 3)(x − 5)'},
+ {q:'Factorise 2x² + 7x + 3',steps:['The 2x² can only come from 2x × x, so start with (2x   )(x   ).','The two numbers must multiply to +3: try 1 and 3.','(2x + 3)(x + 1) gives middle terms 2x + 3x = 5x ✗','(2x + 1)(x + 3) gives middle terms 6x + x = 7x ✓'],ans:'(2x + 1)(x + 3)',trap:'Also learn the difference of two squares: 9x² − 16 = (3x − 4)(3x + 4).'}],
+eq:[
+ {q:'Solve 5x − 7 = 2x + 8',steps:['Take 2x from both sides: 3x − 7 = 8.','Add 7 to both sides: 3x = 15.','Divide both sides by 3: x = 5.','Check: 5(5) − 7 = 18 and 2(5) + 8 = 18 ✓'],ans:'x = 5'},
+ {q:'Solve <span class="fr"><span>x + 1</span><span>2</span></span> + <span class="fr"><span>x − 3</span><span>5</span></span> = 9',steps:['The LCD of 2 and 5 is 10. Multiply every term by 10.','5(x + 1) + 2(x − 3) = 90','5x + 5 + 2x − 6 = 90','7x − 1 = 90, so 7x = 91 and x = 13.','Check: 14/2 + 10/5 = 7 + 2 = 9 ✓'],ans:'x = 13'},
+ {q:'Solve 3x + 2y = 14 and x − 2y = 2',steps:['The y terms are +2y and −2y. Add the two equations and y disappears.','4x = 16, so x = 4.','Substitute into x − 2y = 2: 4 − 2y = 2, so 2y = 2 and y = 1.','Check in the first: 3(4) + 2(1) = 14 ✓'],ans:'x = 4, y = 1',trap:'If no letter cancels straight away, multiply one or both equations first so the numbers match.'},
+ {q:'Solve x² − x − 12 = 0',steps:['Two numbers that multiply to −12 and add to −1: −4 and 3.','Factorise: (x − 4)(x + 3) = 0.','If two things multiply to 0, one of them is 0.','x − 4 = 0 → x = 4, or x + 3 = 0 → x = −3.'],ans:'x = 4 or x = −3'}],
+fn:[
+ {q:'f(x) = 3x − 4. Find f(−2).',steps:['Replace x with (−2), in brackets: f(−2) = 3(−2) − 4.','3 × −2 = −6.','−6 − 4 = −10.'],ans:'f(−2) = −10'},
+ {q:'Find Tₙ for the pattern 7, 10, 13, 16, …',steps:['Differences: 3, 3, 3. The same every time, so the pattern is linear.','The difference goes in front of n: Tₙ = 3n + ?','When n = 1, 3n = 3. The first term is 7, so add 4.','Tₙ = 3n + 4. Check n = 2: 6 + 4 = 10 ✓'],ans:'Tₙ = 3n + 4'},
+ {q:'Find the next term of 2, 5, 10, 17, …',steps:['First differences: 3, 5, 7. Not the same, so not linear.','Second differences: 2, 2. The same, so it is quadratic.','The next first difference is 7 + 2 = 9.','Next term = 17 + 9 = 26.'],ans:'26'},
+ {q:'f(x) = x² + kx − 5 and f(2) = 7. Find k.',steps:['Put x = 2 in: 2² + k(2) − 5 = 7.','4 + 2k − 5 = 7','2k − 1 = 7, so 2k = 8.','k = 4.'],ans:'k = 4'}],
+coord:[
+ {q:'Find the midpoint of (−4, 3) and (6, 9).',steps:['Average the x values: (−4 + 6) ÷ 2 = 2 ÷ 2 = 1.','Average the y values: (3 + 9) ÷ 2 = 12 ÷ 2 = 6.','Midpoint = (1, 6).'],ans:'(1, 6)'},
+ {q:'Find the slope of the line through (1, −2) and (4, 7).',steps:['m = (y₂ − y₁) ÷ (x₂ − x₁)','m = (7 − (−2)) ÷ (4 − 1)','m = 9 ÷ 3 = 3','Bonus: a line perpendicular to this one has slope −1/3. Flip it and change the sign.'],ans:'m = 3'},
+ {q:'Find the distance between (2, 1) and (8, 9).',steps:['Across: 8 − 2 = 6. Up: 9 − 1 = 8.','Pythagoras: √(6² + 8²) = √(36 + 64).','= √100 = 10.'],ans:'10'},
+ {q:'Find the equation of the line through (2, 5) with slope 3.',steps:['Use y − y₁ = m(x − x₁).','y − 5 = 3(x − 2)','y − 5 = 3x − 6','y = 3x − 1. Check: x = 2 gives y = 5 ✓'],ans:'y = 3x − 1'}],
+trig:[
+ {q:'Two sides of a right-angled triangle are 5 cm and 12 cm. Find the hypotenuse.',steps:['h² = 5² + 12²','h² = 25 + 144 = 169','h = √169 = 13 cm'],ans:'13 cm',trap:'Finding a shorter side? Subtract instead: a² = h² − b².'},
+ {q:'Opposite = 8, adjacent = 15, hypotenuse = 17. Find sin A, cos A and tan A.',fig:[8,15,17],steps:['SOH: sin A = Opposite ÷ Hypotenuse = 8/17','CAH: cos A = Adjacent ÷ Hypotenuse = 15/17','TOA: tan A = Opposite ÷ Adjacent = 8/15'],ans:'sin A = 8/17, cos A = 15/17, tan A = 8/15'},
+ {q:'A ladder 8 m long makes an angle of 60° with the ground. How high up the wall does it reach?',steps:['Label from the 60° angle: ladder = hypotenuse (8), height = opposite (?).','Opposite and Hypotenuse → SOH → use sin.','sin 60° = O ÷ 8','O = 8 × sin 60° = 8 × 0.866… = 6.9 m (1 d.p.)'],ans:'6.9 m'},
+ {q:'A ramp rises 3 m over a horizontal distance of 10 m. Find the angle it makes with the ground.',steps:['Opposite = 3, adjacent = 10 → TOA → use tan.','tan A = 3 ÷ 10 = 0.3','A = tan⁻¹(0.3) = 16.69…°','A = 17° to the nearest degree.'],ans:'17°'}],
+vol:[
+ {q:'Find the area of a triangle with base 10 cm and perpendicular height 7 cm.',steps:['Area = ½ × base × perpendicular height','= ½ × 10 × 7','= 35 cm²'],ans:'35 cm²'},
+ {q:'A circle has diameter 12 cm. Find its area and circumference in terms of π.',steps:['The formulas use the radius: 12 ÷ 2 = 6 cm.','Area = πr² = π × 6² = 36π cm²','Circumference = 2πr = 2 × π × 6 = 12π cm'],ans:'36π cm² and 12π cm'},
+ {q:'A cylinder has radius 4 cm and height 10 cm. Find its volume in terms of π.',steps:['V = πr²h','= π × 4² × 10','= π × 16 × 10 = 160π cm³'],ans:'160π cm³'},
+ {q:'A sphere of radius 3 cm is melted and recast as a cone of radius 3 cm. Find the height of the cone.',steps:['Melting does not change the volume, so sphere volume = cone volume.','⁴⁄₃π(3)³ = ⅓π(3)²h','36π = 3πh','h = 36 ÷ 3 = 12 cm'],ans:'12 cm'}],
+stats:[
+ {q:'Find the mean of 6, 9, 4, 11, 10.',steps:['Add them up: 6 + 9 + 4 + 11 + 10 = 40.','Count them: 5 values.','Mean = 40 ÷ 5 = 8.'],ans:'8'},
+ {q:'Find the median of 12, 3, 8, 15, 6, 10.',steps:['Put them in order first: 3, 6, 8, 10, 12, 15.','Six values, so there are two in the middle: 8 and 10.','Median = (8 + 10) ÷ 2 = 9.'],ans:'9'},
+ {q:'A bag has 4 red, 6 blue and 2 green counters. Find P(blue).',steps:['Total counters: 4 + 6 + 2 = 12.','Favourable outcomes (blue): 6.','P(blue) = 6/12 = 1/2.'],ans:'1/2'},
+ {q:'Two dice are thrown and the scores added. Find P(total = 9).',steps:['Total outcomes: 6 × 6 = 36.','Pairs that make 9: (3, 6), (4, 5), (5, 4), (6, 3). That is 4.','P = 4/36 = 1/9.'],ans:'1/9'}]
+};
+
+// ---------- Figures: graphs and diagrams (SVG/HTML strings). `shown` lets worked examples build up step by step ----------
+const FIG=(()=>{
+let uid=0;
+const C={ink:'var(--ink)',blue:'var(--biro)',red:'var(--redpen)',green:'var(--mint)',yel:'var(--marker)',mut:'var(--muted)'};
+const f1=v=>Number.isInteger(v)?M(v):M(Math.round(v*10)/10);
+const T=(x,y,s,o={})=>`<text x="${(+x).toFixed(1)}" y="${(+y).toFixed(1)}" font-size="${o.fs||13}"${o.anchor?` text-anchor="${o.anchor}"`:''} fill="${o.c||C.ink}" font-weight="${o.b?700:400}" paint-order="stroke" stroke="var(--card)" stroke-width="4" stroke-linejoin="round">${s}</text>`;
+const head=(x1,y1,x2,y2,c)=>{const a=Math.atan2(y2-y1,x2-x1),L=10,w=5,p=[[x2,y2],[x2-L*Math.cos(a)+w*Math.sin(a),y2-L*Math.sin(a)-w*Math.cos(a)],[x2-L*Math.cos(a)-w*Math.sin(a),y2-L*Math.sin(a)+w*Math.cos(a)]];return `<polygon points="${p.map(q=>q.map(v=>v.toFixed(1)).join(',')).join(' ')}" fill="${c}"/>`};
+const svg=(W,H,body,label)=>`<svg class="fig" viewBox="0 0 ${Math.ceil(W)} ${Math.ceil(H)}" role="img" aria-label="${label||'Diagram'}" style="max-width:${Math.min(420,Math.ceil(W))}px">${body}</svg>`;
+const L=(x1,y1,x2,y2,c,w=2,o={})=>`<line x1="${x1.toFixed(1)}" y1="${y1.toFixed(1)}" x2="${x2.toFixed(1)}" y2="${y2.toFixed(1)}" stroke="${c}" stroke-width="${w}"${o.dash?' stroke-dasharray="6 5"':''} stroke-linecap="round"/>`+(o.arrow?head(x1,y1,x2,y2,c):'');
+
+// coordinate plane
+function plane(o,shown=99){const on=s=>(s||0)<=shown;
+ const xs=[0,...(o.xs||[])],ys=[0,...(o.ys||[])];
+ const x0=Math.floor(Math.min(...xs))-1,x1=Math.ceil(Math.max(...xs))+1,y0=Math.floor(Math.min(...ys))-1,y1=Math.ceil(Math.max(...ys))+1,sx=x1-x0,sy=y1-y0;
+ let ux=Math.min(32,330/sx),uy=Math.min(32,300/sy);if(o.equal)ux=uy=Math.min(ux,uy);
+ const P=36,W=sx*ux+2*P,H=sy*uy+2*P,X=x=>P+(x-x0)*ux,Y=y=>P+(y1-y)*uy,st=s=>s<=12?1:s<=26?2:s<=60?5:10,gx=st(sx),gy=st(sy);
+ let g='';
+ for(let x=Math.ceil(x0/gx)*gx;x<=x1;x+=gx)g+=L(X(x),P,X(x),H-P,C.mut,1).replace('stroke-linecap','stroke-opacity=".25" stroke-linecap');
+ for(let y=Math.ceil(y0/gy)*gy;y<=y1;y+=gy)g+=L(P,Y(y),W-P,Y(y),C.mut,1).replace('stroke-linecap','stroke-opacity=".25" stroke-linecap');
+ g+=L(P-6,Y(0),W-P+6,Y(0),C.ink,1.6)+head(W-P,Y(0),W-P+8,Y(0),C.ink)+L(X(0),H-P+6,X(0),P-6,C.ink,1.6)+head(X(0),P,X(0),P-8,C.ink);
+ g+=T(W-P+4,Y(0)-8,'x',{fs:13,b:1})+T(X(0)+8,P-2,'y',{fs:13,b:1});
+ for(let x=Math.ceil(x0/gx)*gx;x<x1;x+=gx)if(x)g+=T(X(x),Y(0)+15,M(x),{fs:11,anchor:'middle',c:C.mut});
+ for(let y=Math.ceil(y0/gy)*gy;y<y1;y+=gy)if(y)g+=T(X(0)-6,Y(y)+4,M(y),{fs:11,anchor:'end',c:C.mut});
+ (o.curves||[]).filter(c=>on(c.step)).forEach(c=>{let d='',pen=false,last=null,first=null;for(let i=0;i<=160;i++){const x=x0+sx*i/160,y=c.f(x);if(y<y0||y>y1){pen=false;continue}d+=(pen?'L':'M')+X(x).toFixed(1)+' '+Y(y).toFixed(1);pen=true;last=[x,y];if(!first)first=[x,y]}
+  g+=`<path d="${d}" fill="none" stroke="${c.c||C.ink}" stroke-width="${c.w||2.4}"${c.dash?' stroke-dasharray="7 5"':''}/>`;if(c.l&&last){if(c.lstart&&first)g+=T(X(first[0])+6,Y(first[1])+(c.dy||-8),c.l,{anchor:'start',c:c.c||C.ink,b:1});else g+=T(X(c.lx??last[0])+(c.dx||-4),Y(c.f(c.lx??last[0]))+(c.dy||-8),c.l,{anchor:'end',c:c.c||C.ink,b:1})}});
+ (o.segs||[]).filter(s=>on(s.step)).forEach(s=>{const[a,b]=[s.a,s.b];g+=L(X(a[0]),Y(a[1]),X(b[0]),Y(b[1]),s.c||C.ink,s.w||3,{dash:s.dash,arrow:s.arrow});
+  if(s.l)g+=T((X(a[0])+X(b[0]))/2+(s.lo?.[0]||0),(Y(a[1])+Y(b[1]))/2+(s.lo?.[1]||0),s.l,{c:s.c||C.ink,b:1,anchor:s.anchor||'middle'})});
+ (o.pts||[]).filter(p=>on(p.step)).forEach(p=>{g+=`<circle cx="${X(p.x).toFixed(1)}" cy="${Y(p.y).toFixed(1)}" r="6" fill="${p.c||C.blue}" stroke="var(--card)" stroke-width="2"/>`;
+  if(p.l)g+=T(X(p.x)+(p.ld?.[0]??9),Y(p.y)+(p.ld?.[1]??-9),p.l,{b:1,anchor:p.anchor||'start'})});
+ return svg(W,H,g,o.label||'Graph')}
+const PT=(x,y)=>`(${M(x)}, ${M(y)})`;
+
+// sets
+function lines(s,x,y){const a=String(s).split(', ');if(a.length<=3)return T(x,y,s,{anchor:'middle',b:1,fs:14});const h=Math.ceil(a.length/2);return T(x,y-8,a.slice(0,h).join(', '),{anchor:'middle',b:1,fs:14})+T(x,y+10,a.slice(h).join(', '),{anchor:'middle',b:1,fs:14})}
+function venn2(o){const id='v'+(++uid),W=320,H=200,A=[115,100],B=[205,100],r=72,sh=C.yel;
+ const ca=`<circle cx="${A[0]}" cy="${A[1]}" r="${r}"`,cb=`<circle cx="${B[0]}" cy="${B[1]}" r="${r}"`;
+ let d=`<defs><clipPath id="${id}a">${ca}/></clipPath><mask id="${id}m"><rect width="${W}" height="${H}" fill="#fff"/>${cb} fill="#000"/></mask><mask id="${id}o"><rect width="${W}" height="${H}" fill="#fff"/>${ca} fill="#000"/>${cb} fill="#000"/></mask></defs>`,g='';
+ if(o.hl==='union')g+=`${ca} fill="${sh}" fill-opacity=".6"/>${cb} fill="${sh}" fill-opacity=".6"/>`;
+ if(o.hl==='inter')g+=`<g clip-path="url(#${id}a)">${cb} fill="${sh}" fill-opacity=".8"/></g>`;
+ if(o.hl==='aonly')g+=`${ca} fill="${sh}" fill-opacity=".8" mask="url(#${id}m)"/>`;
+ if(o.hl==='out')g+=`<rect x="6" y="6" width="${W-12}" height="${H-12}" rx="10" fill="${sh}" fill-opacity=".7" mask="url(#${id}o)"/>`;
+ g+=`<rect x="6" y="6" width="${W-12}" height="${H-12}" rx="10" fill="none" stroke="${C.ink}" stroke-width="1.5"/>${ca} fill="none" stroke="${C.blue}" stroke-width="2.5"/>${cb} fill="none" stroke="${C.red}" stroke-width="2.5"/>`;
+ g+=T(16,H-14,o.U||'U',{b:1})+T(70,36,o.na||'A',{b:1,c:C.blue,anchor:'middle'})+T(250,36,o.nb||'B',{b:1,c:C.red,anchor:'middle'});
+ if(o.a!=null)g+=lines(o.a,80,105);if(o.ab!=null)g+=lines(o.ab,160,105);if(o.b!=null)g+=lines(o.b,240,105);if(o.out!=null)g+=T(W-18,H-16,o.out,{anchor:'end',b:1,fs:14});
+ return svg(W,H,d+g,'Venn diagram')}
+function venn3(x,shown=99,steps=[0,0,0,0,0,0,0]){const W=320,H=250,r=66,ctr=[[125,92],[195,92],[160,152]],cols=[C.blue,C.red,C.green];let g='';
+ ctr.forEach((c,i)=>g+=`<circle cx="${c[0]}" cy="${c[1]}" r="${r}" fill="${cols[i]}" fill-opacity=".07" stroke="${cols[i]}" stroke-width="2.5"/>`);
+ g+=T(64,30,'A',{b:1,c:C.blue})+T(250,30,'B',{b:1,c:C.red})+T(232,232,'C',{b:1,c:C.green});
+ const pos=[[100,82],[220,82],[160,196],[160,70],[122,140],[198,140],[160,114]];
+ x.forEach((v,i)=>{if((steps[i]||0)<=shown)g+=T(pos[i][0],pos[i][1]+5,v,{anchor:'middle',b:1,fs:i===6?16:15,c:i===6?C.red:C.ink})});
+ return svg(W,H,g,'Three-set Venn diagram')}
+
+// algebra area model
+const term=(k,v)=>poly([k],[v]);
+function area(a1,b1,a2,b2,shown=99,cs=[0,0,0,0],sumStep=0){const cells=[[term(a1*a2,'x²'),term(a1*b2,'x')],[term(b1*a2,'x'),M(b1*b2)]],cl=['c0','c1','c1','c2'];
+ const cell=(r,c)=>{const k=r*2+c;return `<td class="${cl[k]}">${(cs[k]||0)<=shown?cells[r][c]:''}</td>`};
+ return `<div class="amod"><table><tr><th>×</th><th>${term(a2,'x')}</th><th>${M(b2)}</th></tr><tr><th>${term(a1,'x')}</th>${cell(0,0)}${cell(0,1)}</tr><tr><th>${M(b1)}</th>${cell(1,0)}${cell(1,1)}</tr></table>${sumStep<=shown?`<p>Add the boxes: <b>${P2(a1*a2,a1*b2+b1*a2,b1*b2)}</b></p>`:''}</div>`}
+
+// patterns: difference ladder
+function diffs(t,second,shown=99,s1=0,s2=0){const n=t.length,gap=66,W=n*gap+20,H=second?150:100;let g='';
+ t.forEach((v,i)=>{const x=20+i*gap;g+=`<rect x="${x}" y="10" width="46" height="34" rx="8" fill="${v==='?'?C.yel:'var(--soft)'}" stroke="${C.ink}" stroke-width="1.5"/>`+T(x+23,33,v==='?'?'?':M(v),{anchor:'middle',b:1,fs:15})});
+ const d1=[];for(let i=1;i<n;i++)d1.push(t[i]==='?'?null:t[i]-t[i-1]);
+ if(s1<=shown)d1.forEach((d,i)=>{const x=20+i*gap+23+gap/2;g+=`<path d="M${x-gap/2+6} 48 Q${x} 74 ${x+gap/2-6} 48" fill="none" stroke="${C.blue}" stroke-width="2"/>`+T(x,88,d==null?'?':(d>=0?'+':'')+M(d),{anchor:'middle',c:C.blue,b:1})});
+ if(second&&s2<=shown)for(let i=1;i<d1.length;i++){if(d1[i]==null||d1[i-1]==null)continue;const x=20+i*gap+23;g+=T(x,128,(d1[i]-d1[i-1]>=0?'+':'')+M(d1[i]-d1[i-1]),{anchor:'middle',c:C.red,b:1})}
+ if(second&&s2<=shown)g+=T(8,128,'2nd',{c:C.red,fs:11});
+ return svg(W,H,g,'Differences')}
+
+// right-angled triangle with labelled sides
+function rt(o){const hi=o.hi||[],c=s=>hi.includes(s)?C.red:C.ink,w=s=>hi.includes(s)?4:2.5;let g='';
+ g+=L(20,140,220,140,c('a'),w('a'))+L(220,140,220,30,c('o'),w('o'))+L(20,140,220,30,c('h'),w('h'));
+ g+=`<path d="M206 140v-14h14" fill="none" stroke="${C.ink}" stroke-width="1.5"/>`;
+ if(o.ang)g+=`<path d="M60 140a40 40 0 0 0-5-19" fill="none" stroke="${C.blue}" stroke-width="2.5"/>`+T(66,132,o.ang,{c:C.blue,b:1});
+ if(o.a!=null)g+=T(120,162,o.a,{anchor:'middle',c:c('a'),b:1});
+ if(o.o!=null)g+=T(230,90,o.o,{c:c('o'),b:1});
+ if(o.h!=null)g+=T(106,76,o.h,{anchor:'end',c:c('h'),b:1});
+ return svg(310,172,g,'Right-angled triangle')}
+
+// shapes
+function triA(b,h,u){return svg(300,176,`<path d="M30 140H250L95 30Z" fill="var(--soft)" stroke="${C.ink}" stroke-width="2.5" stroke-linejoin="round"/>`+L(95,30,95,140,C.red,2,{dash:1})+`<path d="M95 128h12v12" fill="none" stroke="${C.red}" stroke-width="1.5"/>`+T(140,162,`${b} ${u}`,{anchor:'middle',b:1})+T(101,92,`${h} ${u}`,{c:C.red,b:1}),'Triangle')}
+function rectA(b,ar,u){return svg(300,170,`<rect x="40" y="34" width="210" height="100" fill="var(--soft)" stroke="${C.ink}" stroke-width="2.5"/>`+T(145,24,`${b} ${u}`,{anchor:'middle',b:1})+T(258,88,'?',{b:1,c:C.red,fs:16})+T(145,90,`Area = ${ar} ${u}²`,{anchor:'middle'}),'Rectangle')}
+function para(b,h,u){return svg(300,176,`<path d="M70 34H270L230 140H30Z" fill="var(--soft)" stroke="${C.ink}" stroke-width="2.5" stroke-linejoin="round"/>`+L(70,34,70,140,C.red,2,{dash:1})+`<path d="M70 128h12v12" fill="none" stroke="${C.red}" stroke-width="1.5"/>`+T(130,162,`${b} ${u}`,{anchor:'middle',b:1})+T(78,92,`${h} ${u}`,{c:C.red,b:1}),'Parallelogram')}
+function circ(r,dia){const g=`<circle cx="150" cy="95" r="72" fill="var(--soft)" stroke="${C.ink}" stroke-width="2.5"/><circle cx="150" cy="95" r="3.5" fill="${C.ink}"/>`+(dia?L(78,95,222,95,C.red,3)+T(150,86,`${2*r} cm`,{anchor:'middle',c:C.red,b:1}):L(150,95,222,95,C.red,3)+T(186,86,`${r} cm`,{anchor:'middle',c:C.red,b:1}));return svg(300,180,g,'Circle')}
+function cylS(cx,r,h,lr,lh){const top=40,bot=40+h;return `<path d="M${cx-r} ${top}V${bot}A${r} ${r*.27} 0 0 0 ${cx+r} ${bot}V${top}" fill="var(--soft)" stroke="${C.ink}" stroke-width="2.5"/><ellipse cx="${cx}" cy="${top}" rx="${r}" ry="${r*.27}" fill="var(--soft)" stroke="${C.ink}" stroke-width="2.5"/>`+L(cx,top,cx+r,top,C.red,2.5)+T(cx+r/2,top-8,lr,{anchor:'middle',c:C.red,b:1})+L(cx+r+14,top,cx+r+14,bot,C.blue,2)+T(cx+r+20,(top+bot)/2+5,lh,{c:C.blue,b:1})}
+function coneS(cx,r,h,lr,lh){const ap=30,base=30+h;return `<path d="M${cx-r} ${base}L${cx} ${ap}L${cx+r} ${base}A${r} ${r*.25} 0 0 1 ${cx-r} ${base}Z" fill="var(--soft)" stroke="${C.ink}" stroke-width="2.5" stroke-linejoin="round"/>`+L(cx,ap,cx,base,C.blue,2,{dash:1})+L(cx,base,cx+r,base,C.red,2.5)+T(cx+r/2,base+20,lr,{anchor:'middle',c:C.red,b:1})+T(cx+6,(ap+base)/2+5,lh,{c:C.blue,b:1})}
+function sphS(cx,cy,R,l){return `<circle cx="${cx}" cy="${cy}" r="${R}" fill="var(--soft)" stroke="${C.ink}" stroke-width="2.5"/><ellipse cx="${cx}" cy="${cy}" rx="${R}" ry="${R*.28}" fill="none" stroke="${C.ink}" stroke-width="1" stroke-dasharray="4 4"/>`+L(cx,cy,cx+R,cy,C.red,2.5)+T(cx+R/2,cy-8,l,{anchor:'middle',c:C.red,b:1})}
+const cyl=(r,h)=>svg(300,190,cylS(130,70,120,`r = ${r} cm`,typeof h==='number'?`h = ${h} cm`:'h = ?'),'Cylinder');
+const cone=(r,h)=>svg(300,200,coneS(140,70,140,`r = ${r} cm`,`h = ${h} cm`),'Cone');
+function melt(r,R,kind){return svg(400,210,sphS(80,105,58,`${r} cm`)+L(150,105,196,105,C.ink,2.5,{arrow:1})+T(173,94,'melt',{anchor:'middle',fs:12,c:C.mut})+(kind==='cone'?coneS(300,62,140,`${R} cm`,'h = ?'):cylS(300,62,120,`${R} cm`,'h = ?')),'Sphere melted into a new solid')}
+
+// statistics & probability
+function dots(xs,m){const lo=Math.min(...xs)-1,hi=Math.max(...xs)+1,W=340,u=(W-40)/(hi-lo),X=v=>20+(v-lo)*u,cnt={};let g=L(14,120,W-14,120,C.ink,1.6);
+ for(let v=lo;v<=hi;v++)g+=L(X(v),116,X(v),124,C.ink,1.5)+((hi-lo)<=16||v%2===0?T(X(v),140,v,{anchor:'middle',fs:11,c:C.mut}):'');
+ xs.forEach(v=>{cnt[v]=(cnt[v]||0)+1;g+=`<circle cx="${X(v)}" cy="${120-cnt[v]*18}" r="7" fill="${C.blue}"/>`});
+ g+=L(X(m),20,X(m),118,C.red,2.5,{dash:1})+T(X(m),16,`mean = ${f1(m)}`,{anchor:'middle',c:C.red,b:1});return svg(W,150,g,'Dot plot with mean')}
+function ordered(s){const n=s.length,gap=50,W=n*gap+20;let g='';const mid=n%2?[Math.floor(n/2)]:[n/2-1,n/2];
+ s.forEach((v,i)=>{const x=10+i*gap,hl=mid.includes(i);g+=`<rect x="${x+2}" y="14" width="44" height="40" rx="8" fill="${hl?C.yel:'var(--soft)'}" stroke="${C.ink}" stroke-width="${hl?2.5:1.5}"/>`+T(x+24,40,v,{anchor:'middle',b:1,fs:15,c:hl?'var(--on-marker)':C.ink}).replace('stroke="var(--card)"',hl?'stroke="none"':'stroke="var(--card)"')});
+ const mv=mid.length===2?(s[mid[0]]+s[mid[1]])/2:s[mid[0]];g+=T(W/2,80,`median = ${f1(mv)}`,{anchor:'middle',c:C.red,b:1});return svg(W,92,g,'Ordered data')}
+function bag(r,b,gr){const all=[...Array(r).fill(C.red),...Array(b).fill(C.blue),...Array(gr).fill(C.green)],per=8,W=per*32+20,H=Math.ceil(all.length/per)*32+16;let g='';
+ all.forEach((c,i)=>g+=`<circle cx="${26+(i%per)*32}" cy="${24+Math.floor(i/per)*32}" r="12" fill="${c}" stroke="${C.ink}" stroke-width="1.2"/>`);return svg(W,H,g,'Counters in the bag')}
+function dice(pred){const s=34,W=7*s+10,H=7*s+10;let g='';
+ for(let i=1;i<=6;i++){g+=T(5+i*s+s/2,26,i,{anchor:'middle',b:1,c:C.blue})+T(5+s/2,10+i*s+22,i,{anchor:'middle',b:1,c:C.red})}
+ let n=0;for(let a=1;a<=6;a++)for(let b=1;b<=6;b++){const hit=pred(a+b,a,b);if(hit)n++;const x=5+b*s,y=8+a*s;g+=`<rect x="${x+1}" y="${y+1}" width="${s-2}" height="${s-2}" rx="5" fill="${hit?C.yel:'var(--soft)'}" stroke="${hit?C.ink:'none'}"/>`+`<text x="${x+s/2}" y="${y+s/2+5}" text-anchor="middle" font-size="13" font-weight="${hit?700:400}" fill="${hit?'var(--on-marker)':C.mut}">${a+b}</text>`}
+ return svg(W,H,g,`Two-dice sample space, ${n} outcomes highlighted`)}
+
+// money bar models
+function bar(parts,W=330){const tot=parts.reduce((s,p)=>s+p.v,0),u=(W-20)/tot;let x=10,g='';const ws=parts.map(p=>Math.max(p.v*u,52)),ex=ws.reduce((a,b)=>a+b,0)-(W-20);ws[ws.indexOf(Math.max(...ws))]-=ex;
+ parts.forEach((p,i)=>{const w=ws[i];g+=`<rect x="${x}" y="30" width="${w}" height="40" fill="${p.c}" stroke="${C.ink}" stroke-width="1.5"/>`+T(x+w/2,55,p.in||'',{anchor:'middle',b:1,fs:13})+(p.below?T(x+w/2,90,p.below,{anchor:'middle',fs:12,c:C.mut}):'');x+=w});return svg(W,100,g,'Bar model')}
+const pctBar=(p,n,s,red)=>bar([{v:p,c:C.yel,in:`${p}%`,below:`€${s}`},{v:100-p,c:'var(--soft)',in:`${100-p}%`,below:red?`sale price €${n-s}`:`€${n-s}`}]);
+const vatBar=(X,I)=>bar([{v:100,c:'var(--soft)',in:'100% (no VAT)',below:eur(X)},{v:23,c:C.yel,in:'23%',below:'VAT'}])+`<p class="figcap">Whole bar = 123% = ${eur(I)}</p>`;
+function growth(P,r,t){const vals=[P];for(let i=1;i<=t;i++)vals.push(r2(vals[i-1]*(1+r/100)));const W=60+t*90,top=Math.max(...vals);let g='';
+ vals.forEach((v,i)=>{const h=70+(v-P)/(top-P||1)*60,x=20+i*90;g+=`<rect x="${x}" y="${160-h}" width="56" height="${h}" rx="6" fill="${i?C.green:'var(--soft)'}" stroke="${C.ink}" stroke-width="1.5"/>`+T(x+28,152-h,eur(v).replace('.00',''),{anchor:'middle',b:1,fs:11})+T(x+28,178,i?`Year ${i}`:'Start',{anchor:'middle',fs:12,c:C.mut});
+  if(i)g+=T(x-8,170-h/2-20,`×${(1+r/100).toFixed(2)}`,{anchor:'middle',fs:11,c:C.blue,b:1})});return svg(W,186,g,'Compound interest year by year')}
+const taxBar=(G,cut)=>bar([{v:cut,c:'var(--soft)',in:'20%',below:`first €${cut.toLocaleString('en-IE')}`},{v:G-cut,c:C.yel,in:'40%',below:`€${(G-cut).toLocaleString('en-IE')}`}]);
+function idx(v,m,n,t){const xs=k=>Array(k).fill(v).join('·');
+ if(t===0)return `<div class="ixp"><span>${xs(m)}</span> × <span>${xs(n)}</span> = <b>${m+n} ${v}'s</b> = ${v}${sup(m+n)}</div>`;
+ if(t===1)return `<div class="ixp"><span class="fr"><span>${Array(m).fill(0).map((_,i)=>i<n?`<s>${v}</s>`:v).join('·')}</span><span>${Array(n).fill(`<s>${v}</s>`).join('·')}</span></span> = <b>${m-n} ${v}'s left</b> = ${v}${sup(m-n)}</div>`;
+ return `<div class="ixp">${Array(n).fill(v+sup(m)).join(' × ')} = ${v}<sup>${Array(n).fill(m).join('+')}</sup> = <b>${v}${sup(m*n)}</b></div>`}
+
+// coordinate geometry builders
+const mid=(x1,y1,x2,y2,shown=99,ms=0)=>{const mx=(x1+x2)/2,my=(y1+y2)/2;return plane({equal:1,xs:[x1,x2],ys:[y1,y2],segs:[{a:[x1,y1],b:[x2,y2],c:C.mut,w:2}],pts:[{x:x1,y:y1,l:'A'+PT(x1,y1),c:C.blue,anchor:x1<=x2?'end':'start',ld:[x1<=x2?-9:9,-9]},{x:x2,y:y2,l:'B'+PT(x2,y2),c:C.blue,anchor:x1<=x2?'start':'end',ld:[x1<=x2?9:-9,-9]},{x:mx,y:my,l:'M'+PT(mx,my),c:C.red,step:ms,ld:[10,20]}]},shown)};
+function slope(x1,y1,x2,y2,shown=99,rs=0,ls=0,ps=null){const dx=x2-x1,dy=y2-y1,m=dy/dx;const o={equal:1,xs:[x1,x2],ys:[y1,y2],
+ curves:[{f:x=>y1+m*(x-x1),c:C.ink,w:2,step:ls}],
+ segs:[{a:[x1,y1],b:[x2,y1],c:C.blue,arrow:1,step:rs,l:`run = ${M(dx)}`,lo:[0,dy>0?18:-10]},{a:[x2,y1],b:[x2,y2],c:C.red,arrow:1,step:rs,l:`rise = ${M(dy)}`,lo:[dx>0?8:-8,4],anchor:dx>0?'start':'end'}],
+ pts:[{x:x1,y:y1,l:PT(x1,y1),c:C.blue,ld:[dx>0?-9:9,-10],anchor:dx>0?'end':'start'},{x:x2,y:y2,l:PT(x2,y2),c:C.blue,ld:[dx>0?-9:9,-10],anchor:dx>0?'end':'start'}]};
+ if(ps!=null)o.curves.push({f:x=>y1-(x-x1)/m,c:C.green,dash:1,step:ps,l:`perpendicular: slope ${frac(-dx,dy)}`,lstart:1,dy:-10});return plane(o,shown)}
+function perp(a,b){const m1=a/b,m2=-b/a,lx=m=>Math.min(3.6,3.6/Math.abs(m));return plane({equal:1,xs:[-4,4],ys:[-4,4],curves:[{f:x=>m1*x,c:C.blue,l:`slope ${frac(a,b)}`,lx:lx(m1),dx:-6},{f:x=>m2*x,c:C.red,l:`slope ${frac(-b,a)}`,lx:lx(m2),dx:-6,dy:16}]})}
+function dist(x1,y1,x2,y2,shown=99,ls=0,hs=0){const dx=Math.abs(x2-x1),dy=Math.abs(y2-y1),h=Math.hypot(dx,dy);return plane({equal:1,xs:[x1,x2],ys:[y1,y2],
+ segs:[{a:[x1,y1],b:[x2,y1],c:C.blue,dash:1,step:ls,l:`${dx}`,lo:[0,y2>y1?18:-10]},{a:[x2,y1],b:[x2,y2],c:C.red,dash:1,step:ls,l:`${dy}`,lo:[x2>x1?10:-10,4],anchor:x2>x1?'start':'end'},{a:[x1,y1],b:[x2,y2],c:C.green,w:4,step:hs,l:`${f1(h)}`,lo:[x2>x1?-12:12,-8],anchor:x2>x1?'end':'start'}],
+ pts:[{x:x1,y:y1,l:PT(x1,y1)},{x:x2,y:y2,l:PT(x2,y2)}]},shown)}
+function lineEq(m,x1,y1,c,shown=99,rs=0,ls=0){return plane({xs:[x1,x1+1,0,x1-2,x1+2],ys:[y1,y1+m,c],
+ curves:[{f:x=>m*x+c,c:C.ink,step:ls,l:'y = '+poly([m,c],['x',''])}],
+ segs:[{a:[x1,y1],b:[x1+1,y1],c:C.blue,arrow:1,step:rs,l:'1',lo:[0,m>0?16:-8]},{a:[x1+1,y1],b:[x1+1,y1+m],c:C.red,arrow:1,step:rs,l:M(m),lo:[8,4],anchor:'start'}],
+ pts:[{x:x1,y:y1,l:PT(x1,y1),ld:[-9,-9],anchor:'end'},{x:0,y:c,l:PT(0,c),c:C.green,step:ls,ld:[9,14]}]},shown)}
+
+// functions & equations
+const lineFn=(a,b,k,v)=>plane({xs:[k,k-1,k+1,2,-2],ys:[v,b],curves:[{f:x=>a*x+b,c:C.blue,l:'y = '+poly([a,b],['x',''])}],segs:[{a:[k,0],b:[k,v],c:C.red,dash:1,w:2},{a:[k,v],b:[0,v],c:C.red,dash:1,w:2}],pts:[{x:k,y:v,l:PT(k,v),c:C.red,ld:[k>0?9:-9,v>0?-9:18],anchor:k>0?'start':'end'}]});
+function parab(a,b,c,roots,pt,shown=99,rs=0){const f=x=>a*x*x+b*x+c,xv=-b/(2*a),yv=f(xv),xs=[xv-3.2,xv+3.2,...(roots||[]),...(pt?[pt[0]]:[])],ys=[yv,0,Math.min(Math.max(f(xv+3),4),Math.abs(yv)+8),...(pt?[pt[1]]:[])];
+ return plane({xs,ys,curves:[{f,c:C.blue,l:'y = '+P2(a,b,c),lx:xv+2.6}],pts:[...(roots||[]).map((r,i)=>({x:r,y:0,l:'x = '+(Number.isInteger(r)?M(r):frac(r*2,2)),c:C.red,step:rs,ld:[i?8:-8,20],anchor:i?'start':'end'})),...(pt?[{x:pt[0],y:pt[1],l:PT(pt[0],pt[1]),c:C.red,ld:[9,-9]}]:[])]},shown)}
+const meet=(a,b,c,d,x,shown=99,ps=0)=>{const y=a*x+b;return plane({xs:[x-3,x+3,0],ys:[y,b,d],curves:[{f:t=>a*t+b,c:C.blue,l:'y = '+poly([a,b],['x',''])},{f:t=>c*t+d,c:C.red,l:'y = '+poly([c,d],['x','']),lstart:1,dy:-10}],pts:[{x,y,l:`meet at x = ${M(x)}`,c:C.green,step:ps,ld:[10,18]}],segs:[{a:[x,0],b:[x,y],c:C.green,dash:1,w:2,step:ps}]},shown)};
+const sim=(a1,b1,c1,a2,b2,c2,x,y,shown=99,ps=0)=>plane({xs:[x-4,x+4],ys:[y-4,y+4],curves:[{f:t=>(c1-a1*t)/b1,c:C.blue,l:poly([a1,b1],['x','y'])+' = '+M(c1)},{f:t=>(c2-a2*t)/b2,c:C.red,l:poly([a2,b2],['x','y'])+' = '+M(c2),lstart:1,dy:-10}],pts:[{x,y,l:PT(x,y),c:C.green,step:ps,ld:[10,18]}]},shown);
+
+return {bar,plane,venn2,venn3,area,diffs,rt,triA,rectA,para,circ,cyl,cone,melt,dots,ordered,bag,dice,pctBar,vatBar,growth,taxBar,idx,mid,slope,perp,dist,lineEq,lineFn,parab,meet,sim};
+})();
+
+// ---------- Figures for the 40 worked examples (built up as the steps are revealed) ----------
+(()=>{const E=EX,s=(n,k)=>n>=k;
+E.num[1].fig=n=>s(n,2)?FIG.idx('x',3,5,0)+(s(n,3)?FIG.idx('x',8,4,1):''):'';
+E.money[0].fig=n=>s(n,2)?FIG.pctBar(15,160,24,true):'';
+E.money[1].fig=n=>s(n,1)?FIG.vatBar(800,984):'';
+E.money[2].fig=n=>s(n,4)?FIG.growth(2000,4,2):'';
+E.money[3].fig=n=>FIG.taxBar(50000,44000);
+E.sets[0].fig=n=>FIG.venn2({a:'1, 3, 8',ab:'2, 5',b:'4, 6',hl:n<3?'inter':'union'});
+E.sets[1].fig=n=>FIG.venn2({a:11,ab:4,b:7,hl:s(n,2)?'union':null,out:null});
+E.sets[2].fig=n=>FIG.venn2({na:'Maths',nb:'Art',U:'Class (30)',ab:s(n,1)?6:null,a:s(n,2)?11:null,b:s(n,2)?6:null,out:s(n,4)?7:null,hl:s(n,4)?'out':null});
+E.sets[3].fig=n=>FIG.venn3([9,8,7,5,3,2,3],n,[3,3,3,2,2,2,1]);
+E.alg[1].fig=n=>FIG.area(1,5,1,-3,n,[1,2,3,4],5);
+E.alg[2].fig=n=>s(n,4)?FIG.area(1,3,1,-5):'';
+E.alg[3].fig=n=>s(n,4)?FIG.area(2,1,1,3):'';
+E.eq[0].fig=n=>FIG.meet(5,-7,2,8,5,n,3);
+E.eq[2].fig=n=>FIG.sim(3,2,14,1,-2,2,4,1,n,2);
+E.eq[3].fig=n=>FIG.parab(1,-1,-12,[-3,4],null,n,4);
+E.fn[0].fig=n=>s(n,3)?FIG.lineFn(3,-4,-2,-10):'';
+E.fn[1].fig=n=>FIG.diffs([7,10,13,16],false,n,1);
+E.fn[2].fig=n=>FIG.diffs(s(n,4)?[2,5,10,17,26]:[2,5,10,17,'?'],true,n,1,2);
+E.fn[3].fig=n=>s(n,4)?FIG.parab(1,4,-5,null,[2,7]):'';
+E.coord[0].fig=n=>FIG.mid(-4,3,6,9,n,3);
+E.coord[1].fig=n=>FIG.slope(1,-2,4,7,n,2,3,4);
+E.coord[2].fig=n=>FIG.dist(2,1,8,9,n,1,3);
+E.coord[3].fig=n=>FIG.lineEq(3,2,5,-1,n,2,4);
+E.trig[0].fig=n=>FIG.rt({o:'5 cm',a:'12 cm',h:s(n,3)?'13 cm':'?',hi:s(n,3)?['h']:[]});
+E.trig[2].fig=n=>FIG.rt({h:'ladder 8 m',o:s(n,4)?'6.9 m':'?',ang:'60°',hi:s(n,1)?['o','h']:[]});
+E.trig[3].fig=n=>FIG.rt({o:'3 m',a:'10 m',ang:s(n,4)?'17°':'A',hi:s(n,1)?['o','a']:[]});
+E.vol[0].fig=()=>FIG.triA(10,7,'cm');
+E.vol[1].fig=()=>FIG.circ(6,true);
+E.vol[2].fig=()=>FIG.cyl(4,10);
+E.vol[3].fig=()=>FIG.melt(3,3,'cone');
+E.stats[0].fig=n=>s(n,3)?FIG.dots([6,9,4,11,10],8):'';
+E.stats[1].fig=n=>s(n,1)?FIG.ordered([3,6,8,10,12,15]):'';
+E.stats[2].fig=()=>FIG.bag(4,6,2);
+E.stats[3].fig=n=>s(n,2)?FIG.dice(t=>t===9):'';
+})();
+
+// ---------- Worked answers for the Scroll quick checks (same order as REELS) ----------
+const REELWORK=[
+ {s:['Same base (2) and multiplying, so add the powers: 3 + 4 = 7.','2⁷ = 2 × 2 × 2 × 2 × 2 × 2 × 2 = 128.'],fig:()=>FIG.idx('2',3,4,0)},
+ {s:['Dividing, so subtract the powers: 6 − 6 = 0. That gives 5⁰.','Anything divided by itself is 1, so 5⁰ = 1.'],fig:()=>FIG.idx('5',6,6,1)},
+ {s:['The 3 on the bottom means cube root: ∛27 = 3, because 3 × 3 × 3 = 27.','The 2 on top means square it: 3² = 9.']},
+ {s:['A negative power means one over: 2⁻³ = 1/2³.','2³ = 8, so 2⁻³ = 1/8.']},
+ {s:['Move the decimal point until the number is between 1 and 10: 0.0032 → 3.2.','You moved it 3 places to the right, so the power is −3.','0.0032 = 3.2 × 10⁻³.']},
+ {s:['The price with VAT is 123% of the original.','1% = 738 ÷ 123 = €6.','100% = 6 × 100 = €600. Check: 600 × 1.23 = 738 ✓'],fig:()=>FIG.vatBar(600,738)},
+ {s:['F = P(1 + i)ᵗ = 1000 × (1.05)².','1.05² = 1.1025.','F = 1000 × 1.1025 = €1,102.50.'],fig:()=>FIG.growth(1000,5,2)},
+ {s:['Net tax = gross tax − tax credits.','9,000 − 3,500 = €5,500.']},
+ {s:['Profit = 100 − 80 = €20.','% profit = profit ÷ cost price × 100 = 20 ÷ 80 × 100 = 25%.'],fig:()=>FIG.bar([{v:100,c:'var(--soft)',in:'cost = 100%',below:'€80'},{v:25,c:'var(--marker)',in:'25%',below:'profit €20'}])},
+ {s:['Adding 12 + 9 = 21 counts the 4 in the overlap twice.','#(A ∪ B) = 12 + 9 − 4 = 17.'],fig:()=>FIG.venn2({a:8,ab:4,b:5,hl:'union'})},
+ {s:['A ∪ B is everyone inside the circles: 25.','(A ∪ B)′ means everyone outside the circles: 30 − 25 = 5.'],fig:()=>FIG.venn2({U:'Class (30)',out:5,hl:'out'})},
+ {s:['The highest common factor of 5x² and 10x is 5x.','5x² ÷ 5x = x and 10x ÷ 5x = 2.','5x² + 10x = 5x(x + 2).']},
+ {s:['4x² = (2x)² and 9 = 3².','a² − b² = (a − b)(a + b), so 4x² − 9 = (2x − 3)(2x + 3).'],fig:()=>FIG.area(2,-3,2,3)},
+ {s:['Find two numbers that multiply to −12 and add to −1: −4 and 3.','x² − x − 12 = (x − 4)(x + 3).'],fig:()=>FIG.area(1,-4,1,3)},
+ {s:['The LCD of 2 and 3 is 6. Multiply every term by 6: 3x + 2x = 30.','5x = 30, so x = 6.','Check: 6/2 + 6/3 = 3 + 2 = 5 ✓']},
+ {s:['The y terms are +y and −y. Add the equations: 2x = 8, so x = 4.','Substitute into x + y = 7: 4 + y = 7, so y = 3.','On the graph, the two lines cross at (4, 3).'],fig:()=>FIG.sim(1,1,7,1,-1,1,4,3)},
+ {s:['Two numbers that multiply to 6 and add to −5: −2 and −3.','(x − 2)(x − 3) = 0','x = 2 or x = 3. These are where the graph crosses the x-axis.'],fig:()=>FIG.parab(1,-5,6,[2,3])},
+ {s:['Divide both sides by −3.','Dividing by a negative flips the sign: ≥ becomes ≤.','x ≤ −4.']},
+ {s:['In Irish maths, N = {1, 2, 3, …}.','x > 2 means bigger than 2, not equal to it.','The first three values are 3, 4, 5.']},
+ {s:['The difference is 5 every time, so start with 5n.','When n = 1, 5n = 5. The first term is 3, so subtract 2.','Tₙ = 5n − 2. Check n = 2: 10 − 2 = 8 ✓'],fig:()=>FIG.diffs([3,8,13,18],false)},
+ {s:['The number in front of n² is half the second difference.','6 ÷ 2 = 3, so the pattern starts 3n².']},
+ {s:['The roots are where f(x) = 0, so set each bracket equal to 0.','x − 1 = 0 → x = 1.','x + 4 = 0 → x = −4.'],fig:()=>FIG.parab(1,3,-4,[-4,1])},
+ {s:['Flip 2/3 upside down: 3/2.','Change the sign: −3/2.','Check: 2/3 × −3/2 = −1 ✓'],fig:()=>FIG.perp(2,3)},
+ {s:['Use y − y₁ = m(x − x₁) with the point (0, 1) and m = 2.','y − 1 = 2(x − 0)','y = 2x + 1.'],fig:()=>FIG.lineEq(2,0,1,1)},
+ {s:['sin = Opposite ÷ Hypotenuse.','sin A = 3/5.'],fig:()=>FIG.rt({o:'opp 3',a:'adj 4',h:'hyp 5',ang:'A',hi:['o','h']})},
+ {s:['sin 30° should be exactly 0.5.','Getting −0.988 means the calculator is in radians.','Switch it to degrees in the calculator settings (SETUP) and look for the small D on the screen.']},
+ {s:['6 and 8 are 3 and 4 doubled.','So the hypotenuse is 5 doubled: 10.','Check: 6² + 8² = 36 + 64 = 100, and √100 = 10 ✓'],fig:()=>FIG.rt({o:'6',a:'8',h:'10',hi:['h']})},
+ {s:['The three angles add to 180°: x + 2x + 3x = 180.','6x = 180','x = 30°. The angles are 30°, 60° and 90°.']},
+ {s:['V = πr²h','V = π × 3² × 10 = π × 9 × 10','V = 90π cm³'],fig:()=>FIG.cyl(3,10)},
+ {s:['Area = πr²','Area = π × 5² = 25π cm²'],fig:()=>FIG.circ(5,false)},
+ {s:['Put them in order: 2, 4, 5, 7, 9.','Five values, so the median is the 3rd one: 5.'],fig:()=>FIG.ordered([2,4,5,7,9])},
+ {s:['Two dice give 6 × 6 = 36 outcomes.','Doubles: (1,1), (2,2), (3,3), (4,4), (5,5), (6,6). That is 6.','P(double) = 6/36 = 1/6.'],fig:()=>FIG.dice((t,a,b)=>a===b)},
+ {s:['A blank answer gets 0 marks.','A correct first step usually earns marks even if the final answer is wrong.','So always write something down.']},
+ {s:['1 d.p. means keep one digit after the point: 74.1|37.','Look at the next digit: 3.','3 is less than 5, so round down: 74.1.']}
+];
+
+// ---------- state ----------
+const KEY='jcmq.v1';
+let S={xp:0,streak:0,last:'',stars:{},boss:{},liked:[]};
+try{const raw=localStorage.getItem(KEY);if(raw)S=Object.assign(S,JSON.parse(raw))}catch(e){}
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}};
+const $=(s,r=document)=>r.querySelector(s);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const ICON={
+ star:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 17l-6.1 3.4 1.5-6.8L2.2 9l6.9-.7z"/></svg>',
+ heart:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-8-5.2-8-11.2A4.6 4.6 0 0 1 12 7a4.6 4.6 0 0 1 8 2.8C20 15.8 12 21 12 21z"/></svg>',
+ heartO:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 21s-8-5.2-8-11.2A4.6 4.6 0 0 1 12 7a4.6 4.6 0 0 1 8 2.8C20 15.8 12 21 12 21z"/></svg>',
+ lock:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>',
+ crown:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 18h18l-1.5-10-5 4L12 5l-2.5 7-5-4z"/></svg>',
+ x:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>',
+ arrowL:'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg>',
+ up:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 14l6-6 6 6"/></svg>',
+ play:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V4h11l-2 4 2 4H5"/></svg>',
+ pen:'<svg class="pen" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l4-1 11-11-3-3L5 16z"/></svg>'
+};
+const today=()=>new Date().toISOString().slice(0,10);
+function touchStreak(){const t=today();if(S.last===t)return;const y=new Date(Date.now()-864e5).toISOString().slice(0,10);S.streak=S.last===y?S.streak+1:1;S.last=t}
+function addXP(n){S.xp+=n;touchStreak();save();renderStats()}
+function renderStats(){$('#xp').textContent=S.xp;$('#streak').textContent=(S.last===today()||S.last===new Date(Date.now()-864e5).toISOString().slice(0,10))?S.streak:0}
+function confetti(){if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;const c=document.createElement('div');c.className='confetti';const cols=['var(--marker)','var(--biro)','var(--mint)','var(--redpen)','var(--coral)'];
+ for(let i=0;i<40;i++){const p=document.createElement('i');p.style.left=Math.random()*100+'%';p.style.background=cols[i%5];p.style.animationDelay=Math.random()*.5+'s';p.style.animationDuration=1.2+Math.random()*1+'s';c.appendChild(p)}
+ document.body.appendChild(c);setTimeout(()=>c.remove(),3000)}
+
+// ---------- tabs ----------
+let tab='feed';
+function setTab(t){tab=t;document.querySelectorAll('nav.tabs button').forEach(b=>b.setAttribute('aria-selected',b.dataset.tab===t));['feed','quest','test'].forEach(v=>$('#v-'+v).hidden=v!==t);const gm=$('#game');if(gm)gm.hidden=t!=='quest';if(t==='quest'&&!questRendered)renderQuest()}
+document.querySelectorAll('nav.tabs button').forEach(b=>b.onclick=()=>setTab(b.dataset.tab));
+
+// ---------- Part 1: scroll feed ----------
+function renderFeed(){const v=$('#v-feed');const box=document.createElement('div');box.className='reels';
+ REELS.forEach((r,i)=>{const[tag,title,body,fx,cq,ca,topic]=r;const liked=S.liked.includes(i);const el=document.createElement('div');el.className='reel';
+  el.innerHTML=`<article class="rc c${i%4}">
+   <span class="tag">#${esc(tag)}</span><span class="count">${i+1} / ${REELS.length}</span>
+   <h2>${esc(title)}</h2><p>${esc(body)}</p><div class="fx">${esc(fx)}</div>
+   <button class="check" aria-expanded="false">Quick check: ${esc(cq)}<span class="ans" hidden>${esc(ca)}</span><span class="tap" style="display:block;font-weight:400;font-size:14px;opacity:.8;margin-top:2px">Tap to reveal</span></button>
+   ${i===0?`<div class="hint">${ICON.up}Swipe up for the next one</div>`:''}
+   <div class="rail">
+    <div><button class="like" aria-pressed="${liked}" aria-label="Save">${liked?ICON.heart:ICON.heartO}</button><small>${liked?'Saved':'Save'}</small></div>
+    <div><button class="work" aria-label="Show worked answer">${ICON.pen.replace('class="pen" ','')}</button><small>Working</small></div>
+    ${topic?`<div><button class="go" aria-label="Practise this topic">${ICON.play}</button><small>Practise</small></div>`:''}
+   </div></article>`;
+  const ck=el.querySelector('.check');ck.onclick=()=>{const a=ck.querySelector('.ans'),open=a.hidden;a.hidden=!open;ck.querySelector('.tap').hidden=open;ck.setAttribute('aria-expanded',open);if(open&&!ck.dataset.done){ck.dataset.done=1;addXP(2)}};
+  const lk=el.querySelector('.like');lk.onclick=()=>{const on=!S.liked.includes(i);S.liked=on?[...S.liked,i]:S.liked.filter(x=>x!==i);save();lk.setAttribute('aria-pressed',on);lk.innerHTML=on?ICON.heart:ICON.heartO;lk.nextElementSibling.textContent=on?'Saved':'Save'};
+  const g=el.querySelector('.go');if(g)g.onclick=()=>{setTab('quest');openTopic(topic)};
+  el.querySelector('.work').onclick=()=>openWork(i);
+  box.appendChild(el)});
+ v.appendChild(box)}
+
+function openWork(i){const r=REELS[i],w=REELWORK[i],v=$('#v-feed');$('#sheet')?.remove();
+ const sh=document.createElement('div');sh.id='sheet';sh.className='sheet';sh.setAttribute('role','dialog');sh.setAttribute('aria-label','Worked answer');
+ sh.innerHTML=`<div class="sheet-in"><div class="sheet-top"><span class="lvl">Worked answer · #${esc(r[0])}</span><button class="x" aria-label="Close">${ICON.x}</button></div>
+  <div class="qtext">${esc(r[4])}</div>${w.fig?`<div class="figwrap">${w.fig()}</div>`:''}${stepsHTML(w.s)}<div class="wans"><span class="who">Answer</span><b>${esc(r[5])}</b></div>
+  <button class="btn pri" id="gotit">Got it</button></div>`;
+ const close=()=>sh.remove();sh.onclick=e=>{if(e.target===sh)close()};sh.querySelector('.x').onclick=close;sh.querySelector('#gotit').onclick=close;
+ v.appendChild(sh);sh.querySelector('#gotit').focus({preventScroll:true});
+ const ck=v.querySelectorAll('.check')[i];if(ck&&!ck.dataset.done){ck.dataset.done=1;addXP(2)}}
+function stepsHTML(arr){return `<ol class="wsteps">${arr.map((s,k)=>`<li><span class="sn">${k+1}</span><span>${s}</span></li>`).join('')}</ol>`}
+const whySteps=w=>w.split(/(?<=[.✓])\s+(?=[A-Z0-9(−√½⁴TA-Za-z])/).filter(Boolean);
+
+// ---------- Part 2: Quest ----------
+let questRendered=false;
+const topicStars=t=>[0,1,2,3].reduce((s,i)=>s+(S.stars[t.id+i]||0),0);
+function renderQuest(){questRendered=true;const v=$('#v-quest');
+ v.innerHTML=`<div class="sec-head"><div><h1>Topic Quest</h1><p>Ten Higher Level topics. Four levels each, from warm-up to expert, then a boss round. Win the trophy for every topic.</p></div><span class="chip">${ICON.crown.replace('<svg','<svg style="color:var(--marker)"')}${Object.keys(S.boss).length} / ${TOPICS.length} trophies</span></div><div class="topics"></div>`;
+ const g=v.querySelector('.topics');
+ TOPICS.forEach(t=>{const st=topicStars(t),b=document.createElement('button');b.className='tcard';
+  b.innerHTML=`<span class="strand">${t.strand}</span><h3>${t.name}</h3><p class="blurb">${t.blurb}</p><div class="bar"><i style="width:${st/12*100}%"></i></div><div class="tmeta"><span>${st} / 12 stars</span><span class="trophy">${S.boss[t.id]?ICON.crown.replace('<svg','<svg width="18" height="18"'):''}</span></div>`;
+  b.onclick=()=>openTopic(t.id);g.appendChild(b)})}
+function starRow(n,cls='stars'){return `<span class="${cls}">${[0,1,2].map(i=>`<span class="${i<n?'on':'off'}">${ICON.star}</span>`).join('')}</span>`}
+function openTopic(id){const t=TOPICS.find(x=>x.id===id),v=$('#v-quest');v.scrollTop=0;
+ v.innerHTML=`<div class="sec-head"><div><button class="back">${ICON.arrowL}All topics</button><h1 style="margin-top:12px">${t.name}</h1><p>${t.blurb}</p></div></div><div class="map"></div>`;
+ v.querySelector('.back').onclick=renderQuest;const map=v.querySelector('.map');
+ for(let i=0;i<5;i++){const boss=i===4,done=boss?!!S.boss[id]:(S.stars[id+i]||0)>0,open=boss?[0,1,2,3].every(k=>S.stars[id+k]):(i===0||S.stars[id+(i-1)]);
+  const n=document.createElement('div');n.className='node';
+  n.innerHTML=`<button class="nbtn ${boss?'boss':''} ${done?'done':open?'open':''}" ${open?'':'disabled'} aria-label="${boss?'Boss round':'Level '+(i+1)}">${!open?ICON.lock:boss?ICON.crown:i+1}</button>
+   <div class="nlabel"><b>${boss?'Boss round':LV[i]}</b><span>${boss?(done?'Trophy won':'6 mixed questions, 2 hearts'):starRow(S.stars[id+i]||0)}</span></div>`;
+  if(open)n.querySelector('button').onclick=()=>startLevel(id,i);map.appendChild(n)}}
+
+let G=null;
+function startLevel(id,li){const t=TOPICS.find(x=>x.id===id),boss=li===4,n=boss?6:5;
+ const qs=[];for(let k=0;k<n;k++){const lv=boss?t.levels[1+k%3]:t.levels[li];qs.push(lv.gen())}
+ G={t,li,boss,qs,i:0,hearts:boss?2:3,max:boss?2:3,wrong:0,correct:0,revealed:0};
+ const el=document.createElement('div');el.className='game';el.id='game';$('main').appendChild(el);
+ renderIntro()}
+function closeGame(){$('#game')?.remove();if(G)openTopic(G.t.id);G=null}
+const heartsHTML=()=>`<div class="hearts" aria-label="${G.hearts} hearts left">${Array.from({length:G.max},(_,k)=>`<span class="${k<G.hearts?'':'lost'}">${ICON.heart}</span>`).join('')}</div>`;
+function gHead(){return `<div class="gbar"><button class="x" aria-label="Quit">${ICON.x}</button><div class="bar"><i style="width:${G.i/G.qs.length*100}%"></i></div>${heartsHTML()}</div>`}
+function renderIntro(){const el=$('#game'),tip=G.boss?'Mixed questions from the Building, Higher and Expert levels. You only get 2 hearts. Beat it and the trophy is yours.':G.t.levels[G.li].tip;
+ el.innerHTML=`<div class="game-in">${gHead()}<div class="tipcard"><span class="who">Tutor's note</span><h2>${G.t.name}: ${G.boss?'Boss round':LV[G.li]}</h2><p>${tip}</p></div>
+  ${G.boss?`<button class="btn pri" id="go">Start the boss round</button>`:`<button class="btn pri" id="go">Show me a worked example</button>`}</div>`;
+ el.querySelector('.x').onclick=closeGame;const go=el.querySelector('#go');go.onclick=G.boss?renderQ:()=>renderExample(0);go.focus()}
+function exHTML(e,shown,full){return `<div class="wex"><div class="lvl">Worked example</div><div class="qtext">${e.q}</div>${typeof e.fig==='function'?`<div class="wfig">${e.fig(shown)}</div>`:e.fig?tri(...e.fig):''}
+ <ol class="wsteps">${e.steps.map((s,k)=>`<li ${k<shown?'':'hidden'}><span class="sn">${k+1}</span><span>${s}</span></li>`).join('')}</ol>
+ ${full?`<div class="wans"><span class="who">Answer</span><b>${e.ans}</b></div>${e.trap?`<p class="wtrap"><b>Watch out:</b> ${e.trap}</p>`:''}`:''}</div>`}
+function renderExample(shown){const el=$('#game'),e=EX[G.t.id][G.li],n=e.steps.length,full=shown>=n;
+ el.innerHTML=`<div class="game-in">${gHead()}${exHTML(e,shown,full)}
+  <div class="row">${full?`<button class="btn go" id="start">Start the quest</button><button class="btn" id="again">Replay example</button>`
+   :`<button class="btn pri" id="step">${shown===0?'Show step 1':'Next step'}</button><button class="btn" id="all">Show all steps</button>`}</div></div>`;
+ el.querySelector('.x').onclick=closeGame;
+ if(full){el.querySelector('#start').onclick=renderQ;el.querySelector('#again').onclick=()=>renderExample(0);el.querySelector('#start').focus();el.querySelector('.wans').scrollIntoView({block:'nearest',behavior:'smooth'})}
+ else{el.querySelector('#step').onclick=()=>renderExample(shown+1);el.querySelector('#all').onclick=()=>renderExample(n);el.querySelector('#step').focus();
+  const last=el.querySelectorAll('.wsteps li:not([hidden])');if(last.length)last[last.length-1].scrollIntoView({block:'nearest',behavior:'smooth'})}}
+function renderQ(){const el=$('#game'),q=G.qs[G.i];el.scrollTop=0;
+ el.innerHTML=`<div class="game-in">${gHead()}<div class="qcard"><div class="lvl">${G.boss?'Boss':LV[G.li]} · Question ${G.i+1} of ${G.qs.length}</div><div class="qtext">${q.q}</div></div>
+  <div class="opts">${q.opts.map((o,k)=>`<button class="opt" data-v="${esc(o)}"><span class="k">${'ABCD'[k]}</span><span>${o}</span></button>`).join('')}</div><button class="btn ghost" id="reveal">Show me the worked answer</button><div id="fbx"></div>${G.boss?'':`<details class="peek"><summary>Stuck? Look back at the worked example</summary>${exHTML(EX[G.t.id][G.li],99,true)}</details>`}</div>`;
+ el.querySelector('.x').onclick=closeGame;
+ el.querySelectorAll('.opt').forEach(b=>b.onclick=()=>answer(b));el.querySelector('#reveal').onclick=reveal}
+function reveal(){const el=$('#game'),q=G.qs[G.i],last=G.i===G.qs.length-1;G.revealed++;
+ el.querySelectorAll('.opt').forEach(x=>{x.disabled=true;if(x.dataset.v===q.a)x.classList.add('right')});el.querySelector('#reveal').remove();
+ const fb=el.querySelector('#fbx');fb.innerHTML=`<div class="fb help"><h3>Here's how it's done</h3><p class="note2">No heart lost, no points scored. This question counts as passed.</p>${q.vis?`<div class="figwrap">${q.vis}</div>`:''}${stepsHTML(whySteps(q.why))}<div class="wans"><span class="who">Answer</span><b>${q.a}</b></div><button class="btn pri" id="next">${last?'Finish':'Continue'}</button></div>`;
+ const nx=fb.querySelector('#next');nx.focus({preventScroll:true});fb.scrollIntoView({block:'start',behavior:'smooth'});
+ nx.onclick=()=>{if(last)return result(true);G.i++;renderQ()}}
+function answer(b){const el=$('#game'),q=G.qs[G.i],ok=b.dataset.v===q.a;
+ el.querySelectorAll('.opt').forEach(x=>{x.disabled=true;if(x.dataset.v===q.a)x.classList.add('right')});
+ if(!ok){b.classList.add('wrong');G.hearts--;G.wrong++}else G.correct++;el.querySelector('#reveal')?.remove();
+ el.querySelector('.hearts').outerHTML=heartsHTML();
+ const lose=G.hearts<=0,last=G.i===G.qs.length-1;
+ const fb=el.querySelector('#fbx');fb.innerHTML=`<div class="fb ${ok?'ok':'no'}"><h3>${ok?pick(['Spot on!','Nailed it.','Correct!','Lovely work.','Exactly right.']):'Not quite.'}</h3><p>${q.why}</p>${q.vis?`<div class="figwrap">${q.vis}</div>`:''}<button class="btn ${ok?'go':''}" id="next">${lose?'See result':last?'Finish':'Continue'}</button></div>`;
+ const nx=fb.querySelector('#next');nx.focus();fb.scrollIntoView({block:'nearest',behavior:'smooth'});
+ nx.onclick=()=>{if(lose)return result(false);if(last)return result(true);G.i++;renderQ()}}
+function result(pass){const el=$('#game'),id=G.t.id;let stars=0,xp=G.correct*10;
+ if(pass){stars=G.boss?3:Math.max(1,3-G.wrong-G.revealed);xp+=G.correct?(G.boss?50:stars*5):0;
+  if(G.boss)S.boss[id]=1;else S.stars[id+G.li]=Math.max(S.stars[id+G.li]||0,stars);confetti()}
+ addXP(xp);
+ const hasNext=pass&&G.li<4&&!(G.li===3&&![0,1,2,3].every(k=>S.stars[id+k]));
+ el.innerHTML=`<div class="game-in"><div class="center">
+  ${pass?(G.boss?`<div style="color:var(--marker);width:90px">${ICON.crown}</div><h1>Trophy won!</h1><p>You beat the ${G.t.name} boss round.</p>`:`${starRow(stars,'bigstars')}<h1>${stars===3?'Perfect level!':stars===2?'Level cleared!':'Scraped through!'}</h1><p>${G.correct} of ${G.qs.length} correct${G.revealed?`, ${G.revealed} shown with the worked answer`:''}.</p>`)
+  :`<h1>Out of hearts</h1><p>${G.correct} correct before the hearts ran out. Read the tutor's note again and have another go. New numbers every time.</p>`}
+  <span class="chip">+${xp} XP</span>
+  <div class="row" style="justify-content:center">
+   ${pass?(hasNext?`<button class="btn pri" id="nxt">${G.li===3?'Boss round':'Next level'}</button>`:''):`<button class="btn pri" id="retry">Try again</button>`}
+   <button class="btn" id="map">Back to map</button></div></div></div>`;
+ el.querySelector('#map').onclick=closeGame;
+ const r=el.querySelector('#retry');if(r)r.onclick=()=>{const li=G.li;el.remove();startLevel(id,li)};
+ const n=el.querySelector('#nxt');if(n)n.onclick=()=>{const li=G.li+1;el.remove();startLevel(id,li)};
+ questRendered=false}
+
+// ---------- Part 3: Test ----------
+let sampleFn=null,imgCaps=null,T=null,files=[],ctl=null,timer=null;
+const TOPIC_NAME=Object.fromEntries(TOPICS.map(t=>[t.id,t.name]));
+const plain=h=>{const d=document.createElement('div');d.innerHTML=h.replace(/<sup>(.*?)<\/sup>/g,'^($1)').replace(/<span class="fr"><span>(.*?)<\/span><span>(.*?)<\/span><\/span>/g,'($1)/($2)').replace(/<br>/g,'\n');return d.textContent};
+function grade(p){return p>=90?'Distinction':p>=75?'Higher Merit':p>=55?'Merit':p>=40?'Achieved':p>=20?'Partially Achieved':'Not Graded'}
+function renderTestHome(){const v=$('#v-test');clearInterval(timer);
+ v.innerHTML=`<div class="sec-head"><div><h1>Test yourself</h1><p>A random exam-style paper drawn from every topic. Answer on paper with full working, take a photo, and get it marked like an exam script.</p></div></div>
+ <div class="steps"><div class="step"><b class="n">1</b><span>Pick a paper. Questions are random each time.</span></div><div class="step"><b class="n">2</b><span>Write your answers on paper. Show every step.</span></div><div class="step"><b class="n">3</b><span>Photograph your pages and upload them.</span></div><div class="step"><b class="n">4</b><span>Get marks, red-pen feedback and what to fix.</span></div></div>
+ <div class="tests" style="margin-top:16px">
+  <button class="tchoice" data-n="3"><h3>Quick fire</h3><p>3 questions · about 20 minutes</p></button>
+  <button class="tchoice" data-n="5"><h3>Mini paper</h3><p>5 questions · about 35 minutes</p></button>
+  <button class="tchoice" data-n="8"><h3>Full paper</h3><p>8 questions · about 60 minutes</p></button></div>`;
+ v.querySelectorAll('.tchoice').forEach(b=>b.onclick=()=>newTest(+b.dataset.n))}
+function newTest(n){const byTopic={};shuffle(BANK).forEach(q=>{(byTopic[q.t]=byTopic[q.t]||[]).push(q)});
+ const ts=shuffle(Object.keys(byTopic)),qs=[];let k=0;while(qs.length<n){const t=ts[k%ts.length],q=byTopic[t].shift();if(q)qs.push(q);k++;if(k>200)break}
+ T={qs,start:Date.now(),done:false,res:null};files=[];renderPaper()}
+function fmtT(ms){const s=Math.floor(ms/1000);return String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0')}
+function renderPaper(){const v=$('#v-test'),tot=T.qs.reduce((s,q)=>s+q.m,0);v.scrollTop=0;
+ v.innerHTML=`<div class="sec-head"><button class="back">${ICON.arrowL}New paper</button></div>
+ <article class="paper"><h2>Higher Level Maths</h2><div class="pmeta"><span>Junior Cycle practice paper</span><span>${T.qs.length} questions</span><span>${tot} marks</span><span>Time: <span id="clock">00:00</span></span></div>
+ ${T.qs.map((q,i)=>`<div class="pq"><span class="qn">Question ${i+1}</span><span class="mk">[${q.m} marks]</span><div class="body">${q.q}</div><div class="sol" hidden><b>Marking scheme:</b> ${esc(q.s)}</div></div>`).join('')}
+ </article>
+ <div class="upload" id="up"></div><div id="res"></div>`;
+ v.querySelector('.back').onclick=renderTestHome;
+ clearInterval(timer);if(!T.done)timer=setInterval(()=>{const c=$('#clock');if(c)c.textContent=fmtT(Date.now()-T.start)},1000);
+ renderUpload()}
+function renderUpload(){const up=$('#up');if(!up)return;const max=imgCaps?.maxCount||5;
+ if(!sampleFn||!imgCaps){up.innerHTML=`<h3>Marking</h3><p class="warn">${sampleFn===undefined?'Checking whether photo marking is available…':'Photo marking by Claude is not available in this version. Mark your own work against the marking scheme, or ask a parent to upload your photos in the Claude app.'}</p><div class="row"><button class="btn" id="sols">Show marking scheme</button></div>`;
+  up.querySelector('#sols').onclick=toggleSols;return}
+ up.innerHTML=`<h3>Upload your answers</h3><p class="note">Number each answer. Write clearly in dark pen, photograph in good light, one page per photo. Up to ${max} photos.</p>
+  <label class="btn go" for="pic">Add photos<input id="pic" type="file" accept="${(imgCaps.mediaTypes||['image/*']).join(',')}" multiple></label>
+  <div class="thumbs"></div>
+  <div class="row"><button class="btn pri" id="markBtn" ${files.length?'':'disabled'}>Mark my paper</button><button class="btn" id="sols">Show marking scheme</button></div><div id="mstat"></div>`;
+ const th=up.querySelector('.thumbs');files.forEach((f,i)=>{const d=document.createElement('div');d.className='thumb';const u=URL.createObjectURL(f);d.innerHTML=`<img alt="Page ${i+1}" src="${u}"><button aria-label="Remove page ${i+1}">×</button>`;d.querySelector('button').onclick=()=>{files.splice(i,1);renderUpload()};th.appendChild(d)});
+ up.querySelector('#pic').onchange=e=>{const add=[...e.target.files];const big=add.filter(f=>imgCaps.maxInputBytes&&f.size>imgCaps.maxInputBytes);files=[...files,...add.filter(f=>!big.includes(f))].slice(0,max);renderUpload();if(big.length)$('#mstat').innerHTML=`<p class="warn">${big.length} photo(s) were too large. Try a smaller photo.</p>`};
+ up.querySelector('#markBtn').onclick=mark;up.querySelector('#sols').onclick=toggleSols}
+function toggleSols(){const s=document.querySelectorAll('.sol');const show=s[0]?.hidden;s.forEach(x=>x.hidden=!show);this.textContent=show?'Hide marking scheme':'Show marking scheme'}
+function buildPrompt(){const tot=T.qs.reduce((s,q)=>s+q.m,0);
+ return `You are Ireland's best Junior Cycle Higher Level Mathematics tutor and an experienced State Examinations Commission examiner. A student (aged 14-15) has handwritten answers to the test below and photographed their pages. The attached images are those pages.
+
+Mark the script the way an SEC examiner would:
+- Use the marking scheme. Award marks for correct method even when the final answer is wrong; give partial credit for real progress.
+- Accept any valid alternative method.
+- Small deductions for missing units or wrong rounding when the question asks for it.
+- A bare final answer with no work, where working is clearly needed, gets reduced credit.
+- If a question is not attempted, or you cannot read it, award 0 and say so plainly.
+- If the images are not maths work, award 0 for everything and explain in the summary.
+Then teach: be warm, specific and encouraging. Point to the exact line where it went wrong. Use Irish/UK spelling. Plain text only, no LaTeX; write powers like x^2.
+
+TEST (${T.qs.length} questions, ${tot} marks)
+${T.qs.map((q,i)=>`Q${i+1} [${q.m} marks] (${TOPIC_NAME[q.t]})
+${plain(q.q)}
+Marking scheme: ${q.s}`).join('\n\n')}
+
+Reply with only JSON in this shape:
+{"questions":[{"n":1,"awarded":0,"max":${T.qs[0].m},"verdict":"correct|partial|incorrect|missing","seen":"one short line describing what the student wrote","feedback":"1-2 sentences of examiner feedback","fix":"one concrete next step"}],"total":0,"max":${tot},"summary":"2-3 encouraging sentences on the whole paper","focus":["topic to practise next"]}
+Include every question from 1 to ${T.qs.length}.`}
+async function mark(){const st=$('#mstat'),btn=$('#markBtn');btn.disabled=true;ctl=new AbortController();
+ st.innerHTML=`<div class="marking" style="margin-top:8px">${ICON.pen}<span>Your examiner is marking…</span></div><button class="btn" id="stop" style="margin-top:8px">Stop</button>`;
+ $('#stop').onclick=()=>ctl.abort();
+ try{const r=await sampleFn.json(buildPrompt(),{images:files,signal:ctl.signal,cache:false});
+  if(!r||!Array.isArray(r.questions))throw{code:'invalid_json'};
+  const tot=T.qs.reduce((s,q)=>s+q.m,0);r.questions.forEach((q,i)=>{q.max=T.qs[i]?.m??q.max;q.awarded=Math.max(0,Math.min(Number(q.awarded)||0,q.max))});
+  r.total=r.questions.reduce((s,q)=>s+q.awarded,0);r.max=tot;T.res=r;T.done=true;clearInterval(timer);st.innerHTML='';showResult();
+  addXP(Math.round(r.total/tot*100));if(r.total/tot>=.75)confetti()}
+ catch(e){const c=e?.code;btn.disabled=false;
+  st.innerHTML=c==='cancelled'?'':`<p class="warn">${c==='not_granted'||c==='sampling_disabled'?'Marking was not allowed, so nothing was sent. Use the marking scheme to self-mark.':c==='rate_limited'?'Too many requests just now. Wait a minute and try again.':c==='image_rejected'?'One of the photos could not be read. Try a clearer JPEG or PNG.':c==='invalid_json'?'The marking came back in a muddle. Press Mark my paper to try again.':c==='refused'?'Those photos could not be marked. Check they show your maths work.':'Something went wrong while marking. Try again.'}</p>`}}
+function showResult(){const r=T.res,box=$('#res');if(!box)return;const p=Math.round(r.total/r.max*100);
+ box.innerHTML=`<section class="result"><div class="score"><div class="ring"><div><b>${r.total}</b><span>out of ${r.max}</span></div></div><div><div class="grade">${grade(p)}</div><p style="margin:4px 0 0;max-width:46ch">${esc(r.summary||'')}</p><p class="note">Time taken: ${fmtT(Date.now()-T.start)}</p></div></div>
+ ${r.questions.map(q=>`<div class="qres"><span class="tick ${q.verdict==='correct'?'ok':''}">${q.verdict==='correct'?'✓':q.verdict==='partial'?'~':'✗'}</span><h4>Question ${esc(q.n)}</h4><span class="m">${q.awarded}/${q.max}</span>
+  ${q.seen?`<span class="seen">You wrote: ${esc(q.seen)}</span>`:''}<span class="hand">${esc(q.feedback||'')}</span>${q.fix?`<span class="fix"><b>Fix:</b> ${esc(q.fix)}</span>`:''}</div>`).join('')}
+ ${Array.isArray(r.focus)&&r.focus.length?`<div class="warn"><b>Practise next:</b> ${r.focus.map(esc).join(', ')}</div>`:''}
+ <div class="row"><button class="btn pri" id="again">New paper</button><button class="btn" id="toq">Go to Quest</button></div></section>`;
+ box.querySelector('#again').onclick=renderTestHome;box.querySelector('#toq').onclick=()=>setTab('quest');
+ box.scrollIntoView({behavior:'smooth',block:'start'})}
+
+// ---------- boot ----------
+renderStats();renderFeed();renderTestHome();
+sampleFn=undefined;
+(async()=>{let s=null;try{if(window.claude&&claude.use)s=await claude.use('sample')}catch(e){}
+ sampleFn=s;if(s){const lim=await s.limits().catch(()=>null);imgCaps=lim?.images||null}
+ renderUpload()})();
+
+</script>
+
+</body>
+</html>

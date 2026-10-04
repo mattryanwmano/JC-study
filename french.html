@@ -1,0 +1,641 @@
+<!doctype html>
+<html lang="en-IE">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="JC French">
+<meta name="theme-color" content="#F6F2E8">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="icon" href="data:image/png;base64,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">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}</style>
+</head>
+<body>
+<title>JC French Quest</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,900&family=Nunito:wght@400;600;800&family=Caveat:wght@600;700&display=swap">
+<style>
+/* Layout: phone-first app shell. The Quest is a métro map: each unit is a line, each lesson a station. Enamel-sign cream by day, night-métro navy by night. */
+:root{
+  --paper:#F6F2E8; --tile:rgba(15,26,61,.05); --ink:#0F1A3D; --muted:#5B6380; --stroke:#0F1A3D; --edge:#0F1A3D;
+  --card:#FFFFFF; --soft:#ECE8F6; --navy:#1D2B6B; --on-navy:#FFFFFF;
+  --go:#169A5A; --on-go:#FFFFFF; --stop:#D93448; --on-stop:#FFFFFF; --gold:#F2B705; --on-gold:#0F1A3D; --sky:#2F6FDB;
+  --f-display:"Fraunces",Georgia,"Times New Roman",serif;
+  --f-body:"Nunito",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-hand:"Caveat","Segoe Print","Comic Sans MS",cursive;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#0E1430; --tile:rgba(255,255,255,.04); --ink:#EEF0F8; --muted:#9AA3C2; --stroke:#3A4685; --edge:#050816;
+  --card:#18204A; --soft:#232C5C; --navy:#9DB0FF; --on-navy:#0E1430;
+  --go:#38D184; --on-go:#06210F; --stop:#FF6B78; --on-stop:#2A0509; --gold:#F7C948; --on-gold:#0F1A3D; --sky:#7FA8FF; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#0E1430; --tile:rgba(255,255,255,.04); --ink:#EEF0F8; --muted:#9AA3C2; --stroke:#3A4685; --edge:#050816;
+  --card:#18204A; --soft:#232C5C; --navy:#9DB0FF; --on-navy:#0E1430;
+  --go:#38D184; --on-go:#06210F; --stop:#FF6B78; --on-stop:#2A0509; --gold:#F7C948; --on-gold:#0F1A3D; --sky:#7FA8FF; color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{height:100%}
+body{background-color:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.45;
+  background-image:linear-gradient(45deg,var(--tile) 25%,transparent 25%,transparent 75%,var(--tile) 75%),linear-gradient(45deg,var(--tile) 25%,transparent 25%,transparent 75%,var(--tile) 75%);background-size:28px 28px;background-position:0 0,14px 14px}
+button{font:inherit;color:inherit;cursor:pointer}
+button:focus-visible,textarea:focus-visible,label:focus-within{outline:3px solid var(--sky);outline-offset:2px}
+h1,h2,h3{font-family:var(--f-display);font-weight:900;letter-spacing:-.01em;line-height:1.1;text-wrap:balance;margin:0}
+.app{height:100%;display:flex;flex-direction:column;max-width:1100px;margin:0 auto}
+header.top{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 16px}
+.brand{display:flex;align-items:center;gap:8px;font-family:var(--f-display);font-weight:900;font-size:21px;white-space:nowrap}
+.brand .plate{display:inline-grid;place-items:center;background:var(--navy);color:var(--on-navy);border-radius:8px;padding:2px 9px;font-size:18px;border:2px solid var(--gold)}
+.stats{display:flex;gap:6px}
+.chip{display:inline-flex;align-items:center;gap:5px;border:2px solid var(--stroke);border-radius:999px;padding:3px 10px;font-weight:800;font-size:14px;background:var(--card);font-variant-numeric:tabular-nums;white-space:nowrap}
+.chip svg{width:16px;height:16px}
+.iconbtn{width:34px;height:34px;border-radius:50%;border:2px solid var(--stroke);background:var(--card);display:grid;place-items:center;padding:0}
+.iconbtn svg{width:18px;height:18px}
+main{flex:1;min-height:0;position:relative}
+.view{position:absolute;inset:0;overflow-y:auto;padding:4px 16px 28px}
+nav.tabs{display:flex;justify-content:center;gap:6px;padding:8px 12px;border-top:2px solid var(--stroke);background:var(--card)}
+nav.tabs button{flex:1;max-width:180px;display:flex;flex-direction:column;align-items:center;gap:2px;border:0;background:none;padding:6px 4px;border-radius:12px;font-weight:800;font-size:13px;color:var(--muted)}
+nav.tabs button svg{width:24px;height:24px}
+nav.tabs button[aria-selected="true"]{background:var(--navy);color:var(--on-navy)}
+.say{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:50%;border:2px solid var(--stroke);background:var(--sky);color:#fff;padding:0;flex:none;vertical-align:middle}
+.say svg{width:18px;height:18px}
+.say.big{width:84px;height:84px;border-width:3px;box-shadow:0 5px 0 var(--edge)}
+.say.big svg{width:40px;height:40px}
+
+/* ---------- Scroll ---------- */
+#v-feed{padding:0;overflow:hidden}
+.reels{height:100%;overflow-y:auto;scroll-snap-type:y mandatory;overscroll-behavior:contain}
+.reel{height:100%;scroll-snap-align:start;scroll-snap-stop:always;display:flex;justify-content:center;padding:10px 16px}
+.rc{position:relative;width:100%;max-width:460px;height:100%;border-radius:24px;border:2px solid var(--stroke);box-shadow:5px 5px 0 var(--edge);
+  padding:56px 76px 28px 22px;display:flex;flex-direction:column;justify-content:center;gap:12px;overflow:hidden;background:var(--card)}
+.rc::before{content:"";position:absolute;left:0;right:0;top:0;height:8px;background:var(--lc)}
+.rc .tag{position:absolute;top:20px;left:22px;font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.rc .count{position:absolute;top:20px;right:22px;font-size:13px;font-weight:800;color:var(--muted);font-variant-numeric:tabular-nums}
+.rc h2{font-size:clamp(28px,8vw,40px);display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.rc .gloss{font-size:18px;font-weight:800;color:var(--muted);margin:-6px 0 0}
+.rc p{margin:0;font-size:17px}
+.rc .ex{font-size:18px;font-weight:700;border-left:5px solid var(--lc);background:var(--soft);border-radius:0 12px 12px 0;padding:10px 12px;display:flex;gap:10px;align-items:center}
+.rc .check{border:2px solid var(--stroke);border-radius:14px;padding:10px 14px;background:transparent;text-align:left;font-weight:800;font-size:16px}
+.rc .check .ans{display:block;font-family:var(--f-hand);font-size:28px;line-height:1.1;margin-top:4px;color:var(--go)}
+.rc .tap{display:block;font-weight:400;font-size:14px;color:var(--muted);margin-top:2px}
+.rail{position:absolute;right:12px;bottom:24px;display:flex;flex-direction:column;gap:14px;align-items:center}
+.rail button{width:50px;height:50px;border-radius:50%;border:2px solid var(--stroke);background:var(--card);display:grid;place-items:center}
+.rail button svg{width:24px;height:24px}
+.rail small{display:block;text-align:center;font-size:11px;font-weight:800;margin-top:3px}
+.rail button[aria-pressed="true"]{background:var(--stop);color:var(--on-stop);border-color:var(--stop)}
+.hint{font-size:14px;font-weight:800;color:var(--muted);display:flex;align-items:center;gap:6px}
+.hint svg{width:18px;height:18px;animation:bob 1.4s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-5px)}}
+
+/* ---------- Quest (métro map) ---------- */
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:10px 0 14px}
+.sec-head h1{font-size:clamp(28px,6vw,40px)}
+.sec-head p{margin:4px 0 0;color:var(--muted);max-width:56ch}
+.lines{max-width:520px;margin:0 auto;display:flex;flex-direction:column;gap:22px;padding-bottom:20px}
+.ubanner{display:flex;align-items:center;gap:12px;background:var(--lc);color:var(--lon);border:2px solid var(--stroke);border-radius:18px;box-shadow:4px 4px 0 var(--edge);padding:12px 14px}
+.ubanner .num{flex:none;width:44px;height:44px;border-radius:50%;background:var(--card);color:var(--ink);border:3px solid var(--stroke);display:grid;place-items:center;font-family:var(--f-display);font-weight:900;font-size:20px}
+.ubanner .t{flex:1;min-width:0}
+.ubanner .t small{display:block;font-weight:800;font-size:12px;text-transform:uppercase;letter-spacing:.08em;opacity:.85}
+.ubanner .t b{display:block;font-family:var(--f-display);font-size:21px;line-height:1.1}
+.ubanner .t span{font-size:14px;opacity:.9}
+.ubanner button{flex:none;border:2px solid var(--stroke);background:var(--card);color:var(--ink);border-radius:12px;padding:6px 10px;font-weight:800;font-size:13px}
+.stations{position:relative;padding:6px 0 0 34px;display:flex;flex-direction:column;gap:14px}
+.stations::before{content:"";position:absolute;left:52px;top:0;bottom:24px;width:10px;border-radius:5px;background:var(--lc);border:2px solid var(--stroke)}
+.st{position:relative;display:flex;align-items:center;gap:14px}
+.sbtn{flex:none;position:relative;z-index:1;width:46px;height:46px;border-radius:50%;border:4px solid var(--stroke);background:var(--card);display:grid;place-items:center;font-weight:900;font-size:16px;padding:0}
+.sbtn.done{background:var(--go);color:var(--on-go)}
+.sbtn.open{background:var(--card);box-shadow:0 0 0 5px var(--lc)}
+.sbtn[disabled]{opacity:.55;cursor:not-allowed}
+.sbtn svg{width:20px;height:20px}
+.slabel{display:flex;flex-direction:column;min-width:0}
+.slabel b{font-size:17px;font-weight:800}
+.slabel span{font-size:13px;color:var(--muted)}
+.stars{display:inline-flex;gap:2px;vertical-align:middle}
+.stars svg{width:15px;height:15px}
+.stars .on{color:var(--gold)} .stars .off{color:var(--muted);opacity:.45}
+
+/* ---------- Lesson overlay ---------- */
+.game{position:absolute;inset:0;z-index:5;background:var(--paper);display:flex;flex-direction:column}
+.g-top{width:100%;max-width:640px;margin:0 auto;padding:12px 16px 4px;display:flex;align-items:center;gap:12px}
+.x{width:40px;height:40px;border-radius:50%;border:2px solid var(--stroke);background:var(--card);display:grid;place-items:center;flex:none;padding:0}
+.x svg{width:18px;height:18px}
+.bar{flex:1;height:16px;border-radius:99px;background:var(--soft);border:2px solid var(--stroke);overflow:hidden}
+.bar i{display:block;height:100%;background:var(--go);transition:width .3s}
+.hearts{display:flex;gap:3px;color:var(--stop)} .hearts svg{width:22px;height:22px} .hearts .lost{opacity:.2}
+.g-body{flex:1;overflow-y:auto}
+.g-in{width:100%;max-width:640px;margin:0 auto;padding:10px 16px 24px;display:flex;flex-direction:column;gap:16px}
+.kind{font-size:13px;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.prompt{font-family:var(--f-display);font-size:clamp(22px,5.5vw,28px);font-weight:900;line-height:1.25;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.prompt .fr{color:var(--sky)}
+.gapline{font-size:22px;font-weight:800;line-height:1.6;background:var(--card);border:2px solid var(--stroke);border-radius:16px;padding:14px 16px}
+.gapline .blank{display:inline-block;min-width:80px;border-bottom:3px solid var(--sky);text-align:center;color:var(--sky)}
+.opts{display:grid;grid-template-columns:1fr;gap:10px}
+.opt{display:flex;gap:12px;align-items:center;text-align:left;background:var(--card);border:2px solid var(--stroke);border-radius:16px;box-shadow:0 4px 0 var(--edge);padding:13px 14px;font-size:18px;font-weight:800;min-width:0}
+.opt:active{transform:translateY(3px);box-shadow:0 1px 0 var(--edge)}
+.opt .k{flex:none;width:28px;height:28px;border-radius:8px;border:2px solid var(--stroke);display:grid;place-items:center;font-size:13px}
+.opt.sel{border-color:var(--sky);background:var(--soft);box-shadow:0 4px 0 var(--sky)}
+.opt.right{background:var(--go);color:var(--on-go);border-color:var(--go)}
+.opt.wrong{background:var(--stop);color:var(--on-stop);border-color:var(--stop);animation:shake .35s}
+.opt[disabled]{cursor:default}
+@keyframes shake{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+.answerline{min-height:66px;border-bottom:2px solid var(--stroke);border-top:2px solid var(--stroke);padding:8px 0;display:flex;flex-wrap:wrap;gap:8px;align-content:flex-start}
+.bank{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;padding-top:6px}
+.tile{border:2px solid var(--stroke);border-radius:12px;background:var(--card);box-shadow:0 3px 0 var(--edge);padding:8px 12px;font-size:18px;font-weight:800}
+.tile.used{visibility:hidden}
+.pairs{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.pair{border:2px solid var(--stroke);border-radius:14px;background:var(--card);box-shadow:0 4px 0 var(--edge);padding:12px 10px;font-size:16px;font-weight:800;min-height:56px}
+.pair.sel{border-color:var(--sky);background:var(--soft)}
+.pair.ok{opacity:.35;box-shadow:none;border-color:var(--go)}
+.pair.bad{border-color:var(--stop);animation:shake .35s}
+.g-foot{border-top:2px solid var(--stroke);background:var(--card);padding:12px 16px}
+.g-foot .in{max-width:640px;margin:0 auto;display:flex;flex-direction:column;gap:10px}
+.g-foot.ok{background:var(--go);color:var(--on-go)} .g-foot.no{background:var(--stop);color:var(--on-stop)} .g-foot.help{background:var(--gold);color:var(--on-gold)}
+.g-foot h3{font-size:22px}
+.g-foot p{margin:0;font-weight:600}
+.g-foot .row{justify-content:space-between}
+.btn{border:2px solid var(--stroke);border-radius:14px;padding:12px 18px;font-weight:800;font-size:17px;background:var(--card);color:var(--ink);box-shadow:0 4px 0 var(--edge);display:inline-flex;align-items:center;justify-content:center;gap:8px}
+.btn:active{transform:translateY(3px);box-shadow:0 1px 0 var(--edge)}
+.btn.pri{background:var(--navy);color:var(--on-navy)}
+.btn.go{background:var(--gold);color:var(--on-gold)}
+.btn.wide{width:100%}
+.btn[disabled]{opacity:.45;cursor:not-allowed}
+.link{border:0;background:none;text-decoration:underline;font-weight:800;padding:4px;color:inherit;font-size:15px}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.learn{background:var(--card);border:2px solid var(--stroke);border-radius:20px;box-shadow:4px 4px 0 var(--edge);padding:18px;display:flex;flex-direction:column;gap:12px}
+.learn .who{font-family:var(--f-hand);font-size:26px;line-height:1;color:var(--sky)}
+.learn p{margin:0}
+.vlist{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:8px}
+.vrow{display:flex;align-items:center;gap:10px;background:var(--soft);border-radius:12px;padding:6px 10px}
+.vrow .say{width:30px;height:30px}
+.vrow .say svg{width:15px;height:15px}
+.vrow b{font-weight:800}
+.vrow span{color:var(--muted);font-size:14px;margin-left:auto;text-align:right}
+.wsteps{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.wsteps li{display:flex;gap:12px;align-items:flex-start;font-size:17px;padding:10px 12px;border-radius:12px;background:var(--soft)}
+.wsteps .sn{flex:none;width:26px;height:26px;border-radius:50%;background:var(--navy);color:var(--on-navy);display:grid;place-items:center;font-weight:800;font-size:13px}
+.wans{display:flex;flex-direction:column;gap:2px;background:var(--gold);color:var(--on-gold);border:2px solid var(--stroke);border-radius:14px;padding:10px 14px;font-size:19px}
+.wans .who{font-family:var(--f-hand);font-size:24px;line-height:1}
+.center{text-align:center;display:flex;flex-direction:column;align-items:center;gap:14px;margin-top:4vh}
+.bigstars{display:flex;gap:8px} .bigstars svg{width:56px;height:56px}
+.bigstars .on{color:var(--gold);filter:drop-shadow(2px 2px 0 var(--edge))} .bigstars .off{color:var(--muted);opacity:.35}
+.confetti{position:fixed;inset:0;pointer-events:none;z-index:20;overflow:hidden}
+.confetti i{position:absolute;top:-20px;width:10px;height:14px;border-radius:2px;animation:fall 1.6s ease-in forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(540deg)}}
+.sheet{position:absolute;inset:0;z-index:6;background:rgba(10,12,30,.5);display:flex;align-items:flex-end;justify-content:center;padding:12px}
+.sheet-in{width:100%;max-width:540px;max-height:100%;overflow-y:auto;background:var(--card);color:var(--ink);border:2px solid var(--stroke);border-radius:22px;padding:18px;display:flex;flex-direction:column;gap:12px;animation:pop .25s ease-out}
+.sheet-top{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.lvl{font-size:13px;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+@keyframes pop{from{transform:translateY(8px);opacity:.3}to{transform:none;opacity:1}}
+
+/* ---------- Test ---------- */
+.tests{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-bottom:18px}
+.tchoice{background:var(--card);border:2px solid var(--stroke);border-radius:18px;box-shadow:4px 4px 0 var(--edge);padding:18px;text-align:left;display:flex;flex-direction:column;gap:6px;border-top:10px solid var(--lc)}
+.tchoice h3{font-size:22px} .tchoice p{margin:0;color:var(--muted);font-size:15px}
+.back{border:2px solid var(--stroke);background:var(--card);border-radius:999px;padding:6px 14px;font-weight:800;display:inline-flex;gap:6px;align-items:center}
+.paper{background:var(--card);border:2px solid var(--stroke);border-radius:10px;box-shadow:5px 5px 0 var(--edge);padding:20px;display:flex;flex-direction:column;gap:14px}
+.paper h2{font-size:24px}
+.passage{font-size:18px;line-height:1.65;background:var(--soft);border-radius:12px;padding:14px 16px}
+.passage mark{background:var(--gold);color:var(--on-gold);border-radius:4px;padding:0 2px}
+.tq{display:flex;flex-direction:column;gap:8px;padding-top:12px;border-top:1px dashed var(--stroke)}
+.tq b{font-size:17px}
+.radios{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+@media (max-width:520px){.radios{grid-template-columns:1fr}}
+.radio{text-align:left;border:2px solid var(--stroke);border-radius:12px;background:var(--card);padding:10px 12px;font-weight:700}
+.radio.sel{border-color:var(--sky);background:var(--soft)}
+.radio.right{background:var(--go);color:var(--on-go);border-color:var(--go)}
+.radio.wrong{background:var(--stop);color:var(--on-stop);border-color:var(--stop)}
+.ev{font-size:14px;color:var(--muted)}
+.pts{margin:0;padding-left:20px;font-size:17px}
+textarea{width:100%;min-height:200px;border:2px solid var(--stroke);border-radius:14px;padding:12px;font:inherit;font-size:17px;background:var(--card);color:var(--ink);resize:vertical}
+.wc{font-size:14px;font-weight:800;color:var(--muted);font-variant-numeric:tabular-nums}
+.accents{display:flex;gap:6px;flex-wrap:wrap}
+.accents button{border:2px solid var(--stroke);background:var(--card);border-radius:10px;min-width:38px;height:38px;font-weight:800;font-size:17px}
+.upload input[type=file]{position:absolute;width:1px;height:1px;opacity:0}
+.thumbs{display:flex;gap:10px;flex-wrap:wrap}
+.thumb{position:relative;width:80px;height:100px;border-radius:10px;overflow:hidden;border:2px solid var(--stroke)}
+.thumb img{width:100%;height:100%;object-fit:cover}
+.thumb button{position:absolute;top:4px;right:4px;width:24px;height:24px;border-radius:50%;border:0;background:var(--stop);color:#fff;font-weight:800;line-height:1;padding:0}
+.warn{background:var(--soft);border:2px solid var(--stroke);border-radius:12px;padding:10px 12px;font-size:15px}
+.note{font-size:14px;color:var(--muted)}
+.marking{display:flex;align-items:center;gap:12px;font-family:var(--f-hand);font-size:26px;color:var(--stop)}
+.pen{width:34px;height:34px;animation:scribble .8s ease-in-out infinite alternate}
+@keyframes scribble{from{transform:rotate(-12deg) translateX(-4px)}to{transform:rotate(8deg) translateX(6px)}}
+.score{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.ring{width:124px;height:124px;border:4px solid var(--stop);border-radius:50%;display:grid;place-items:center;transform:rotate(-6deg);font-family:var(--f-hand);color:var(--stop);text-align:center;line-height:.9}
+.ring b{font-size:44px;display:block} .ring span{font-size:21px}
+.grade{font-family:var(--f-display);font-size:24px;font-weight:900}
+.crit{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.crit div{background:var(--soft);border-radius:12px;padding:8px;text-align:center;font-weight:800}
+.crit b{display:block;font-family:var(--f-display);font-size:24px}
+.fix{display:grid;grid-template-columns:1fr;gap:6px}
+.fix div{background:var(--soft);border-radius:10px;padding:8px 10px}
+.fix s{color:var(--stop)} .fix ins{color:var(--go);text-decoration:none;font-weight:800}
+.hand{font-family:var(--f-hand);font-size:23px;line-height:1.25;color:var(--stop)}
+@media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}}
+@media (max-width:420px){.chip .lbl{display:none}.brand{font-size:18px}}
+</style>
+
+<div class="app">
+  <header class="top">
+    <div style="display:flex;align-items:center;min-width:0"><a href="index.html" aria-label="All subjects" style="display:inline-grid;place-items:center;width:34px;height:34px;margin-right:8px;border-radius:50%;border:2px solid currentColor;color:inherit;text-decoration:none;vertical-align:middle;flex:none"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg></a><div class="brand"><span class="plate">Allez !</span>JC French</div></div>
+    <div class="stats">
+      <span class="chip" title="Day streak"><svg viewBox="0 0 24 24" fill="#F28C28" stroke="var(--stroke)" stroke-width="1.6"><path d="M12 2c1 4 5 6 5 11a5 5 0 0 1-10 0c0-2 1-3.5 2-4.5.3 1.6 1.2 2.5 2 2.5 0-3-1-6 1-9z"/></svg><span id="streak">0</span></span>
+      <span class="chip" title="Experience points"><svg viewBox="0 0 24 24" fill="var(--gold)" stroke="var(--stroke)" stroke-width="1.6"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 17l-6.1 3.4 1.5-6.8L2.2 9l6.9-.7z"/></svg><span id="xp">0</span><span class="lbl">XP</span></span>
+      <button class="iconbtn" id="snd" aria-label="Sound effects on" aria-pressed="true"></button>
+    </div>
+  </header>
+  <main>
+    <section class="view" id="v-feed" role="tabpanel" aria-label="Scroll"></section>
+    <section class="view" id="v-quest" role="tabpanel" aria-label="Quest" hidden></section>
+    <section class="view" id="v-test" role="tabpanel" aria-label="Test" hidden></section>
+  </main>
+  <nav class="tabs" role="tablist">
+    <button role="tab" data-tab="feed" aria-selected="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="3"/><path d="M10 9l5 3-5 3z" fill="currentColor"/></svg>Scroll</button>
+    <button role="tab" data-tab="quest" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8.5 6H14a4 4 0 0 1 0 8h-4a4 4 0 0 0 0 8"/></svg>Quest</button>
+    <button role="tab" data-tab="test" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l4-1 11-11-3-3L5 16z"/><path d="M14 7l3 3"/><path d="M13 20h7"/></svg>Test</button>
+  </nav>
+</div>
+
+<script>
+// ================= CONTENT =================
+// Each unit: vocab [fr,en], sent [fr,en], gaps [sentence with ___, answer, wrongs[], why]
+const UNITS=[
+{fr:"Moi et ma famille",en:"Me and my family",c:"#F2B705",on:"#0F1A3D",
+ tip:"<b>être</b> (to be): je suis, tu es, il/elle est, nous sommes, vous êtes, ils/elles sont.<br><b>avoir</b> (to have): j'ai, tu as, il/elle a, nous avons, vous avez, ils/elles ont.<br>Age uses <b>avoir</b>: J'ai quatorze ans (literally: I have fourteen years).<br>My = <b>mon</b> (masc.), <b>ma</b> (fem.), <b>mes</b> (plural).",
+ vocab:[["la mère","mother"],["le père","father"],["le frère","brother"],["la sœur","sister"],["les parents","parents"],["le grand-père","grandfather"],["la grand-mère","grandmother"],["le cousin","cousin"],["fils unique","only child (boy)"],["grand","tall"],["petit","small"],["drôle","funny"],["sympa","nice"],["les yeux bleus","blue eyes"],["les cheveux courts","short hair"],["j'habite","I live"]],
+ sent:[["Je m'appelle Luc.","My name is Luc."],["J'ai quatorze ans.","I am fourteen."],["J'ai un frère et une sœur.","I have a brother and a sister."],["Ma mère est très drôle.","My mother is very funny."],["Mon père est grand.","My father is tall."],["J'ai les yeux bleus.","I have blue eyes."],["Mon anniversaire est le dix mai.","My birthday is the tenth of May."],["J'habite à Dublin avec ma famille.","I live in Dublin with my family."]],
+ gaps:[["J'___ quatorze ans.","ai",["suis","es","a"],"Age uses avoir, not être: j'ai … ans."],["Elle ___ très sympa.","est",["es","a","sont"],"être with il/elle → est."],["Nous ___ deux chats.","avons",["sommes","ont","avez"],"avoir with nous → avons."],["Ils ___ irlandais.","sont",["est","ont","sommes"],"être with ils → sont."],["___ sœur s'appelle Emma.","Ma",["Mon","Mes","Me"],"sœur is feminine, so 'my' is ma."],["___ parents sont stricts.","Mes",["Mon","Ma","Me"],"parents is plural, so 'my' is mes."]]},
+{fr:"Ma maison",en:"My house",c:"#2F6FDB",on:"#FFFFFF",
+ tip:"<b>Il y a</b> = there is / there are: Il y a trois chambres.<br><b>le / la / les</b> = the; <b>un / une / des</b> = a / some.<br>Every noun is masculine or feminine, so learn each word with its article.<br>Place words: <b>dans</b> (in), <b>sur</b> (on), <b>sous</b> (under), <b>à côté de</b> (beside), <b>en face de</b> (opposite).",
+ vocab:[["la maison","house"],["l'appartement","flat"],["la chambre","bedroom"],["la cuisine","kitchen"],["le salon","sitting room"],["la salle de bains","bathroom"],["le jardin","garden"],["le lit","bed"],["la fenêtre","window"],["à côté de","beside"],["en face de","opposite"],["sous","under"],["sur","on"],["dans","in"],["à la campagne","in the countryside"],["en ville","in town"]],
+ sent:[["J'habite dans une maison.","I live in a house."],["Il y a trois chambres.","There are three bedrooms."],["Ma chambre est petite.","My bedroom is small."],["Le chat est sous le lit.","The cat is under the bed."],["Il y a un grand jardin.","There is a big garden."],["La cuisine est à côté du salon.","The kitchen is beside the sitting room."],["J'aime ma chambre.","I like my bedroom."],["J'habite à la campagne.","I live in the countryside."]],
+ gaps:[["Il ___ a deux salles de bains.","y",["est","a","les"],"There is / there are = il y a."],["La cuisine est à côté ___ salon.","du",["de le","de la","des"],"de + le always shortens to du."],["Ma chambre est ___.","petite",["petit","petits","petites"],"chambre is feminine singular, so add -e: petite."],["J'habite ___ un appartement.","dans",["sur","sous","à"],"in = dans."],["___ jardin est grand.","Le",["La","Les","L'"],"jardin is masculine: le jardin."],["Il y a ___ lit dans ma chambre.","un",["une","des","le"],"lit is masculine: un lit."]]},
+{fr:"Mon collège",en:"My school",c:"#8A9A1B",on:"#FFFFFF",
+ tip:"Opinions: <b>j'aime, j'adore, je préfère, je n'aime pas, je déteste</b> + le / la / les + subject.<br>Give a reason with <b>parce que</b> (because): J'aime les maths parce que c'est intéressant.<br>To make a verb negative, put <b>ne … pas</b> around it: Je <b>n'</b>aime <b>pas</b> l'histoire.",
+ vocab:[["les maths","maths"],["le français","French"],["l'anglais","English"],["l'histoire","history"],["la géographie","geography"],["les sciences","science"],["le dessin","art"],["l'EPS","PE"],["le professeur","teacher"],["la récré","break"],["les devoirs","homework"],["facile","easy"],["difficile","difficult"],["ennuyeux","boring"],["intéressant","interesting"],["la matière","subject"]],
+ sent:[["J'adore le français.","I love French."],["Je n'aime pas l'histoire.","I don't like history."],["Ma matière préférée est le dessin.","My favourite subject is art."],["Les maths sont difficiles.","Maths is difficult."],["Le professeur est sympa.","The teacher is nice."],["Je déteste les devoirs.","I hate homework."],["Les cours commencent à neuf heures.","Classes start at nine o'clock."],["J'aime l'EPS parce que c'est amusant.","I like PE because it's fun."]],
+ gaps:[["Je n'aime ___ la géographie.","pas",["ne","non","rien"],"The negative is ne … pas, wrapped around the verb."],["J'aime les sciences ___ c'est intéressant.","parce que",["mais","et","ou"],"because = parce que."],["Les maths ___ faciles.","sont",["est","ont","sommes"],"les maths is plural, so use sont."],["Je ___ le dessin.","préfère",["préfèrent","préférer","préfères"],"With je, the verb is préfère."],["Les cours finissent ___ quatre heures.","à",["en","dans","au"],"at + a time = à."],["C'est ___.","ennuyeux",["ennuyeuse","ennuyeuses","ennuyeuxs"],"After c'est, the adjective stays masculine singular."]]},
+{fr:"Mon temps libre",en:"My free time",c:"#B04FB0",on:"#FFFFFF",
+ tip:"Sport: <b>jouer à</b> — je joue <b>au</b> foot (à + le = au).<br>Instrument: <b>jouer de</b> — je joue <b>de la</b> guitare, <b>du</b> piano.<br>Activity: <b>faire de</b> — je fais <b>de la</b> natation, <b>du</b> vélo.<br>How often: souvent (often), le week-end, tous les jours (every day).",
+ vocab:[["le foot","football"],["le rugby","rugby"],["la natation","swimming"],["le vélo","cycling"],["la guitare","guitar"],["le piano","piano"],["les jeux vidéo","video games"],["regarder la télé","watch TV"],["lire","to read"],["écouter de la musique","listen to music"],["sortir avec mes amis","go out with my friends"],["souvent","often"],["le week-end","at the weekend"],["tous les jours","every day"],["mon passe-temps","my hobby"],["le match","match"]],
+ sent:[["Je joue au foot le samedi.","I play football on Saturdays."],["Je joue de la guitare.","I play the guitar."],["Je fais de la natation.","I go swimming."],["J'aime jouer aux jeux vidéo.","I like playing video games."],["Je regarde la télé le soir.","I watch TV in the evening."],["Le week-end, je sors avec mes amis.","At the weekend, I go out with my friends."],["Mon passe-temps préféré est la lecture.","My favourite hobby is reading."],["Je fais du vélo tous les jours.","I cycle every day."]],
+ gaps:[["Je joue ___ rugby.","au",["à le","du","de la"],"Sport uses jouer à, and à + le = au."],["Je joue ___ piano.","du",["au","de le","à la"],"Instrument uses jouer de, and de + le = du."],["Je fais ___ natation.","de la",["du","au","à la"],"Activity uses faire de: de la natation."],["Nous ___ du vélo.","faisons",["faites","font","fais"],"faire with nous → faisons."],["Ils ___ au tennis.","jouent",["joue","jouons","jouez"],"-er verbs with ils end in -ent (silent)."],["J'aime ___ de la musique.","écouter",["écoute","écoutes","écouté"],"After j'aime, use the infinitive."]]},
+{fr:"La nourriture",en:"Food",c:"#F28C28",on:"#0F1A3D",
+ tip:"Some / any: <b>du</b> (masc.), <b>de la</b> (fem.), <b>de l'</b> (before a vowel), <b>des</b> (plural): je mange du pain.<br>After a negative they all become <b>de</b>: je ne mange pas <b>de</b> viande.<br>To order politely: <b>je voudrais …</b> (I would like).",
+ vocab:[["le pain","bread"],["le fromage","cheese"],["la viande","meat"],["le poulet","chicken"],["le poisson","fish"],["les légumes","vegetables"],["les fruits","fruit"],["la pomme","apple"],["l'eau","water"],["le lait","milk"],["le petit déjeuner","breakfast"],["le déjeuner","lunch"],["le dîner","dinner"],["délicieux","delicious"],["l'addition","the bill"],["je voudrais","I would like"]],
+ sent:[["Je mange du pain.","I eat bread."],["Je bois de l'eau.","I drink water."],["Je voudrais un coca, s'il vous plaît.","I would like a cola, please."],["Je ne mange pas de viande.","I don't eat meat."],["Le poulet est délicieux.","The chicken is delicious."],["Pour le petit déjeuner, je mange des céréales.","For breakfast, I eat cereal."],["L'addition, s'il vous plaît.","The bill, please."],["J'adore les fruits.","I love fruit."]],
+ gaps:[["Je mange ___ fromage.","du",["de la","des","de l'"],"fromage is masculine, so some = du."],["Je bois ___ eau.","de l'",["du","de la","des"],"eau starts with a vowel, so some = de l'."],["Je ne mange pas ___ poisson.","de",["du","le","des"],"After a negative, du / de la / des become de."],["Elle mange ___ légumes.","des",["du","de la","le"],"légumes is plural, so some = des."],["Je ___ un sandwich, s'il vous plaît.","voudrais",["veux","voudrait","voulons"],"Polite ordering: je voudrais."],["Nous ___ du lait.","buvons",["boivent","bois","boit"],"boire with nous → buvons."]]},
+{fr:"Ma ville",en:"My town",c:"#3FAE7A",on:"#0F1A3D",
+ tip:"<b>aller</b> (to go): je vais, tu vas, il va, nous allons, vous allez, ils vont.<br>to the: <b>au</b> (masc.), <b>à la</b> (fem.), <b>à l'</b> (vowel), <b>aux</b> (plural): je vais au cinéma, à la piscine.<br>Directions: tournez <b>à gauche</b> / <b>à droite</b>, allez <b>tout droit</b>.",
+ vocab:[["la ville","town"],["le cinéma","cinema"],["la piscine","swimming pool"],["la plage","beach"],["le parc","park"],["la gare","train station"],["le centre commercial","shopping centre"],["l'église","church"],["la bibliothèque","library"],["le supermarché","supermarket"],["à gauche","left"],["à droite","right"],["tout droit","straight on"],["près de","near"],["loin de","far from"],["les magasins","shops"]],
+ sent:[["Je vais au cinéma.","I go to the cinema."],["Elle va à la piscine.","She goes to the swimming pool."],["Il y a un grand parc.","There is a big park."],["La gare est près d'ici.","The station is near here."],["Tournez à gauche.","Turn left."],["Allez tout droit.","Go straight on."],["Où est la bibliothèque ?","Where is the library?"],["Il y a beaucoup de magasins.","There are lots of shops."]],
+ gaps:[["Je vais ___ parc.","au",["à la","à le","aux"],"parc is masculine, and à + le = au."],["Nous ___ à la plage.","allons",["allez","vont","vais"],"aller with nous → allons."],["Ils ___ au supermarché.","vont",["va","allons","vas"],"aller with ils → vont."],["Tu vas ___ église ?","à l'",["au","à la","aux"],"église starts with a vowel, so to the = à l'."],["Tournez ___ droite.","à",["au","en","de"],"Turn right = tournez à droite."],["La gare est loin ___ centre.","du",["de le","de la","au"],"loin de + le centre → loin du centre."]]},
+{fr:"Ma routine",en:"My daily routine",c:"#E86C9A",on:"#0F1A3D",
+ tip:"Reflexive verbs have an extra pronoun: je <b>me</b> lève, tu <b>te</b> lèves, il <b>se</b> lève, nous <b>nous</b> levons.<br>Before a vowel: je <b>m'</b>habille.<br>Times: à sept heures (7:00), et quart (7:15), et demie (7:30), à huit heures moins le quart (7:45).<br>Sequence words: d'abord (first), ensuite / puis (then), enfin (finally).",
+ vocab:[["je me réveille","I wake up"],["je me lève","I get up"],["je me douche","I shower"],["je m'habille","I get dressed"],["je me brosse les dents","I brush my teeth"],["je prends le petit déjeuner","I have breakfast"],["je pars","I leave"],["je rentre","I come home"],["je me couche","I go to bed"],["le matin","in the morning"],["le soir","in the evening"],["d'abord","first"],["ensuite","then"],["enfin","finally"],["et demie","half past"],["tôt","early"]],
+ sent:[["Je me lève à sept heures.","I get up at seven o'clock."],["Je me douche le matin.","I shower in the morning."],["D'abord, je m'habille.","First, I get dressed."],["Ensuite, je prends le petit déjeuner.","Then, I have breakfast."],["Je pars à huit heures et demie.","I leave at half past eight."],["Je rentre à quatre heures.","I come home at four o'clock."],["Je me couche à dix heures.","I go to bed at ten o'clock."],["Il se lève tôt.","He gets up early."]],
+ gaps:[["Je ___ lève à sept heures.","me",["te","se","m'"],"With je, the reflexive pronoun is me."],["Elle ___ couche à dix heures.","se",["me","te","s'"],"With il / elle, the reflexive pronoun is se."],["Je ___ habille.","m'",["me","se","t'"],"me shortens to m' before a vowel: je m'habille."],["Nous nous ___ tôt.","levons",["lève","lèvent","levez"],"With nous: nous nous levons."],["Je pars à huit heures et ___ (8:30).","demie",["demi","moins","midis"],"Half past = et demie. heure is feminine, so demie ends in -e."],["___, je me brosse les dents.","Ensuite",["Hier","Jamais","Demain"],"Ensuite (then) is a sequence word for a routine."]]},
+{fr:"Les vacances",en:"Holidays (past tense)",c:"#8E6FD8",on:"#FFFFFF",
+ tip:"The <b>passé composé</b> says what you did.<br>Most verbs: <b>avoir</b> + past participle: j'ai joué, j'ai mangé, j'ai visité.<br>Movement verbs like aller, arriver, partir, rester use <b>être</b>: je suis allé(e).<br>With être the participle agrees: elle est allé<b>e</b>.<br>Irregular: j'ai fait, j'ai vu, j'ai pris, j'ai bu.",
+ vocab:[["les vacances","holidays"],["l'été dernier","last summer"],["la semaine dernière","last week"],["hier","yesterday"],["je suis allé","I went"],["j'ai visité","I visited"],["j'ai mangé","I ate"],["j'ai vu","I saw"],["j'ai fait","I did"],["j'ai pris","I took"],["en avion","by plane"],["en voiture","by car"],["l'hôtel","hotel"],["le camping","campsite"],["il a fait beau","the weather was nice"],["c'était génial","it was great"]],
+ sent:[["L'été dernier, je suis allé en France.","Last summer, I went to France."],["J'ai visité Paris avec ma famille.","I visited Paris with my family."],["Nous avons pris l'avion.","We took the plane."],["J'ai mangé des croissants.","I ate croissants."],["Il a fait beau.","The weather was nice."],["C'était génial !","It was great!"],["Hier, j'ai joué au foot.","Yesterday, I played football."],["Elle est allée à la plage.","She went to the beach."]],
+ gaps:[["Hier, j'___ joué au tennis.","ai",["suis","as","a"],"jouer uses avoir: j'ai joué."],["Je ___ allé au cinéma.","suis",["ai","es","est"],"aller uses être: je suis allé."],["Elle est ___ à Paris.","allée",["allé","allés","aller"],"With être, the participle agrees: elle est allée."],["Nous avons ___ une pizza.","mangé",["manger","mange","mangeons"],"The past participle of an -er verb ends in -é."],["J'ai ___ la tour Eiffel.","vu",["voir","vois","vue"],"voir → vu: j'ai vu."],["Il ___ fait beau.","a",["est","ai","était"],"The weather was nice = il a fait beau."]]},
+{fr:"Les vêtements",en:"Clothes and shopping",c:"#C9A227",on:"#0F1A3D",
+ tip:"Adjectives agree with the noun and usually go after it: un pull noir, une robe noir<b>e</b>, des chaussures noir<b>es</b>.<br>Watch out: blanc → blanc<b>he</b>.<br>Prices: <b>Ça coûte combien ?</b> (How much is it?) — Ça coûte vingt euros.",
+ vocab:[["le pull","jumper"],["le pantalon","trousers"],["la robe","dress"],["la jupe","skirt"],["le t-shirt","T-shirt"],["la veste","jacket"],["les chaussures","shoes"],["les baskets","trainers"],["le manteau","coat"],["noir","black"],["blanc","white"],["rouge","red"],["bleu","blue"],["vert","green"],["cher","expensive"],["ça coûte combien ?","how much is it?"]],
+ sent:[["Je porte un pull bleu.","I am wearing a blue jumper."],["Elle porte une robe rouge.","She is wearing a red dress."],["J'aime les baskets blanches.","I like the white trainers."],["Ça coûte combien ?","How much is it?"],["Ça coûte trente euros.","It costs thirty euros."],["C'est trop cher.","It's too expensive."],["Je voudrais acheter une veste.","I would like to buy a jacket."],["Au collège, je porte un uniforme.","At school, I wear a uniform."]],
+ gaps:[["une jupe ___","noire",["noir","noirs","noires"],"jupe is feminine singular, so add -e: noire."],["des chaussures ___","vertes",["vert","verte","verts"],"chaussures is feminine plural, so add -es: vertes."],["un pantalon ___","gris",["grise","grises","grisse"],"pantalon is masculine singular, and gris already ends in s."],["une chemise ___","blanche",["blanc","blanches","blance"],"blanc has an irregular feminine: blanche."],["Ça coûte ___ ?","combien",["comment","quand","pourquoi"],"How much = combien."],["Je ___ un manteau en hiver.","porte",["portes","portent","porter"],"With je, porter → porte."]]},
+{fr:"Projets et météo",en:"Plans and weather",c:"#E0414F",on:"#FFFFFF",
+ tip:"<b>Futur proche</b> = aller + infinitive: Je <b>vais voyager</b> (I am going to travel).<br>Negative: Je <b>ne</b> vais <b>pas</b> travailler.<br>Weather: il fait beau / chaud / froid, <b>il pleut</b> (it's raining), <b>il neige</b> (it's snowing), <b>il y a du vent</b> (it's windy).",
+ vocab:[["demain","tomorrow"],["le week-end prochain","next weekend"],["l'année prochaine","next year"],["je vais","I am going to"],["voyager","to travel"],["travailler","to work"],["il fait beau","the weather is nice"],["il fait chaud","it's hot"],["il fait froid","it's cold"],["il pleut","it's raining"],["il neige","it's snowing"],["il y a du vent","it's windy"],["l'été","summer"],["l'hiver","winter"],["le printemps","spring"],["l'automne","autumn"]],
+ sent:[["Demain, je vais jouer au foot.","Tomorrow, I am going to play football."],["L'été prochain, je vais voyager en Espagne.","Next summer, I am going to travel to Spain."],["Nous allons regarder un film.","We are going to watch a film."],["Il pleut aujourd'hui.","It's raining today."],["En hiver, il fait froid.","In winter, it's cold."],["Je ne vais pas travailler.","I am not going to work."],["Plus tard, je voudrais être médecin.","Later, I would like to be a doctor."],["Il y a du vent.","It's windy."]],
+ gaps:[["Demain, je ___ visiter Paris.","vais",["va","allons","vont"],"Futur proche with je: je vais + infinitive."],["Ils vont ___ au tennis.","jouer",["joue","jouent","joué"],"After aller, use the infinitive."],["Il ___ aujourd'hui (it's raining).","pleut",["pluie","pleuvoir","plu"],"It's raining = il pleut."],["Il fait ___ en été.","chaud",["froid","neige","pleut"],"In summer it's hot: il fait chaud."],["Je ne vais ___ sortir.","pas",["ne","rien","non"],"ne … pas goes around vais."],["En ___, il neige.","hiver",["été","juillet","août"],"Snow comes in winter: en hiver."]]}
+];
+const LESSONS=[{fr:"Les mots",en:"Words"},{fr:"Les phrases",en:"Sentences"},{fr:"La grammaire",en:"Grammar"},{fr:"Révision",en:"Unit review"}];
+
+// ================= SCROLL REELS =================
+// [tag, French headline, English, tip, example (FR), quick check, answer, unit index or null, working steps[]]
+const REELS=[
+["Greetings","Bonjour ou salut ?","Hello or hi?","Bonjour is polite: teachers, adults, shops. Salut is for friends.","Bonjour, madame !","How do you greet your teacher?","Bonjour, madame / monsieur.",0,["Your teacher is an adult you should be polite to.","Polite = bonjour, plus madame or monsieur.","Salut would be too casual."]],
+["Tu or vous","Tu ou vous ?","Two words for 'you'","Tu: a friend, a family member, a child. Vous: an adult you don't know, or more than one person.","Vous désirez, monsieur ?","Talking to a shop assistant: tu or vous?","Vous",4,["A shop assistant is an adult you don't know.","Strangers and adults get the polite vous."]],
+["Age","J'ai quatorze ans","I am fourteen","French uses avoir (to have) for age, not être.","Ma sœur a dix ans.","Say 'I am fifteen'.","J'ai quinze ans.",0,["Age uses avoir: j'ai.","15 = quinze.","Add ans (years): J'ai quinze ans."]],
+["Gender","Le ou la ?","Masculine or feminine","Words ending in -tion are feminine. Words ending in -age are usually masculine.","la natation, le fromage","Le or la natation?","la natation",3,["natation ends in -tion.","-tion words are feminine, so: la natation."]],
+["Opinions","J'aime… parce que…","I like… because…","Give an opinion and a reason in every answer. Examiners love parce que.","J'aime le dessin parce que c'est créatif.","Say 'I like maths because it's easy'.","J'aime les maths parce que c'est facile.",2,["I like = j'aime. Maths = les maths.","because = parce que. It's easy = c'est facile.","J'aime les maths parce que c'est facile."]],
+["Negatives","ne … pas","not","Wrap ne … pas around the verb. ne becomes n' before a vowel.","Je ne joue pas au golf.","Say 'I don't play rugby'.","Je ne joue pas au rugby.",2,["I play rugby = je joue au rugby.","Wrap ne … pas around joue.","Je ne joue pas au rugby."]],
+["To the…","au, à la, à l', aux","to the","à + le → au. à + les → aux. à la and à l' never change.","Je vais au parc. Je vais aux magasins.","Say 'to the beach' (la plage).","à la plage",5,["plage is feminine: la plage.","à + la stays as à la.","à la plage."]],
+["Some","du, de la, des","some / any","Use them for food and drink, even where English leaves 'some' out.","Je mange du pain et des fruits.","Say 'some bread' (le pain).","du pain",4,["pain is masculine: le pain.","de + le → du.","du pain."]],
+["Negatives","pas de","not any","After a negative, du / de la / des all become de (d' before a vowel).","Je n'ai pas de frères.","Say 'I don't have any brothers'.","Je n'ai pas de frères.",0,["I have brothers = j'ai des frères.","Make it negative: je n'ai pas…","des becomes de: Je n'ai pas de frères."]],
+["Hobbies","jouer à / jouer de","play a sport / play an instrument","Sport: jouer à (au foot). Instrument: jouer de (de la guitare).","Je joue au tennis et je joue du piano.","Say 'I play the guitar' (la guitare).","Je joue de la guitare.",3,["Guitar is an instrument, so use jouer de.","la guitare is feminine: de la guitare.","Je joue de la guitare."]],
+["Hobbies","faire de…","to do / go …","Many activities use faire: faire du vélo, de la natation, du ski.","Je fais du ski en hiver.","Say 'I go swimming'.","Je fais de la natation.",3,["Swimming = la natation (feminine).","Activities use faire de: de la natation.","Je fais de la natation."]],
+["Routine","Je me lève","I get up","Reflexive verbs need the extra me / te / se.","Je me lève, je me douche, je m'habille.","Say 'I go to bed' (se coucher).","Je me couche.",6,["The verb is se coucher.","With je, se becomes me.","Je me couche."]],
+["Time","Il est huit heures et demie","It's half past eight","et quart = quarter past, et demie = half past, moins le quart = quarter to.","Il est neuf heures moins le quart. (8:45)","How do you say 8:30?","huit heures et demie",6,["8 o'clock = huit heures.","Half past = et demie.","huit heures et demie."]],
+["Days","le lundi","on Mondays","Days and months have no capital letter in French. le lundi = every Monday.","Le samedi, je joue au foot.","Say 'on Saturdays'.","le samedi",3,["Saturday = samedi (no capital).","Adding le makes it 'every Saturday': le samedi."]],
+["Dates","le premier mai","the first of May","For the 1st use premier. Every other date is a plain number: le deux mai, le dix mai.","Mon anniversaire est le vingt juin.","Say '1 May'.","le premier mai",0,["The 1st is special: premier.","Months have no capital: mai.","le premier mai."]],
+["Numbers","soixante-dix","seventy","70 = soixante-dix (60 + 10). 80 = quatre-vingts (4 × 20). 90 = quatre-vingt-dix (4 × 20 + 10).","75 = soixante-quinze","What is 75?","soixante-quinze",null,["75 = 60 + 15.","60 = soixante, 15 = quinze.","soixante-quinze."]],
+["Past tense","J'ai joué","I played","avoir + past participle. -er verbs: drop -er, add -é.","J'ai regardé un film.","Say 'I played'.","J'ai joué.",7,["Present of avoir with je: j'ai.","jouer → joué.","J'ai joué."]],
+["Past tense","Je suis allé","I went","Movement verbs use être: aller, venir, arriver, partir, rester, entrer, sortir, tomber.","Je suis arrivé à six heures.","Say 'I went' (aller).","Je suis allé(e).",7,["aller is a movement verb, so it uses être.","Je suis + allé.","Add -e if you are a girl: je suis allée."]],
+["Past tense","Elle est allée","She went","With être, the past participle agrees like an adjective: add -e for feminine, -s for plural.","Ils sont partis. Elles sont arrivées.","Say 'she arrived' (arriver).","Elle est arrivée.",7,["arriver uses être: elle est arrivé…","She is feminine, so add -e.","Elle est arrivée."]],
+["Future","Je vais manger","I am going to eat","Futur proche = aller (present) + infinitive.","Ce soir, je vais regarder la télé.","Say 'I am going to eat'.","Je vais manger.",9,["I am going = je vais.","Add the infinitive: manger.","Je vais manger."]],
+["Adjectives","une robe noire","a black dress","Adjectives agree: add -e for feminine, -s for plural, -es for feminine plural.","des chaussures noires","Say 'a black dress' (la robe).","une robe noire",8,["robe is feminine: une robe.","Colours go after the noun.","Feminine, so add -e: une robe noire."]],
+["Adjectives","une petite maison","a small house","A few adjectives go before the noun: grand, petit, beau, jeune, bon, nouveau.","un grand jardin","Say 'a small house'.","une petite maison",1,["petit is one of the adjectives that go before the noun.","maison is feminine, so petit → petite.","une petite maison."]],
+["Weather","Il fait froid","It's cold","Most weather uses il fait. Rain and snow have their own verbs: il pleut, il neige.","Il fait beau et chaud.","Say 'It's cold'.","Il fait froid.",9,["Temperature weather uses il fait.","cold = froid.","Il fait froid."]],
+["False friends","la librairie","the bookshop","A librairie sells books. The library is la bibliothèque.","Je vais à la librairie acheter un livre.","Where do you borrow books?","la bibliothèque",5,["Borrowing books happens in a library.","Library = la bibliothèque, not la librairie."]],
+["False friends","Il est sensible","He is sensitive","sensible means sensitive. 'Sensible' in English is raisonnable.","Ma sœur est très sensible.","What does 'Il est sensible' mean?","He is sensitive.",null,["sensible is a false friend.","It means sensitive, not sensible."]],
+["Questions","Où ? Quand ? Comment ?","Where? When? How?","Also: pourquoi (why), combien (how much / many), qui (who), qu'est-ce que (what).","Où habites-tu ?","How do you ask 'Where do you live?'","Où habites-tu ?",null,["Where = où.","Swap the verb and pronoun to ask a question: habites-tu.","Où habites-tu ?"]],
+["Questions","Est-ce que…?","Is it that…?","Put est-ce que at the front of a sentence to turn it into a yes/no question.","Est-ce que tu as un chien ?","Ask 'Do you like sport?'","Est-ce que tu aimes le sport ?",null,["You like sport = tu aimes le sport.","Put est-ce que in front.","Est-ce que tu aimes le sport ?"]],
+["Writing","À bientôt !","See you soon!","Informal email: start with Salut / Cher (boy) / Chère (girl). End with À bientôt, Amitiés or Bisous.","Salut Pierre ! … À bientôt, Seán","How do you sign off an email to a friend?","À bientôt !",null,["To a friend, keep it friendly.","À bientôt (see you soon) or Amitiés both work."]],
+["Writing","mais, aussi, donc","but, also, so","Connectors make your writing flow and earn marks for range.","J'aime le foot mais je préfère le rugby.","How do you say 'but'?","mais",null,["but = mais.","Use it to contrast two ideas."]],
+["Time","il y a deux ans","two years ago","il y a + a time = ago.","Je suis allé en France il y a deux ans.","Say 'three days ago'.","il y a trois jours",7,["ago = il y a, placed before the time.","three days = trois jours.","il y a trois jours."]],
+["Exam tip","Les mots apparentés","Cognates","Many French words look like English ones: le restaurant, la musique, intéressant. Use them to work out a text.","le concert, la famille, important","What does 'la musique classique' mean?","classical music",null,["musique looks like music.","classique looks like classical.","la musique classique = classical music."]],
+["Exam tip","Trois temps","Three tenses","Show off past, present and future in your writing: j'ai joué, je joue, je vais jouer.","Hier j'ai nagé, aujourd'hui je nage, demain je vais nager.","Give 'I play' in the future.","Je vais jouer.",9,["Future (futur proche) = aller + infinitive.","Je vais + jouer.","Je vais jouer."]]
+];
+
+// ================= TEST BANKS =================
+const LISTEN=[
+{t:"Salut ! Je m'appelle Chloé. J'ai quinze ans et j'habite à Lyon avec ma mère et mon petit frère, Hugo. Le week-end, je joue au basket et je fais du vélo. Ma matière préférée, c'est l'anglais.",
+ q:[["How old is Chloé?","15",["13","16","50"]],["Who does she live with?","Her mother and her little brother",["Her father and her sister","Her grandparents","Her mother and her sister"]],["What is her favourite subject?","English",["French","Maths","History"]]]},
+{t:"Attention, s'il vous plaît. Le train pour Paris partira à dix heures quinze, voie numéro quatre. Le train a un retard de vingt minutes.",
+ q:[["Where is the train going?","Paris",["Lyon","Nice","Brussels"]],["What time does it leave?","10:15",["10:50","2:15","4:15"]],["How late is the train?","20 minutes",["2 minutes","12 minutes","An hour"]]]},
+{t:"Voici la météo pour demain. Dans le nord, il va pleuvoir toute la journée. Dans le sud, il va faire beau et chaud, avec des températures de trente degrés. À l'ouest, il y aura du vent.",
+ q:[["What will the weather be like in the north?","Rain all day",["Sunny and hot","Snow","Windy"]],["What temperature is forecast in the south?","30 degrees",["13 degrees","20 degrees","3 degrees"]],["What will the weather be like in the west?","Windy",["Foggy","Snowy","Stormy"]]]},
+{t:"Bonjour monsieur. Je voudrais une pizza aux champignons et une salade verte, s'il vous plaît. Comme boisson, je voudrais un jus d'orange. Ah, et l'addition, s'il vous plaît.",
+ q:[["What kind of pizza is ordered?","Mushroom",["Ham","Cheese","Chicken"]],["What drink is ordered?","Orange juice",["Water","Cola","Milk"]],["What else does the customer ask for?","The bill",["The menu","A dessert","A table"]]]},
+{t:"Salut Marc, c'est Julie. Je suis rentrée de vacances hier. Je suis allée en Espagne avec mes cousins pendant deux semaines. Il a fait très chaud et on a nagé tous les jours. Appelle-moi ce soir !",
+ q:[["When did Julie come back?","Yesterday",["Today","Last week","Tomorrow"]],["Who did she go with?","Her cousins",["Her parents","Her friends","Her brother"]],["What did they do every day?","Swam",["Cycled","Went shopping","Played tennis"]]]}
+];
+const READ=[
+{title:"Un e-mail de Lucas",t:"Salut ! Je m'appelle Lucas et je suis en troisième au collège Victor Hugo à Nantes. Les cours commencent à huit heures et finissent à cinq heures. C'est long ! J'adore l'histoire parce que le prof est passionnant, mais je déteste les maths : c'est trop difficile pour moi. À midi, je mange à la cantine avec mes copains. Le mercredi après-midi, il n'y a pas cours, alors je joue au handball. Et toi, tu aimes ton école ?",
+ q:[["What time do classes start?","8 o'clock",["9 o'clock","5 o'clock","Midday"],"commencent à huit heures"],["Why does Lucas like history?","The teacher is fascinating",["It is easy","His friends are in the class","There is no homework"],"le prof est passionnant"],["Where does he eat at lunchtime?","In the school canteen",["At home","In a café","In the park"],"je mange à la cantine"],["What does he do on Wednesday afternoons?","Plays handball",["Goes to class","Does homework","Plays football"],"je joue au handball"]]},
+{title:"Camp d'été",t:"Camp d'été à Biarritz ! Pour les jeunes de 12 à 16 ans. Du 5 au 19 juillet. Activités : surf, voile, randonnée et soirées karaoké. Logement sous tente. Prix : 450 euros, repas compris. Inscription avant le 1er juin sur notre site.",
+ q:[["Who is the camp for?","Young people aged 12 to 16",["Children under 12","Adults","Families"],"de 12 à 16 ans"],["Where do campers sleep?","In tents",["In a hotel","In a school","At home"],"Logement sous tente"],["What is included in the price?","Meals",["Travel","Surf lessons only","A T-shirt"],"repas compris"],["When must you register by?","Before 1 June",["Before 5 July","Before 19 July","Before 16 June"],"avant le 1er juin"]]},
+{title:"Mon samedi",t:"Samedi dernier, je suis allée au centre commercial avec ma meilleure amie, Inès. J'ai acheté un jean et des baskets blanches, mais Inès n'a rien acheté parce que tout était trop cher ! Ensuite, nous avons mangé une crêpe au chocolat. Le soir, j'ai regardé un film d'horreur avec mon frère. J'avais peur !",
+ q:[["Where did she go last Saturday?","The shopping centre",["The cinema","The beach","School"],"au centre commercial"],["What did she buy?","Jeans and white trainers",["A dress and shoes","A white jumper","A jacket"],"un jean et des baskets blanches"],["Why did Inès buy nothing?","Everything was too expensive",["She had no money with her","The shop was closed","She didn't like anything"],"tout était trop cher"],["How did she feel watching the film?","Scared",["Bored","Happy","Tired"],"J'avais peur"]]},
+{title:"À la piscine",t:"Règlement de la piscine : Le bonnet de bain est obligatoire. Il est interdit de manger au bord de la piscine. Les enfants de moins de huit ans doivent être accompagnés d'un adulte. Douche obligatoire avant d'entrer dans l'eau.",
+ q:[["What must you wear?","A swimming cap",["Goggles","Flip-flops","A T-shirt"],"Le bonnet de bain est obligatoire"],["What is not allowed beside the pool?","Eating",["Running","Shouting","Using phones"],"interdit de manger"],["What is the rule for children under eight?","They must be with an adult",["They cannot swim","They swim for free","They must wear armbands"],"accompagnés d'un adulte"],["What must you do before getting in?","Have a shower",["Buy a ticket","Warm up","Take off jewellery"],"Douche obligatoire"]]},
+{title:"Ma famille",t:"Ma famille est assez grande. J'ai deux sœurs et un frère. Ma sœur aînée, Léa, a dix-neuf ans et elle étudie la médecine à Paris. Mon frère, Tom, est très sportif : il joue au rugby trois fois par semaine. Ma petite sœur a seulement six ans. Nous avons aussi un chien qui s'appelle Biscuit. Il est noir et très gourmand !",
+ q:[["How many brothers and sisters does the writer have?","Three",["Two","Four","One"],"deux sœurs et un frère"],["What does Léa study?","Medicine",["Law","Music","History"],"elle étudie la médecine"],["How often does Tom play rugby?","Three times a week",["Every day","Once a week","At weekends"],"trois fois par semaine"],["What is Biscuit like?","Black and greedy",["White and lazy","Small and shy","Old and noisy"],"noir et très gourmand"]]}
+];
+const WRITE=[
+{title:"E-mail to a new penpal",task:"You have a new French penpal. Write an e-mail (60–90 words) in French. Include:",pts:["your name and age","your family","your school: your favourite subject and why","your hobbies"],
+ model:"Salut ! Je m'appelle Seán et j'ai quatorze ans. J'habite à Dublin avec mes parents, mon frère et ma sœur. Je suis en deuxième année au collège. Ma matière préférée est l'histoire parce que c'est intéressant et le prof est sympa. Par contre, je n'aime pas les sciences. Le week-end, je joue au foot et je joue de la guitare. Et toi, qu'est-ce que tu aimes faire ? À bientôt, Seán"},
+{title:"Blog: last weekend",task:"Write a blog post (60–90 words) in French about last weekend. Include:",pts:["where you went","what you did","what you ate","your opinion of the weekend"],
+ model:"Samedi dernier, je suis allé en ville avec mes amis. D'abord, nous avons fait du shopping au centre commercial et j'ai acheté un t-shirt. Ensuite, nous avons mangé des hamburgers au restaurant. C'était délicieux ! Dimanche, j'ai joué au foot avec mon club et nous avons gagné le match. C'était un week-end génial !"},
+{title:"Note for your exchange partner",task:"Your French exchange partner is staying with you. You have gone out. Leave a note (40–60 words) in French. Include:",pts:["where you have gone","when you will be back","what there is to eat in the fridge","the plan for this evening"],
+ model:"Salut Lucas ! Je suis allé au supermarché avec ma mère. Je vais rentrer vers six heures. Il y a du jus d'orange et des sandwichs dans le frigo. Ce soir, nous allons regarder un film ensemble. À plus tard ! Conor"},
+{title:"Holiday postcard",task:"You are on holiday. Write a postcard (50–80 words) in French to your grandmother. Include:",pts:["where you are","the weather","what you did yesterday","what you will do tomorrow"],
+ model:"Chère Mamie, je suis en vacances à Nice avec ma famille. Il fait beau et très chaud. Hier, je suis allé à la plage et j'ai nagé dans la mer. Le soir, nous avons mangé au restaurant. Demain, nous allons visiter Monaco. Je m'amuse bien ! Grosses bises, Conor"},
+{title:"My town",task:"Write a short article (60–90 words) in French about your town. Include:",pts:["what there is in your town","what you like and dislike about it","something you did there recently","what you will do there next weekend"],
+ model:"J'habite à Galway, une ville dans l'ouest de l'Irlande. Il y a beaucoup de magasins, des restaurants, une plage et un cinéma. J'aime ma ville parce qu'il y a toujours de la musique dans les rues, mais il pleut souvent ! Samedi dernier, je suis allé au cinéma avec mes amis. Le week-end prochain, je vais faire du vélo au bord de la mer."},
+{title:"My daily routine",task:"Write a paragraph (60–90 words) in French about your routine. Include:",pts:["what time you get up and what you do in the morning","when you go to and come home from school","what you do in the evening","what you do at the weekend"],
+ model:"Pendant la semaine, je me lève à sept heures. Je me douche, je m'habille et je prends le petit déjeuner. Je pars au collège à huit heures et je rentre à quatre heures. Le soir, je fais mes devoirs et je regarde la télé. Je me couche à dix heures. Le week-end, je fais la grasse matinée, je joue au foot et je sors avec mes amis."}
+];
+
+// ================= APP =================
+const $=(s,r=document)=>r.querySelector(s);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const pick=a=>a[Math.floor(Math.random()*a.length)];
+const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+const KEY='jcfr.v1';
+let S={xp:0,streak:0,last:'',done:{},liked:[],sound:true};
+try{const r=localStorage.getItem(KEY);if(r)S=Object.assign(S,JSON.parse(r))}catch(e){}
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}};
+const ICON={
+ star:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 17l-6.1 3.4 1.5-6.8L2.2 9l6.9-.7z"/></svg>',
+ heart:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-8-5.2-8-11.2A4.6 4.6 0 0 1 12 7a4.6 4.6 0 0 1 8 2.8C20 15.8 12 21 12 21z"/></svg>',
+ heartO:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 21s-8-5.2-8-11.2A4.6 4.6 0 0 1 12 7a4.6 4.6 0 0 1 8 2.8C20 15.8 12 21 12 21z"/></svg>',
+ spk:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9z" fill="currentColor"/><path d="M16 9a4 4 0 0 1 0 6M18.5 6.5a8 8 0 0 1 0 11"/></svg>',
+ mute:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9z" fill="currentColor"/><path d="M17 9l5 6M22 9l-5 6"/></svg>',
+ lock:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>',
+ x:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>',
+ arrowL:'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg>',
+ up:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 14l6-6 6 6"/></svg>',
+ go:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8.5 6H14a4 4 0 0 1 0 8h-4a4 4 0 0 0 0 8"/></svg>',
+ pen:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l4-1 11-11-3-3L5 16z"/></svg>',
+ trophy:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 3h10v3h3v2a5 5 0 0 1-4.6 5A5 5 0 0 1 13 15.9V18h3v3H8v-3h3v-2.1A5 5 0 0 1 8.6 13 5 5 0 0 1 4 8V6h3zm0 5V8H6a3 3 0 0 0 1 2.2zm10 0v2.2A3 3 0 0 0 18 8z"/></svg>'
+};
+const today=()=>new Date().toISOString().slice(0,10),yday=()=>new Date(Date.now()-864e5).toISOString().slice(0,10);
+function addXP(n){S.xp+=n;if(S.last!==today()){S.streak=S.last===yday()?S.streak+1:1;S.last=today()}save();renderStats()}
+function renderStats(){$('#xp').textContent=S.xp;$('#streak').textContent=(S.last===today()||S.last===yday())?S.streak:0;const b=$('#snd');b.innerHTML=S.sound?ICON.spk:ICON.mute;b.setAttribute('aria-pressed',S.sound);b.setAttribute('aria-label',S.sound?'Sound effects on':'Sound effects off')}
+$('#snd').onclick=()=>{S.sound=!S.sound;save();renderStats()};
+function confetti(){if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;const c=document.createElement('div');c.className='confetti';const cols=['#F2B705','#2F6FDB','#169A5A','#D93448','#B04FB0'];
+ for(let i=0;i<40;i++){const p=document.createElement('i');p.style.left=Math.random()*100+'%';p.style.background=cols[i%5];p.style.animationDelay=Math.random()*.5+'s';c.appendChild(p)}document.body.appendChild(c);setTimeout(()=>c.remove(),3000)}
+
+// ---------- audio: French text-to-speech + sound effects ----------
+let VOICE=null;const canSpeak=()=>'speechSynthesis' in window&&'SpeechSynthesisUtterance' in window;
+function pickVoice(){try{const vs=speechSynthesis.getVoices();VOICE=vs.find(v=>/^fr[-_]FR/i.test(v.lang))||vs.find(v=>/^fr/i.test(v.lang))||null}catch(e){}}
+if(canSpeak()){pickVoice();try{speechSynthesis.onvoiceschanged=pickVoice}catch(e){}}
+function say(t,rate=.88){if(!canSpeak())return false;try{speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='fr-FR';if(VOICE)u.voice=VOICE;u.rate=rate;speechSynthesis.speak(u);return true}catch(e){return false}}
+const sayBtn=(t,big)=>`<button class="say${big?' big':''}" data-say="${esc(t)}" aria-label="Listen">${ICON.spk}</button>`;
+document.addEventListener('click',e=>{const b=e.target.closest('[data-say]');if(b){e.stopPropagation();say(b.dataset.say)}},true);
+let AC=null;function sfx(ok){if(!S.sound)return;try{AC=AC||new(window.AudioContext||window.webkitAudioContext)();const o=AC.createOscillator(),g=AC.createGain(),t=AC.currentTime,n=ok?[659,880]:[247,196];o.type=ok?'triangle':'sawtooth';o.connect(g);g.connect(AC.destination);o.frequency.setValueAtTime(n[0],t);o.frequency.setValueAtTime(n[1],t+.1);g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(ok?.18:.07,t+.02);g.gain.exponentialRampToValueAtTime(.0001,t+.3);o.start(t);o.stop(t+.32)}catch(e){}}
+
+// ---------- tabs ----------
+function setTab(t){document.querySelectorAll('nav.tabs button').forEach(b=>b.setAttribute('aria-selected',b.dataset.tab===t));['feed','quest','test'].forEach(v=>$('#v-'+v).hidden=v!==t);const g=$('#game');if(g)g.hidden=t!=='quest';if(t==='quest')renderQuest()}
+document.querySelectorAll('nav.tabs button').forEach(b=>b.onclick=()=>setTab(b.dataset.tab));
+const stepsHTML=a=>`<ol class="wsteps">${a.map((s,k)=>`<li><span class="sn">${k+1}</span><span>${s}</span></li>`).join('')}</ol>`;
+
+// ================= PART 1: SCROLL =================
+function renderFeed(){const v=$('#v-feed'),box=document.createElement('div');box.className='reels';
+ REELS.forEach((r,i)=>{const[tag,fr,en,body,ex,cq,ca,u]=r,lc=u!=null?UNITS[u].c:'#2F6FDB',liked=S.liked.includes(i),el=document.createElement('div');el.className='reel';
+  el.innerHTML=`<article class="rc" style="--lc:${lc}"><span class="tag">${esc(tag)}</span><span class="count">${i+1} / ${REELS.length}</span>
+   <h2>${esc(fr)} ${sayBtn(fr)}</h2><p class="gloss">${esc(en)}</p><p>${esc(body)}</p><div class="ex">${sayBtn(ex)}<span>${esc(ex)}</span></div>
+   <button class="check" aria-expanded="false">Quick check: ${esc(cq)}<span class="ans" hidden>${esc(ca)}</span><span class="tap">Tap to reveal</span></button>
+   ${i===0?`<div class="hint">${ICON.up}Swipe up for the next one</div>`:''}
+   <div class="rail"><div><button class="like" aria-pressed="${liked}" aria-label="Save">${liked?ICON.heart:ICON.heartO}</button><small>${liked?'Saved':'Save'}</small></div>
+    <div><button class="work" aria-label="Show worked answer">${ICON.pen}</button><small>Working</small></div>
+    ${u!=null?`<div><button class="gol" aria-label="Practise this unit">${ICON.go}</button><small>Practise</small></div>`:''}</div></article>`;
+  const ck=el.querySelector('.check');ck.onclick=()=>{const a=ck.querySelector('.ans'),open=a.hidden;a.hidden=!open;ck.querySelector('.tap').hidden=open;ck.setAttribute('aria-expanded',open);if(open){say(ca);if(!ck.dataset.done){ck.dataset.done=1;addXP(2)}}};
+  const lk=el.querySelector('.like');lk.onclick=()=>{const on=!S.liked.includes(i);S.liked=on?[...S.liked,i]:S.liked.filter(x=>x!==i);save();lk.setAttribute('aria-pressed',on);lk.innerHTML=on?ICON.heart:ICON.heartO;lk.nextElementSibling.textContent=on?'Saved':'Save'};
+  el.querySelector('.work').onclick=()=>openWork(i);
+  const g=el.querySelector('.gol');if(g)g.onclick=()=>{setTab('quest');setTimeout(()=>document.getElementById('unit'+u)?.scrollIntoView({behavior:'smooth'}),50)};
+  box.appendChild(el)});
+ v.appendChild(box)}
+function sheet(html,host){$('#sheet')?.remove();const sh=document.createElement('div');sh.id='sheet';sh.className='sheet';sh.setAttribute('role','dialog');
+ sh.innerHTML=`<div class="sheet-in">${html}<button class="btn pri wide" data-close>Got it</button></div>`;const close=()=>sh.remove();
+ sh.onclick=e=>{if(e.target===sh||e.target.closest('[data-close]'))close()};host.appendChild(sh);sh.querySelector('[data-close]').focus({preventScroll:true})}
+function openWork(i){const r=REELS[i];sheet(`<div class="sheet-top"><span class="lvl">Worked answer · ${esc(r[0])}</span><button class="x" data-close aria-label="Close">${ICON.x}</button></div>
+ <h3>${esc(r[5])}</h3>${stepsHTML(r[8].map(esc))}<div class="wans"><span class="who">Answer</span><b>${esc(r[6])} ${sayBtn(r[6])}</b></div>`,$('#v-feed'));
+ const ck=$('#v-feed').querySelectorAll('.check')[i];if(ck&&!ck.dataset.done){ck.dataset.done=1;addXP(2)}}
+
+// ================= PART 2: QUEST =================
+const key=(u,l)=>'u'+u+'l'+l;
+const starRow=(n,c='stars')=>`<span class="${c}">${[0,1,2].map(i=>`<span class="${i<n?'on':'off'}">${ICON.star}</span>`).join('')}</span>`;
+function renderQuest(){const v=$('#v-quest'),y=v.scrollTop;const trophies=UNITS.filter((_,u)=>S.done[key(u,3)]).length;
+ v.innerHTML=`<div class="sec-head"><div><h1>La Quête</h1><p>Ten units, one métro line each. Ride every line from the first station to the terminus: words, sentences, grammar, then the unit review.</p></div><span class="chip" style="color:var(--gold)">${ICON.trophy}<span style="color:var(--ink)">${trophies} / ${UNITS.length}</span></span></div><div class="lines"></div>`;
+ const L=v.querySelector('.lines');
+ UNITS.forEach((U,u)=>{const w=document.createElement('section');w.id='unit'+u;w.style.cssText=`--lc:${U.c};--lon:${U.on}`;
+  w.innerHTML=`<div class="ubanner"><span class="num">${u+1}</span><div class="t"><small>Ligne ${u+1}</small><b>${U.fr}</b><span>${U.en}</span></div><button class="tips">Tips</button></div><div class="stations"></div>`;
+  w.querySelector('.tips').onclick=()=>sheet(`<div class="sheet-top"><span class="lvl">Ligne ${u+1} · Tips</span><button class="x" data-close aria-label="Close">${ICON.x}</button></div><h3>${U.fr}</h3><p style="margin:0;font-size:17px;line-height:1.6">${U.tip}</p>`,v);
+  const st=w.querySelector('.stations');
+  LESSONS.forEach((Ls,l)=>{const stars=S.done[key(u,l)]||0,open=l===0||S.done[key(u,l-1)],d=document.createElement('div');d.className='st';
+   d.innerHTML=`<button class="sbtn ${stars?'done':open?'open':''}" ${open?'':'disabled'} aria-label="${Ls.en}">${!open?ICON.lock:l===3?ICON.trophy:l+1}</button><div class="slabel"><b>${Ls.fr}</b><span>${Ls.en}${stars?' · '+starRow(stars):''}</span></div>`;
+   if(open)d.querySelector('button').onclick=()=>startLesson(u,l);st.appendChild(d)});
+  L.appendChild(w)});
+ v.scrollTop=y}
+
+// ---------- exercise builders ----------
+const toks=fr=>fr.replace(/\s*[.!?]+$/,'').trim().split(/\s+/);
+function others(arr,item,n,f=x=>x){return shuffle(arr.filter(x=>f(x)!==f(item))).slice(0,n).map(f)}
+const exMeaning=(v,U)=>({type:'mcq',kind:'Choose the meaning',prompt:`What does <span class="fr">${esc(v[0])}</span> mean? ${sayBtn(v[0])}`,auto:v[0],a:v[1],opts:shuffle([v[1],...others(U.vocab,v,3,x=>x[1])]),why:`<b>${esc(v[0])}</b> = ${esc(v[1])}`,ans:v[0]});
+const exReverse=(v,U)=>({type:'mcq',kind:'Say it in French',prompt:`How do you say <b>"${esc(v[1])}"</b>?`,a:v[0],opts:shuffle([v[0],...others(U.vocab,v,3,x=>x[0])]),why:`"${esc(v[1])}" = <b>${esc(v[0])}</b>`,ans:v[0],sayAfter:v[0]});
+const exListenWord=(v,U)=>canSpeak()?({type:'mcq',kind:'Listen',prompt:`<span>What did you hear?</span>`,big:v[0],auto:v[0],a:v[0],opts:shuffle([v[0],...others(U.vocab,v,3,x=>x[0])]),why:`You heard <b>${esc(v[0])}</b> (${esc(v[1])}).`,ans:v[0]}):exMeaning(v,U);
+const exTrans=(s,U)=>({type:'mcq',kind:'Translate',prompt:`<span class="fr">${esc(s[0])}</span> ${sayBtn(s[0])}`,auto:s[0],a:s[1],opts:shuffle([s[1],...others(U.sent,s,3,x=>x[1])]),why:`<b>${esc(s[0])}</b> = ${esc(s[1])}`,ans:s[0]});
+const exListenSent=(s,U)=>canSpeak()?({type:'mcq',kind:'Listen',prompt:`<span>Listen. What does it mean?</span>`,big:s[0],auto:s[0],a:s[1],opts:shuffle([s[1],...others(U.sent,s,3,x=>x[1])]),why:`You heard <b>${esc(s[0])}</b> = ${esc(s[1])}`,ans:s[0]}):exTrans(s,U);
+function exBuild(s,U){const words=toks(s[0]),pool=[...new Set(U.sent.filter(x=>x!==s).flatMap(x=>toks(x[0]).map(w=>w.replace(/,$/,''))))].filter(w=>!words.includes(w)&&!words.includes(w+','));
+ return {type:'build',kind:'Write this in French',prompt:`<b>"${esc(s[1])}"</b>`,words,tiles:shuffle([...words,...shuffle(pool).slice(0,3)]),a:s[0],why:`<b>${esc(s[0])}</b> = ${esc(s[1])}`,ans:s[0],sayAfter:s[0]}}
+const exGap=g=>({type:'mcq',kind:'Fill the gap',gap:g[0],a:g[1],opts:shuffle([g[1],...g[2].slice(0,3)]),why:esc(g[3]),ans:g[0].replace('___',g[1]),sayAfter:g[0].replace('___',g[1]).replace(/\s*\(.*\)/,'')});
+const exMatch=vs=>({type:'match',kind:'Match the pairs',pairs:vs});
+function buildLesson(u,l){const U=UNITS[u],v=shuffle(U.vocab),s=shuffle(U.sent),g=shuffle(U.gaps);
+ if(l===0)return [exMeaning(v[0],U),exMeaning(v[1],U),exListenWord(v[2],U),exReverse(v[3],U),exMatch(v.slice(4,9)),exReverse(v[9],U),exListenWord(v[10],U),exMeaning(v[11],U)];
+ if(l===1)return [exTrans(s[0],U),exBuild(s[1],U),exListenSent(s[2],U),exBuild(s[3],U),exTrans(s[4],U),exBuild(s[5],U),exListenSent(s[6],U)];
+ if(l===2)return [exGap(g[0]),exGap(g[1]),exBuild(s[0],U),exGap(g[2]),exGap(g[3]),exBuild(s[1],U),exGap(g[4]),exGap(g[5])];
+ return shuffle([exMeaning(v[0],U),exReverse(v[1],U),exMatch(v.slice(2,7)),exBuild(s[0],U),exBuild(s[1],U),exGap(g[0]),exGap(g[1]),exListenSent(s[2],U)])}
+
+// ---------- lesson flow ----------
+let G=null;
+function startLesson(u,l){const ex=buildLesson(u,l);G={u,l,U:UNITS[u],ex,i:0,max:l===3?2:3,hearts:l===3?2:3,wrong:0,correct:0,revealed:0,sel:null};
+ $('#game')?.remove();const el=document.createElement('div');el.className='game';el.id='game';el.style.cssText=`--lc:${G.U.c}`;$('main').appendChild(el);renderLearn()}
+const heartsHTML=()=>`<div class="hearts" aria-label="${G.hearts} hearts left">${Array.from({length:G.max},(_,k)=>`<span class="${k<G.hearts?'':'lost'}">${ICON.heart}</span>`).join('')}</div>`;
+const gtop=()=>`<div class="g-top"><button class="x" aria-label="Quit">${ICON.x}</button><div class="bar"><i style="width:${G.i/G.ex.length*100}%"></i></div>${heartsHTML()}</div>`;
+function frame(body,foot){const el=$('#game');el.innerHTML=`${gtop()}<div class="g-body"><div class="g-in">${body}</div></div><div class="g-foot" id="foot"><div class="in">${foot}</div></div>`;el.querySelector('.x').onclick=quit;return el}
+function quit(){speechSynthesis?.cancel?.();$('#game')?.remove();G=null;renderQuest()}
+function renderLearn(){const U=G.U,l=G.l;let body=`<div class="learn"><span class="who">Avant de commencer…</span><h2>Ligne ${G.u+1} · ${LESSONS[l].fr}</h2>`;
+ if(l===0)body+=`<p>Tap a speaker to hear each word. Read them through, then start.</p><div class="vlist">${U.vocab.map(v=>`<div class="vrow">${sayBtn(v[0])}<b>${esc(v[0])}</b><span>${esc(v[1])}</span></div>`).join('')}</div>`;
+ if(l===1)body+=`<p>Listen to these sentences. Notice the word order: it is often close to English.</p><div class="vlist">${U.sent.slice(0,6).map(s=>`<div class="vrow">${sayBtn(s[0])}<b>${esc(s[0])}</b><span>${esc(s[1])}</span></div>`).join('')}</div>`;
+ if(l===2){const g=U.gaps[0],full=g[0].replace('___',g[1]);body+=`<p style="font-size:17px;line-height:1.6">${U.tip}</p><h3 style="font-size:19px">Worked example</h3><div class="gapline">${esc(g[0]).replace('___','<span class="blank">?</span>')}</div>${stepsHTML(['Look at what comes before and after the gap.',esc(g[3]),`So the answer is <b>${esc(g[1])}</b>.`])}<div class="wans"><span class="who">Answer</span><b>${esc(full)} ${sayBtn(full.replace(/\s*\(.*\)/,''))}</b></div>`}
+ if(l===3)body+=`<p>The terminus: a mixed review of the whole unit. Only <b>2 hearts</b>. Finish it to win the line's trophy.</p><p style="font-size:16px;line-height:1.6">${U.tip}</p>`;
+ body+='</div>';
+ const el=frame(body,`<button class="btn go wide" id="startL">Start lesson</button>`);el.querySelector('#startL').onclick=renderEx;el.querySelector('#startL').focus()}
+function renderEx(){const e=G.ex[G.i];G.sel=null;let body=`<span class="kind">${e.kind}</span>`;
+ if(e.type==='mcq'){if(e.gap)body+=`<div class="gapline">${esc(e.gap).replace('___','<span class="blank">?</span>')}</div>`;else body+=`<div class="prompt">${e.prompt}</div>`;
+  if(e.big)body+=`<div style="display:flex;justify-content:center;gap:16px;align-items:center">${sayBtn(e.big,true)}<button class="link" data-slow>Slower</button></div>`;
+  body+=`<div class="opts">${e.opts.map((o,k)=>`<button class="opt" data-v="${esc(o)}"><span class="k">${k+1}</span><span>${esc(o)}</span></button>`).join('')}</div>`}
+ if(e.type==='build')body+=`<div class="prompt">${e.prompt}</div><div class="answerline" id="aline"></div><div class="bank">${e.tiles.map((t,k)=>`<button class="tile" data-k="${k}">${esc(t)}</button>`).join('')}</div>`;
+ if(e.type==='match'){const R=shuffle(e.pairs);body+=`<div class="prompt">Tap the matching pairs</div><div class="pairs">${e.pairs.map((p,k)=>`<button class="pair" data-side="fr" data-id="${esc(p[0])}">${esc(p[0])}</button><button class="pair" data-side="en" data-id="${esc(R[k][0])}">${esc(R[k][1])}</button>`).join('')}</div>`}
+ const foot=e.type==='match'?`<div class="row"><button class="link" id="reveal">Show me the answer</button></div>`:`<div class="row"><button class="link" id="reveal">Show me the answer</button><button class="btn pri" id="check" disabled>Check</button></div>`;
+ const el=frame(body,foot);el.querySelector('#reveal').onclick=reveal;
+ if(e.auto)setTimeout(()=>say(e.auto),250);
+ const slow=el.querySelector('[data-slow]');if(slow)slow.onclick=()=>say(e.big,.6);
+ if(e.type==='mcq'){el.querySelectorAll('.opt').forEach(b=>b.onclick=()=>{el.querySelectorAll('.opt').forEach(x=>x.classList.remove('sel'));b.classList.add('sel');G.sel=b.dataset.v;$('#check').disabled=false});$('#check').onclick=()=>check(G.sel===e.a)}
+ if(e.type==='build'){const line=el.querySelector('#aline'),chosen=[];
+  el.querySelectorAll('.tile').forEach(t=>t.onclick=()=>{if(t.classList.contains('used'))return;t.classList.add('used');const c=document.createElement('button');c.className='tile';c.textContent=t.textContent;chosen.push(t.textContent);
+   c.onclick=()=>{const i=[...line.children].indexOf(c);chosen.splice(i,1);c.remove();t.classList.remove('used');$('#check').disabled=!chosen.length};line.appendChild(c);$('#check').disabled=false});
+  $('#check').onclick=()=>check(chosen.join(' ')===e.words.join(' '))}
+ if(e.type==='match'){let pick1=null,left=e.pairs.length;
+  el.querySelectorAll('.pair').forEach(b=>b.onclick=()=>{if(b.classList.contains('ok'))return;if(b.dataset.side==='fr')say(b.textContent);
+   if(!pick1||pick1.dataset.side===b.dataset.side){pick1?.classList.remove('sel');pick1=b;b.classList.add('sel');return}
+   if(pick1.dataset.id===b.dataset.id){[pick1,b].forEach(x=>{x.classList.remove('sel');x.classList.add('ok');x.disabled=true});sfx(true);left--;pick1=null;if(!left){G.correct++;feedback(true,e)}}
+   else{const a=pick1;[a,b].forEach(x=>{x.classList.remove('sel');x.classList.add('bad')});sfx(false);setTimeout(()=>[a,b].forEach(x=>x.classList.remove('bad')),400);pick1=null}})}}
+function check(ok){const e=G.ex[G.i];if(ok)G.correct++;else{G.hearts--;G.wrong++}
+ const el=$('#game');if(e.type==='mcq')el.querySelectorAll('.opt').forEach(x=>{x.disabled=true;if(x.dataset.v===e.a)x.classList.add('right');else if(x.classList.contains('sel'))x.classList.add('wrong')});
+ if(e.type==='build')el.querySelectorAll('.tile').forEach(t=>t.disabled=true);
+ el.querySelector('.hearts').outerHTML=heartsHTML();feedback(ok,e)}
+function feedback(ok,e,help){sfx(ok||help?true:false);if(e.sayAfter&&(ok||help))setTimeout(()=>say(e.sayAfter),200);
+ const lose=G.hearts<=0,last=G.i===G.ex.length-1,foot=$('#foot');foot.className='g-foot '+(help?'help':ok?'ok':'no');
+ const head=help?'Here is the answer':ok?pick(['Bravo !','Excellent !','Parfait !','Super !','Très bien !']):'Pas tout à fait…';
+ const sub=help?'<p style="font-size:14px">No heart lost, no points. This one counts as passed.</p>':'';
+ const ansLine=e.type==='match'?'':`<p>${ok&&!help?'':'Correct answer: '}<b>${esc(e.gap?e.ans:e.a)}</b></p>`;
+ foot.innerHTML=`<div class="in"><h3>${head}</h3>${sub}${ansLine}<p>${e.why||'All pairs matched.'}</p><button class="btn wide" id="next">${lose?'See result':last?'Finish':'Continue'}</button></div>`;
+ const nx=foot.querySelector('#next');nx.focus({preventScroll:true});nx.onclick=()=>{if(lose)return result(false);if(last)return result(true);G.i++;renderEx()}}
+function reveal(){const e=G.ex[G.i],el=$('#game');G.revealed++;
+ if(e.type==='mcq')el.querySelectorAll('.opt').forEach(x=>{x.disabled=true;if(x.dataset.v===e.a)x.classList.add('right')});
+ if(e.type==='build'){el.querySelectorAll('.tile').forEach(t=>t.disabled=true);el.querySelector('#aline').innerHTML=e.words.map(w=>`<span class="tile">${esc(w)}</span>`).join('')}
+ if(e.type==='match'){const by={};el.querySelectorAll('.pair').forEach(b=>{b.disabled=true;b.classList.add('ok')});e.why=e.pairs.map(p=>`<b>${esc(p[0])}</b> = ${esc(p[1])}`).join('<br>')}
+ feedback(false,e,true)}
+function result(pass){const el=$('#game'),k=key(G.u,G.l);let stars=0,xp=G.correct*10;
+ if(pass){stars=Math.max(1,3-G.wrong-G.revealed);if(G.correct)xp+=stars*5+(G.l===3?30:0);S.done[k]=Math.max(S.done[k]||0,stars);confetti()}
+ addXP(xp);const next=pass&&G.l<3;
+ el.innerHTML=`<div class="g-body"><div class="g-in"><div class="center">
+  ${pass?(G.l===3?`<div style="color:var(--gold);width:96px">${ICON.trophy}</div><h1>Terminus !</h1><p>You finished Ligne ${G.u+1}: ${G.U.fr}.</p>`:`${starRow(stars,'bigstars')}<h1>${stars===3?'Parfait !':stars===2?'Bien joué !':'Ouf, c\'est bon !'}</h1>`)
+   :`<h1>Plus de cœurs…</h1><p>Out of hearts. Look at the tips and try again: the questions change every time.</p>`}
+  <p>${G.correct} of ${G.ex.length} correct${G.revealed?`, ${G.revealed} shown`:''}.</p><span class="chip">+${xp} XP</span>
+  <div class="row" style="justify-content:center">${pass?(next?`<button class="btn pri" id="nxt">Next station</button>`:''):`<button class="btn pri" id="retry">Try again</button>`}<button class="btn" id="map">Back to the map</button></div></div></div></div>`;
+ const {u,l}=G;el.querySelector('#map').onclick=quit;
+ el.querySelector('#retry')?.addEventListener('click',()=>startLesson(u,l));el.querySelector('#nxt')?.addEventListener('click',()=>startLesson(u,l+1))}
+
+// ================= PART 3: TEST =================
+let sampleFn=undefined,imgCaps=null,files=[],ctl=null,T=null;
+function testHome(){const v=$('#v-test');v.scrollTop=0;
+ v.innerHTML=`<div class="sec-head"><div><h1>Le Test</h1><p>Exam-style practice for the three skills on the Junior Cycle French paper: listening, reading and writing. A new piece every time.</p></div></div>
+ <div class="tests"><button class="tchoice" style="--lc:#2F6FDB" data-t="L"><h3>Compréhension orale</h3><p>Listening · hear a short French recording and answer in English. Marked instantly.</p></button>
+ <button class="tchoice" style="--lc:#169A5A" data-t="R"><h3>Compréhension écrite</h3><p>Reading · a French text with questions. Marked instantly, with the answer highlighted in the text.</p></button>
+ <button class="tchoice" style="--lc:#D93448" data-t="W"><h3>Production écrite</h3><p>Writing · an e-mail, blog or note. Type it or photograph it, then get it marked.</p></button></div>`;
+ v.querySelectorAll('.tchoice').forEach(b=>b.onclick=()=>({L:listenTest,R:readTest,W:writeTest})[b.dataset.t]())}
+const backBtn=()=>`<button class="back" id="tback">${ICON.arrowL}All tests</button>`;
+function mcqBlock(qs){return qs.map((q,i)=>{const o=shuffle([q[1],...q[2]]);return `<div class="tq" data-i="${i}"><b>${i+1}. ${esc(q[0])}</b><div class="radios">${o.map(x=>`<button class="radio" data-v="${esc(x)}">${esc(x)}</button>`).join('')}</div><div class="ev" hidden></div></div>`}).join('')}
+function wireMcq(root,qs,onDone,evid){root.querySelectorAll('.tq').forEach(t=>t.querySelectorAll('.radio').forEach(r=>r.onclick=()=>{if(t.dataset.locked)return;t.querySelectorAll('.radio').forEach(x=>x.classList.remove('sel'));r.classList.add('sel')}));
+ root.querySelector('#mark').onclick=()=>{let sc=0;root.querySelectorAll('.tq').forEach(t=>{const q=qs[+t.dataset.i],s=t.querySelector('.sel');t.dataset.locked=1;
+  t.querySelectorAll('.radio').forEach(r=>{r.disabled=true;if(r.dataset.v===q[1])r.classList.add('right');else if(r===s)r.classList.add('wrong')});if(s&&s.dataset.v===q[1])sc++;
+  if(evid&&q[3]){const ev=t.querySelector('.ev');ev.hidden=false;ev.textContent='In the text: "'+q[3]+'"'}});
+  root.querySelector('#mark').remove();onDone(sc)}}
+function listenTest(){const P=pick(LISTEN),v=$('#v-test');v.scrollTop=0;let plays=0;
+ v.innerHTML=`<div class="sec-head">${backBtn()}</div><article class="paper"><span class="lvl">Compréhension orale</span><h2>Listen, then answer in English</h2>
+  ${canSpeak()?`<div class="row">${sayBtn(P.t,true)}<div><b>Play the recording</b><p class="note" style="margin:2px 0 0">Listen as often as you like. In the exam you hear it three times.</p><button class="link" id="slow">Play slower</button></div></div>`:`<p class="warn">Audio isn't available on this device, so read the transcript instead.</p><div class="passage">${esc(P.t)}</div>`}
+  ${mcqBlock(P.q)}<button class="btn pri" id="mark">Check my answers</button><div id="res"></div></article>`;
+ v.querySelector('#tback').onclick=testHome;const sl=v.querySelector('#slow');if(sl)sl.onclick=()=>say(P.t,.65);
+ wireMcq(v,P.q,sc=>{addXP(sc*5);if(sc===P.q.length)confetti();v.querySelector('#res').innerHTML=`<div class="score"><div class="ring"><div><b>${sc}</b><span>out of ${P.q.length}</span></div></div><div><b>Transcript</b><div class="passage" style="margin-top:6px">${esc(P.t)} ${sayBtn(P.t)}</div></div></div><div class="row"><button class="btn go" id="again">Another recording</button></div>`;v.querySelector('#again').onclick=listenTest})}
+function readTest(){const P=pick(READ),v=$('#v-test');v.scrollTop=0;
+ v.innerHTML=`<div class="sec-head">${backBtn()}</div><article class="paper"><span class="lvl">Compréhension écrite</span><h2>${esc(P.title)}</h2><div class="passage" id="ptext">${esc(P.t)}</div>${mcqBlock(P.q)}<button class="btn pri" id="mark">Check my answers</button><div id="res"></div></article>`;
+ v.querySelector('#tback').onclick=testHome;
+ wireMcq(v,P.q,sc=>{addXP(sc*5);if(sc===P.q.length)confetti();let h=esc(P.t);P.q.forEach(q=>{const e=esc(q[3]);h=h.replace(e,`<mark>${e}</mark>`)});v.querySelector('#ptext').innerHTML=h;
+  v.querySelector('#res').innerHTML=`<div class="score"><div class="ring"><div><b>${sc}</b><span>out of ${P.q.length}</span></div></div><p style="max-width:40ch">The highlighted parts of the text are where each answer is. Look for them first next time, then match them to the question.</p></div><div class="row"><button class="btn go" id="again">Another text</button></div>`;v.querySelector('#again').onclick=readTest},true)}
+function writeTest(){T=pick(WRITE);files=[];const v=$('#v-test');v.scrollTop=0;
+ v.innerHTML=`<div class="sec-head">${backBtn()}</div><article class="paper"><span class="lvl">Production écrite</span><h2>${esc(T.title)}</h2><p style="margin:0">${esc(T.task)}</p><ul class="pts">${T.pts.map(p=>`<li>${esc(p)}</li>`).join('')}</ul>
+  <p class="note" style="margin:0">Aim for: all the points covered, opinions with reasons, connectors (et, mais, parce que), and more than one tense.</p>
+  <label for="wtxt"><b>Type your answer</b> <span class="note">(or write it on paper and add a photo below)</span></label>
+  <div class="accents">${['é','è','ê','à','â','ç','ù','î','ô','œ'].map(c=>`<button data-acc="${c}" aria-label="Insert ${c}">${c}</button>`).join('')}</div>
+  <textarea id="wtxt" placeholder="Salut ! Je m'appelle…"></textarea><span class="wc" id="wc">0 words</span>
+  <div class="upload" id="up"></div><div class="row"><button class="btn pri" id="markW" hidden>Mark my writing</button><button class="btn" id="model">Show a model answer</button></div><div id="wres"></div></article>`;
+ v.querySelector('#tback').onclick=testHome;const ta=v.querySelector('#wtxt');
+ const upd=()=>{const n=(ta.value.trim().match(/\S+/g)||[]).length;v.querySelector('#wc').textContent=n+' word'+(n===1?'':'s');setMarkBtn()};ta.oninput=upd;
+ v.querySelectorAll('[data-acc]').forEach(b=>b.onclick=()=>{const s=ta.selectionStart,e=ta.selectionEnd;ta.setRangeText(b.dataset.acc,s,e,'end');ta.focus();upd()});
+ v.querySelector('#model').onclick=()=>showModel();renderUp();setMarkBtn()}
+function setMarkBtn(){const b=$('#markW');if(!b)return;const has=($('#wtxt')?.value.trim().length>10)||files.length;b.hidden=!sampleFn;b.disabled=!has}
+function renderUp(){const up=$('#up');if(!up)return;
+ if(!sampleFn){up.innerHTML=`<p class="warn">${sampleFn===undefined?'Checking whether Claude marking is available…':'Marking by Claude isn\'t available in this version. Use the model answer and self-check list, or ask a parent to mark it in the Claude app.'}</p>`;return}
+ const max=imgCaps?.maxCount||4;
+ up.innerHTML=imgCaps?`<label class="btn" for="pic" style="cursor:pointer;align-self:flex-start">Add a photo of your writing<input id="pic" type="file" accept="${(imgCaps.mediaTypes||['image/*']).join(',')}" multiple></label><div class="thumbs" style="margin-top:8px"></div>`:'';
+ const th=up.querySelector('.thumbs');files.forEach((f,i)=>{const d=document.createElement('div');d.className='thumb';d.innerHTML=`<img alt="Page ${i+1}" src="${URL.createObjectURL(f)}"><button aria-label="Remove">×</button>`;d.querySelector('button').onclick=()=>{files.splice(i,1);renderUp();setMarkBtn()};th.appendChild(d)});
+ const pic=up.querySelector('#pic');if(pic)pic.onchange=e=>{files=[...files,...e.target.files].slice(0,max);renderUp();setMarkBtn()};
+ $('#markW').onclick=markWriting}
+function showModel(){const r=$('#wres');r.innerHTML=`<h3 style="margin-top:6px">Model answer ${sayBtn(T.model)}</h3><div class="passage">${esc(T.model)}</div>
+ <b>Self-check</b><ul class="pts"><li>Did I cover all ${T.pts.length} points?</li><li>Did I give an opinion and a reason (parce que)?</li><li>Did I use connectors: et, mais, aussi, ensuite?</li><li>Did I use more than one tense (past, present, future)?</li><li>Did I check verb endings, le/la and adjective agreements?</li></ul>`;r.scrollIntoView({behavior:'smooth',block:'start'})}
+function wPrompt(text){return `You are Ireland's best Junior Cycle French teacher and an experienced examiner. A student aged 14-15 has written a French text for the task below${files.length?' (photos of their handwriting are attached)':''}.
+
+TASK: ${T.task}
+${T.pts.map(p=>'- '+p).join('\n')}
+
+STUDENT'S TYPED TEXT:
+${text||'(none typed: read the attached photos)'}
+
+Mark it out of 30, the way a Junior Cycle examiner would:
+- Communication (10): were all the points covered clearly?
+- Range (10): vocabulary, opinions with reasons, connectors, more than one tense.
+- Accuracy (10): verbs, genders, agreements, spelling and accents.
+Be warm, specific and encouraging, written for a teenager. Use Irish/UK English for feedback. If there is no French writing at all, give 0 and say so.
+
+Reply with only JSON:
+{"communication":0,"range":0,"accuracy":0,"total":0,"covered":["each task point: yes / partly / no"],"strengths":"1-2 sentences","corrections":[{"wrong":"exact words the student wrote","right":"corrected French","why":"short reason in English"}],"improved":"the student's text rewritten correctly in French, keeping their ideas, slightly improved","tips":["2-3 short next-step tips"]}
+Give at most 6 corrections.`}
+async function markWriting(){const st=$('#wres'),b=$('#markW');b.disabled=true;ctl=new AbortController();
+ st.innerHTML=`<div class="marking">${ICON.pen.replace('<svg','<svg class="pen"')}<span>Le prof corrige…</span></div><button class="btn" id="stop">Stop</button>`;$('#stop').onclick=()=>ctl.abort();
+ try{const r=await sampleFn.json(wPrompt($('#wtxt').value.trim()),{images:files.length?files:undefined,signal:ctl.signal,cache:false});
+  const n=x=>Math.max(0,Math.min(10,Math.round(Number(x)||0)));const c=n(r.communication),ra=n(r.range),a=n(r.accuracy),tot=c+ra+a,p=tot/30*100;
+  const g=p>=90?'Distinction':p>=75?'Higher Merit':p>=55?'Merit':p>=40?'Achieved':p>=20?'Partially Achieved':'Not Graded';
+  st.innerHTML=`<div class="score" style="margin-top:8px"><div class="ring"><div><b>${tot}</b><span>out of 30</span></div></div><div><div class="grade">${g}</div><p class="hand" style="margin:4px 0 0">${esc(r.strengths||'')}</p></div></div>
+   <div class="crit"><div><b>${c}</b>Communication</div><div><b>${ra}</b>Range</div><div><b>${a}</b>Accuracy</div></div>
+   ${Array.isArray(r.corrections)&&r.corrections.length?`<b>Corrections</b><div class="fix">${r.corrections.map(x=>`<div><s>${esc(x.wrong||'')}</s> → <ins>${esc(x.right||'')}</ins><br><span class="note">${esc(x.why||'')}</span></div>`).join('')}</div>`:''}
+   ${r.improved?`<b>Improved version ${sayBtn(r.improved)}</b><div class="passage">${esc(r.improved)}</div>`:''}
+   ${Array.isArray(r.tips)&&r.tips.length?`<b>Next time</b><ul class="pts">${r.tips.map(t=>`<li>${esc(t)}</li>`).join('')}</ul>`:''}
+   <div class="row"><button class="btn go" id="againW">Another task</button><button class="btn" id="model2">Model answer</button></div>`;
+  addXP(tot);if(p>=75)confetti();$('#againW').onclick=writeTest;$('#model2').onclick=()=>{const m=document.createElement('div');st.appendChild(m);m.innerHTML=`<h3 style="margin-top:8px">Model answer ${sayBtn(T.model)}</h3><div class="passage">${esc(T.model)}</div>`}}
+ catch(e){const c=e?.code;b.disabled=false;st.innerHTML=c==='cancelled'?'':`<p class="warn">${c==='not_granted'||c==='sampling_disabled'?'Marking was not allowed, so nothing was sent. Use the model answer to check your work.':c==='rate_limited'?'Too many requests just now. Wait a minute and try again.':c==='image_rejected'?'That photo could not be read. Try a clearer one.':c==='invalid_json'?'The marking came back in a muddle. Try again.':'Something went wrong while marking. Try again.'}</p>`}}
+
+// ---------- boot ----------
+renderStats();renderFeed();testHome();
+(async()=>{let s=null;try{if(window.claude&&claude.use)s=await claude.use('sample')}catch(e){}sampleFn=s;if(s){const l=await s.limits().catch(()=>null);imgCaps=l?.images||null}renderUp();setMarkBtn()})();
+
+</script>
+
+</body>
+</html>
